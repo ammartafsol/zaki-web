@@ -1,4 +1,11 @@
 .heroSection {
   /* height: 100vh; */
-  padding-block: 100px;
+  padding-block: 246.5px;
+}
+
+
+@media (max-width: 1400px) {
+  .heroSection {
+    padding-block: 91px;
+  }
 }
