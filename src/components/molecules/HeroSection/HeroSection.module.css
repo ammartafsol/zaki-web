@@ -1,0 +1,28 @@
+.title {
+  color: var(--white);
+  font-family: var(--font-ranade);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  line-height: var(--lh55);
+}
+.description {
+  color: var(--white);
+  font-family: var(--font-ranade);
+  line-height: var(--lh24);
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--g-32);
+}
+.heroSectionImage {
+  display: flex;
+  gap: var(--g-16);
+}
+.heroSectionContent{
+    width: 100%;
+    max-width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--g-16);
+}
