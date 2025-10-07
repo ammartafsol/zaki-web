@@ -4,32 +4,44 @@
 
   /* Black Shades */
   --black: #000000;
-  --black-1: #374151;
 
   /* White Shades */
   --white: #ffffff;
   --white-1: #f8fafc;
   --white-2: #e2e8f0;
+  --cloud-white: #F8F8F8;
 
-  /* Blue Shades */
-  --blue: #007fff;
-  --blue-1: #0d9488;
-  --blue-light: #bfdbfe;
 
-  /* Purple Shades */
-  --purple: #9333ea;
 
-  /* Gradients */
-  --gradient-primary: linear-gradient(
-    90deg,
-    var(--blue) 0%,
-    var(--blue-1) 100%
-  );
+
+
 
   /* Misc */
   --border: #e0e0e0;
   --border-1: #002850;
   --placeholder: #4b5563;
-  --text: #222;
-  --label: #4b5563;
+  --deep-teal:#024757;
+  --Heading-color:#032E38;
+  --green-500:#22C55E;
+  --pastel-aqua:#ACE4E0;
+  --industrial-gray:#696969;
+  --tidewater-blue:#277F93;
+  --mint-whisper:#EEF7F6;
+  --sea-mist-fade:rgba(172, 228, 224, 0.30);
+  --sea-mist-50:rgba(172, 228, 224, 0.50);
+  --smoke-gray:#4A4A4A;
+  --cool-silver:#D5D7DA;
+  --sunbeam-yellow:#FFFA89;
+  --pure-blank:#FDFDFD;
+  --midnight-teal:#052328;
+
+
+
+
+  /* linear-gradient */
+  
+
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.60) 100%), #C5F1EE;
+
+
 }
