@@ -1,42 +1,140 @@
 :root {
-  --fs12: 12px; /* Extra Small */
-  --fs13: 13px; /* Small */
-  --fs14: 14px; /* Base */
-  --fs15: 15px; /* Medium */
-  --fs16: 16px; /* Medium */
-  --fs17: 17px; /* Large */
-  --fs18: 18px; /* Extra Large */
-  --fs20: 20px; /* 2XL */
-  --fs22: 22px; /* 3XL */
-  --fs24: 24px; /* 4XL */
-  --fs28: 28px; /* 5XL */
-  --fs30: 30px; /* 6XL */
-  --fs32: 32px; /* 7XL */
-  --fs34: 34px; /* 8XL */
-  --fs36: 36px; /* 8XL */
-  --fs40: 40px; /* 9XL */
-  --fs41: 41px; /* 10XL */
-  --fs44: 44.3px; /* 10XL */
-  --fs45: 45px; /* 11XL */
-  --fs48: 48px; /* 12XL */
-  --fs54: 54px; /* 13XL */
-  --fs56: 54px; /* 13XL */
-  --fs64: 64px; /* 14XL */
-  --fs96: 96px; /* 15XL */
+  /* Font Sizes */
+  --fs14: 14px;
+  --fs16: 16px;
+  --fs18: 18px;
+  --fs20: 20px;
+  --fs24: 24px;
+  --fs32: 32px;
+  --fs44: 44px;
+  --fs54: 54px;
+
+  /* Line Heights */
+  --lh22: 22px;
+  --lh24: 24px;
+  --lh26: 26px;
+  --lh30: 30px;
+  --lh32: 32px;
+  --lh40: 40px;
+  --lh52: 52px;
+
+  /* Padding */
+  --p-5: 5px;
+  --p-10: 10px;
+  --p-15: 15px;
+  --p-20: 20px;
+  --p-25: 25px;
+  --p-30: 30px;
+  --p-35: 35px;
+  --p-40: 40px;
+
+  /* Margin */
+  --m-5: 5px;
+  --m-10: 10px;
+  --m-15: 15px;
+  --m-20: 20px;
+  --m-25: 25px;
+  --m-30: 30px;
+  --m-35: 35px;
+  --m-40: 40px;
+
+  /* Border Radius */
+  --br-5: 5px;
+  --br-10: 10px;
+  --br-15: 15px;
+  --br-20: 20px;
+  --br-25: 25px;
+  --br-30: 30px;
+  --br-35: 35px;
+  --br-40: 40px;
 }
 
 body {
-  font-family: var(--font-inter);
+  font-family: var(--font-ranade);
   font-size: var(--fs14);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+  margin-bottom: 0;
+}
 p,
 span {
   font-size: var(--fs14);
-  font-family: var(--font-inter);
+  font-family: var(--font-ranade);
   font-weight: 400;
 }
 
 .pointer {
   cursor: pointer;
 }
+
+/* Font Size Utility Classes */
+.fs14 {
+  font-size: var(--fs14);
+}
+
+.fs16 {
+  font-size: var(--fs16);
+}
+
+.fs18 {
+  font-size: var(--fs18);
+}
+
+.fs20 {
+  font-size: var(--fs20);
+}
+
+.fs24 {
+  font-size: var(--fs24);
+}
+
+.fs32 {
+  font-size: var(--fs32);
+}
+
+.fs44 {
+  font-size: var(--fs44);
+}
+
+.fs54 {
+  font-size: var(--fs54);
+}
+
+/* Font Weight Utility Classes */
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
