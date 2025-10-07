@@ -1,71 +1,12 @@
 import React from "react";
 import classes from "./Pagination.module.css";
-import { IoArrowBackOutline, IoArrowForwardOutline } from "react-icons/io5";
+import { RECORDS_LIMIT } from "@/resources/utils/constant";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
-/**
- * Pagination Component - A flexible and accessible pagination component
- * 
- * Features:
- * - Smart page number display with ellipsis for large page counts
- * - Responsive design that adapts to mobile screens
- * - Full accessibility support with ARIA labels and keyboard navigation
- * - Configurable number of visible page buttons
- * - Optional results text display
- * - Input validation and error handling
- * - Smooth hover and focus transitions
- * 
- * @param {Object} props - Component props
- * @param {number} props.currentPage - Current active page number (default: 1)
- * @param {number} props.limit - Number of items per page (default: 10)
- * @param {number} props.totalRecords - Total number of records to paginate (default: 0)
- * @param {Function} props.onPageChange - Callback function called when page changes (required)
- * @param {boolean} props.showResultsText - Whether to show "Showing X - Y of Z Results" text (default: true)
- * @param {number} props.maxVisiblePages - Maximum number of page buttons to show (default: 5)
- * @returns {JSX.Element|null} Pagination component or null if no records
- * 
- * @example
- * // Basic usage
- * <Pagination
- *   currentPage={1}
- *   limit={10}
- *   totalRecords={100}
- *   onPageChange={setCurrentPage}
- * />
- * 
- * @example
- * // Custom configuration
- * <Pagination
- *   currentPage={5}
- *   limit={20}
- *   totalRecords={500}
- *   onPageChange={setCurrentPage}
- *   maxVisiblePages={7}
- *   showResultsText={false}
- * />
- * 
- * @example
- * // Mobile-friendly
- * <Pagination
- *   currentPage={3}
- *   limit={5}
- *   totalRecords={50}
- *   onPageChange={setCurrentPage}
- *   maxVisiblePages={3}
- * />
- * 
- * @example
- * // Large dataset with many pages
- * <Pagination
- *   currentPage={25}
- *   limit={50}
- *   totalRecords={10000}
- *   onPageChange={setCurrentPage}
- *   maxVisiblePages={10}
- * />
- */
+
 export default function Pagination({
   currentPage = 1,
-  limit = 10,
+  limit = RECORDS_LIMIT,
   totalRecords = 0,
   onPageChange,
   showResultsText = true,
@@ -85,18 +26,10 @@ export default function Pagination({
   const totalPages = Math.ceil(totalRecords / limit);
   const safeCurrentPage = Math.max(1, Math.min(currentPage, totalPages));
 
-  /**
-   * Renders the page number buttons and navigation arrows
-   * @private
-   * @returns {JSX.Element[]} Array of page button elements
-   */
   const renderPageNumbers = () => {
     const pages = [];
 
-    // Don't render pagination if only one page
-    if (totalPages <= 1) {
-      return pages;
-    }
+    if (totalPages <= 1) return pages;
 
     // Previous arrow
     pages.push(
@@ -108,7 +41,8 @@ export default function Pagination({
         aria-label="Previous page"
         type="button"
       >
-        <IoArrowBackOutline size={22} />
+        <FaArrowLeftLong size={18} color="var(--blue-graph-light)"/>
+        <span className={classes.arrowButtonText}>Previous</span>
       </button>
     );
 
@@ -152,7 +86,7 @@ export default function Pagination({
 
     // Page numbers in range
     for (let i = startPage; i <= endPage; i++) {
-      if (i !== 1 || startPage === 1) { // Don't duplicate first page
+      if (i !== 1 || startPage === 1) {
         pages.push(
           <button
             key={i}
@@ -202,7 +136,8 @@ export default function Pagination({
         aria-label="Next page"
         type="button"
       >
-        <IoArrowForwardOutline size={22} />
+        <span className={classes.arrowButtonText}>Next</span>
+        <FaArrowRightLong size={18} color="var(--blue-graph-light)"/>
       </button>
     );
 
@@ -215,14 +150,14 @@ export default function Pagination({
 
   return (
     <div className={classes.paginationContainer}>
-      {showResultsText && (
-        <span className={classes.resultsText}>
-          Showing {startResult} - {endResult} of {totalRecords} Results
-        </span>
-      )}
       <div className={classes.paginationButtons} role="navigation" aria-label="Pagination">
         {renderPageNumbers()}
       </div>
+      {showResultsText && (
+        <span className={classes.resultsText}>
+          Showing {startResult} - {endResult} of {totalRecords}
+        </span>
+      )}
     </div>
   );
 }

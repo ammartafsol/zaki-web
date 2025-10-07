@@ -2,50 +2,50 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
-  gap: 16px;
+  margin-bottom: var(--m-20);
+  gap: var(--g-16);
 }
 
 .resultsText {
-  color: #7a7a7a;
-  font-size: 14px;
+  color: var(--gray-600);
+  font-size: var(--fs14);
   font-weight: 400;
-  line-height: 20px;
+  line-height: var(--lh-20);
   white-space: nowrap;
 }
 
 .paginationButtons {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--p-8);
   flex-wrap: wrap;
 }
 
 .pageButton {
-  color: #7a7a7a;
-  font-size: 14px;
+  color: var(--blue-bg-dark);
+  font-size: var(--fs12);
   font-weight: 400;
   display: flex;
-  min-width: 40px;
-  height: 40px;
-  padding: 8px 12px;
+  min-width: var(--w-40);
+  height: var(--h-40);
+  padding: var(--p-8) var(--p-12);
   justify-content: center;
   align-items: center;
-  border-radius: 6px;
-  border: 1px solid #e0e0e0;
-  background: #fff;
+  border-radius: var(--br-6);
+  border: none;
+  background: var(--white);
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
 }
 
 .pageButton:hover:not(:disabled) {
-  background: #f5f5f5;
-  border-color: #d0d0d0;
+  background: var(--gray-100);
+  border-color: var(--gray-300);
 }
 
 .pageButton:focus {
-  outline: 2px solid #0074d9;
+  outline: 2px solid var(--blue-graph-light);
   outline-offset: 2px;
 }
 
@@ -55,38 +55,39 @@
 }
 
 .activePage {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
+  color: var(--blue-bg-dark);
+  font-size: var(--fs12);
+  font-weight: 400;
   display: flex;
-  min-width: 40px;
-  height: 40px;
-  padding: 8px 12px;
+  min-width: var(--w-40);
+  height: var(--h-40);
+  padding: var(--p-8) var(--p-12);
   justify-content: center;
   align-items: center;
-  border-radius: 6px;
-  background: #0074d9;
-  border: 1px solid #0074d9;
+  border-radius: var(--br-6);
+  background: transparent;
+  border: 1px solid var(--blue-graph-light);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .activePage:hover {
-  background: #0056b3;
-  border-color: #0056b3;
+  background: var(--blue-graph-light);
+  border-color: var(--blue-graph-light);
+  color: var(--white);
 }
 
 .ellipsis {
-  color: #7a7a7a;
-  font-size: 14px;
+  color: var(--gray-600);
+  font-size: var(--fs12);
   font-weight: 400;
   display: flex;
-  min-width: 40px;
-  height: 40px;
-  padding: 8px 12px;
+  min-width: var(--w-40);
+  height: var(--h-40);
+  padding: var(--p-8) var(--p-12);
   justify-content: center;
   align-items: center;
-  border-radius: 6px;
+  border-radius: var(--br-6);
   border: 1px solid transparent;
   background: transparent;
   user-select: none;
@@ -94,43 +95,48 @@
 
 .arrowButton {
   display: flex;
-  width: 40px;
-  height: 40px;
-  padding: 8px;
+  gap: var(--g-10);
+  height: var(--h-40);
+  padding: var(--p-8);
   justify-content: center;
   align-items: center;
-  border-radius: 6px;
-  border: 1px solid #e0e0e0;
-  background: #fff;
-  color: #333;
+  border-radius: var(--br-6);
+  border: none;
+  outline: none;
+  background: var(--white);
+  color: var(--gray-600);
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
 }
-
+.arrowButtonText {
+  font-size: var(--fs12);
+  font-weight: 400;
+  color: var(--blue-bg-dark);
+}
 .arrowButton:hover:not(:disabled) {
-  background: #f5f5f5;
-  border-color: #d0d0d0;
+  background: var(--gray-150);
+  border-color: var(--gray-150);
 }
 
 .arrowButton:focus {
-  outline: 2px solid #0074d9;
+  outline: 2px solid var(--blue-graph-light);
   outline-offset: 2px;
 }
 
 .arrowButton:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  background: #f9f9f9;
-  color: #999;
+  background: var(--gray-50);
+  color: var(--gray-600);
 }
 
 .prevButton {
-  margin-right: 4px;
+  margin-right: var(--m-4);
 }
 
 .nextButton {
-  margin-left: 4px;
+  margin-left: var(--m-4);
 }
 
 /* Responsive design */
@@ -138,49 +144,39 @@
   .paginationContainer {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: var(--g-12);
   }
 
   .resultsText {
-    font-size: 12px;
+    font-size: var(--fs12);
     text-align: center;
   }
 
   .paginationButtons {
-    gap: 4px;
+    gap: var(--p-6);
   }
 
   .pageButton,
   .activePage,
-  .arrowButton {
-    min-width: 36px;
-    height: 36px;
-    font-size: 12px;
-  }
-
+  .arrowButton,
   .ellipsis {
     min-width: 36px;
     height: 36px;
-    font-size: 12px;
+    font-size: var(--fs12);
   }
 }
 
 @media (max-width: 480px) {
   .paginationButtons {
-    gap: 2px;
+    gap: var(--p-2);
   }
 
   .pageButton,
   .activePage,
-  .arrowButton {
-    min-width: 32px;
-    height: 32px;
-    padding: 4px 8px;
-  }
-
+  .arrowButton,
   .ellipsis {
     min-width: 32px;
     height: 32px;
-    padding: 4px 8px;
+    padding: var(--p-6) var(--p-8);
   }
 }

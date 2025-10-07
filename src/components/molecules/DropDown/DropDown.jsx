@@ -1,118 +1,144 @@
-"use client";
-import Select from "react-dropdown-select";
-import { IoChevronDown } from "react-icons/io5";
+import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
+import ReactSelect, { components } from "react-select";
 import classes from "./DropDown.module.css";
-import "./styles.css";
+import clsx from "clsx";
 
 const DropDown = ({
-  // Essential Select props
-  values = [],
-  options = [],
-  onChange,
-  multi = false,
-  placeholder = "Select...",
-  disabled = false,
-  searchable = true,
-  clearable = false,
-  style = {},
-  className = "",
-  labelField = "label",
-  valueField = "value",
-  loading = false,
-
-  // Additional essential props
-  color = "#0074D9",
-  direction = "ltr",
-  dropdownHeight = "300px",
-  dropdownPosition = "bottom",
-  closeOnSelect = false,
-  keepSelectedInList = true,
-  searchBy = "label",
-  create = false,
-  createNewLabel = "add {search}",
-  selectAll = false,
-  selectAllLabel = "Select all",
-  clearAllLabel = "Clear all",
-
-  // Callbacks
-  onSelect,
-  onDeselect,
-  onDropdownOpen,
-  onDropdownClose,
-  onCreateNew,
-  onSelectAll,
-  onClearAll,
-
-  // Custom props for our component
+  chevronIcon = false,
+  options,
   label,
-  error,
+  customStyle,
+  disabled,
+  value,
+  setValue,
+  isFilter,
+  placeholder,
+  isMulti,
+  style,
+  leftIcon,
+  errorText,
+  errorTextClass,
+  Components,
   labelClassName,
-  errorClassName,
-  containerClassName,
+  indicatorColor = "var(--text-secondary)",
+  optionLabel,
+  optionValue,
+  selectRef,
+  isSearchable = true,
+  borderRadius = "8px",
+  classNamePrefix,
+  dropDownContainerClass,
+  required = false,
+  dropDownContainer = "",
+  menuPlacement = "auto",
   ...props
 }) => {
-
-  const dropdownHandleRenderer = ({ props, state, methods }) => {
-    console.log(state);
+  const DropdownIndicator = (props) => {
     return (
-      <div className={classes.dropdownHandle}>
-        <IoChevronDown
-          className={classes.dropdownHandleIcon}
-          color={state.dropdown ? "#0074D9" : "var(--text-muted)"}
-          style={state.dropdown ? { transform: "rotate(180deg)" } : {}}
-          size={24}
-        />
-      </div>
+      <components.DropdownIndicator {...props}>
+        {props.isFocused ? (
+          <RiArrowDropUpLine size={24} color={indicatorColor} />
+        ) : (
+          <RiArrowDropDownLine size={24} color={indicatorColor} />
+        )}
+      </components.DropdownIndicator>
     );
   };
 
+  const customStyles = {
+    control: (base, state) => ({
+      ...base,
+      minHeight: 40,
+      cursor: "pointer",
+      borderRadius: 8,
+      borderColor: state.isFocused ? "var(--primary)" : "var(--border-light)",
+      boxShadow: state.isFocused ? "0 0 0 3px rgba(47,104,250,.12)" : "none",
+      backgroundColor: "var(--bg-primary)",
+      "&:hover": { borderColor: "var(--gray-800)" },
+    }),
+    valueContainer: (base) => ({ ...base, padding: "2px 8px" }),
+    input: (base) => ({ ...base, color: "var(--text-primary)" }),
+    singleValue: (base) => ({ ...base, color: "var(--text-primary)" }),
+    placeholder: (base) => ({ ...base, color: "var(--text-placeholder)" }),
+    menu: (base) => ({
+      ...base,
+      border: "1px solid var(--border-light)",
+      borderRadius: 8,
+      overflow: "hidden",
+      zIndex: 10,
+    }),
+    option: (base, state) => ({
+      ...base,
+      backgroundColor: state.isSelected
+        ? "var(--blue-graph)"
+        : state.isFocused
+        ? "var(--blue-bg)"
+        : "var(--bg-primary)",
+      color: state.isSelected ? "var(--white)" : "var(--text-primary)",
+      cursor: "pointer",
+    }),
+    multiValue: (base) => ({
+      ...base,
+      background: "var(--blue-graph)",
+      color: "var(--white)",
+    }),
+    multiValueLabel: (base) => ({ ...base, color: "var(--white)" }),
+    indicatorSeparator: () => ({ display: "none" }),
+  };
+
   return (
-    <div className={`${classes.container} ${containerClassName || ""}`}>
+    <div className={clsx(classes.container, dropDownContainer)}>
       {label && (
-        <label className={`${classes.label} ${labelClassName || ""}`}>
+        <label
+          htmlFor={`dropdown${label}`}
+          className={`${[
+            classes.label,
+            labelClassName,
+            disabled && classes.disabled,
+          ].join(" ")}`}
+        >
           {label}
+          {required && (
+            <span style={{ color: "var(--error)", marginLeft: "2px" }}>*</span>
+          )}
         </label>
       )}
 
-      <Select
-        values={values}
-        options={options}
-        onChange={onChange}
-        onSelect={onSelect}
-        onDeselect={onDeselect}
-        multi={multi}
-        placeholder={placeholder}
-        disabled={disabled}
-        searchable={searchable}
-        clearable={clearable}
-        style={style}
-        className={className}
-        labelField={labelField}
-        valueField={valueField}
-        loading={loading}
-        color={color}
-        direction={direction}
-        dropdownHeight={dropdownHeight}
-        dropdownPosition={dropdownPosition}
-        closeOnSelect={closeOnSelect}
-        keepSelectedInList={keepSelectedInList}
-        searchBy={searchBy}
-        create={create}
-        createNewLabel={createNewLabel}
-        selectAll={selectAll}
-        selectAllLabel={selectAllLabel}
-        clearAllLabel={clearAllLabel}
-        onDropdownOpen={onDropdownOpen}
-        onDropdownClose={onDropdownClose}
-        onCreateNew={onCreateNew}
-        onSelectAll={onSelectAll}
-        onClearAll={onClearAll}
-        dropdownHandleRenderer={dropdownHandleRenderer}
-        {...props}
-      />
-
-      {error && (
-        <p className={`${classes.error} ${errorClassName || ""}`}>{error}</p>
+      <div className={clsx(classes.dropdownContainer, dropDownContainerClass)}>
+        {leftIcon && <div className={classes.leftIconBox}>{leftIcon}</div>}
+        <ReactSelect
+          menuPlacement={menuPlacement}
+          inputId={`dropdown${label}`}
+          value={value}
+          onChange={setValue}
+          className={classes.reactSelect}
+          isMulti={isMulti}
+          isDisabled={disabled}
+          placeholder={placeholder}
+          options={options}
+          styles={{ ...customStyles, ...style }}
+          components={{
+            DropdownIndicator,
+            IndicatorSeparator: () => null,
+          }}
+          optionLabel={optionLabel}
+          optionValue={optionValue}
+          getOptionLabel={(option) =>
+            optionLabel ? option[optionLabel] : option.label
+          }
+          getOptionValue={(option) =>
+            optionValue ? option[optionValue] : option.value
+          }
+          isClearable={false}
+          isSearchable={isSearchable}
+          classNamePrefix={`DropdownOptionContainer ${classNamePrefix || ""}`}
+          {...props}
+        />
+      </div>
+      {errorText && (
+        <p className={clsx("errorText", errorTextClass)}>
+          {errorText + "*"}
+        </p>
       )}
     </div>
   );
