@@ -31,4 +31,6 @@
   --midnight-teal: #052328;
 
   /* linear-gradient */
+  --grey-100: rgba(255, 255, 255, 0.3);
+  --grey-200: #fffefa;
 }
