@@ -1,3 +1,6 @@
+import AboutUsTemplate from "@/components/Template/AboutUsTemplate";
+
+
 export default function AboutUsPage() {
-  return <div>About Us</div>;
+  return <AboutUsTemplate />;
 }

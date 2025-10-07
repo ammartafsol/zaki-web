@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./HeroSection.module.css";
 import Button from "@/components/atoms/Button";
 import clsx from "clsx";
+import { HiArrowRightCircle } from "react-icons/hi2";
 
 export default function HeroSection({ data }) {
   return (
@@ -13,8 +14,12 @@ export default function HeroSection({ data }) {
         </p>
       </div>
       <div className={classes.heroSectionImage}>
-       <Button label="Finde Therapeuten" variant="primary" />
-       <Button label="Treten Sie als Therapeut bei" variant="outlined" />
+        <Button
+          label="Finde Therapeuten"
+          variant="primary"
+          leftIcon={<HiArrowRightCircle size={20} />}
+        />
+        <Button label="Treten Sie als Therapeut bei" variant="outlined" />
       </div>
     </div>
   );

@@ -72,3 +72,12 @@ export const FOOTER_DATA = {
     },
   ],
 };
+
+
+export const pagesWithHeader = [
+  "/about-us",
+  "/why-improself",
+  "/our-practitioners",
+  "/faq",
+  "/",
+];
