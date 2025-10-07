@@ -44,3 +44,10 @@ a {
   font-weight: 400;
   margin-bottom: var(--m-2);
 }
+
+@media screen and (min-width: 1400px) {
+  .dashboardContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}

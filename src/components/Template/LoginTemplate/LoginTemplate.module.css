@@ -23,21 +23,22 @@
   margin-bottom: var(--m-25);
   justify-content: center;
   display: flex;
-  flex-direction: column;
+  gap: 15px;
+  /* flex-direction: column; */
   align-items: center;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   position: relative;
 }
 
 .title {
   font-size: var(--fs24);
   line-height: var(--lh32);
-  color: var(--Heading-color);
+  color: var(--heading-color);
   font-weight: 700;
 }
 
@@ -88,5 +89,5 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }

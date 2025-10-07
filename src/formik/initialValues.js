@@ -15,3 +15,16 @@ export const updatePasswordValues = {
   password: "",
   confirmPassword: "",
 };
+
+export const forgotPasswordValues = {
+  email: "",
+};
+
+export const verifyOtpValues = {
+  code: "",
+};
+
+export const resetPasswordValues = {
+  password: "",
+  confirmPassword: "",
+};

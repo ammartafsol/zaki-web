@@ -1,5 +1,5 @@
-import React from "react";
+import DashboardLayout from "@/components/organisms/DashboardLayout";
 
 export default function UserLayout({ children }) {
-  return <div>{children}</div>;
+  return <DashboardLayout>{children}</DashboardLayout>;
 }

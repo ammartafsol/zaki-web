@@ -1,7 +1,5 @@
+import ResetPasswordTemplate from "@/components/Template/ResetPasswordTemplate";
+
 export default function ResetPasswordPage() {
-  return (
-    <div>
-      <h1>Reset Password</h1>
-    </div>
-  );
+  return <ResetPasswordTemplate />;
 }

@@ -3,7 +3,7 @@
 import { loginFormValues } from "@/formik/initialValues";
 import { LoginSchema } from "@/formik/schema";
 import { useFormik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import Input from "@/components/atoms/Input/Input";
 import Button from "@/components/atoms/Button";
 import classes from "./LoginTemplate.module.css";
@@ -13,6 +13,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
 
 export default function LoginTemplate() {
+  const [loading, setLoading] = useState("");
+
   const loginForm = useFormik({
     initialValues: loginFormValues,
     validationSchema: LoginSchema,
@@ -47,6 +49,9 @@ export default function LoginTemplate() {
                   setValue={(val) => loginForm.setFieldValue("email", val)}
                   onBlur={loginForm.handleBlur}
                   error={loginForm.touched.email && loginForm.errors.email}
+                  onEnterClick={() => {
+                    loginForm.handleSubmit();
+                  }}
                 />
 
                 <Input
@@ -60,6 +65,9 @@ export default function LoginTemplate() {
                   error={
                     loginForm.touched.password && loginForm.errors.password
                   }
+                  onEnterClick={() => {
+                    loginForm.handleSubmit();
+                  }}
                 />
 
                 <Link href="/forgot-password" className={classes.forgotLink}>
@@ -68,10 +76,14 @@ export default function LoginTemplate() {
 
                 <Button
                   type="submit"
-                  fullWidth
+                  variant="secondary"
                   className={classes.submitBtn}
-                  buttonStyles={{ height: 44 }}
                   label="Sign in"
+                  onClick={() => {
+                    loginForm.handleSubmit();
+                  }}
+                  disabled={loading === "submit-form"}
+                  loading={loading === "submit-form"}
                 />
               </div>
 

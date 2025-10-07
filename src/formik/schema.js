@@ -12,3 +12,29 @@ export const LoginSchema = Yup.object({
     ),
   password: Yup.string().required("Password is required"),
 });
+
+export const ForgotPasswordSchema = Yup.object({
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required")
+    .test(
+      "no-special-chars",
+      "Email contains invalid characters",
+      (value) => !value || emailRegex.test(value)
+    ),
+});
+
+export const VerifyOtpSchema = Yup.object({
+  code: Yup.string()
+    .required("OTP is required")
+    .matches(/^\d{4,6}$/, "Enter a valid 4-6 digit code"),
+});
+
+export const ResetPasswordSchema = Yup.object({
+  password: Yup.string()
+    .min(6, "At least 6 characters")
+    .required("Password is required"),
+  confirmPassword: Yup.string()
+    .oneOf([Yup.ref("password"), null], "Passwords must match")
+    .required("Confirm your password"),
+});

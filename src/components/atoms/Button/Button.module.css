@@ -31,7 +31,7 @@
 /* Primary variant: background #FFBF00 with dark text */
 .btn[color-variant="primary"] {
   border: 1px solid var(--deep-teal);
-  background:var(--sunbeam-yellow);
+  background: var(--sunbeam-yellow);
   color: var(--deep-teal);
 }
 
@@ -79,4 +79,29 @@
 .btn[color-variant="transparent"]:active:not(:disabled) {
   transform: translateY(0);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.btn[color-variant="secondary"] {
+  background-color: var(--deep-teal);
+  border-radius: 6px;
+  color: var(--white);
+  width: 100%;
+  font-weight: 500;
+  padding: 12px 20px;
+}
+
+.btn[color-variant="secondary"]:hover:not(:disabled) {
+  background-color: var(--deep-teal);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+.btn[color-variant="secondary"]:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+.btn[color-variant="secondary"]:disabled,
+.btn[color-variant="secondary"]:disabled label {
+  opacity: 0.8;
+  cursor: not-allowed;
 }
