@@ -9,38 +9,26 @@
   --white: #ffffff;
   --white-1: #f8fafc;
   --white-2: #e2e8f0;
-  --cloud-white: #F8F8F8;
-
-
-
-
-
+  --cloud-white: #f8f8f8;
 
   /* Misc */
   --border: #e0e0e0;
   --border-1: #002850;
   --placeholder: #4b5563;
-  --deep-teal:#024757;
-  --Heading-color:#032E38;
-  --green-500:#22C55E;
-  --pastel-aqua:#ACE4E0;
-  --industrial-gray:#696969;
-  --tidewater-blue:#277F93;
-  --mint-whisper:#EEF7F6;
-  --sea-mist-fade:rgba(172, 228, 224, 0.30);
-  --sea-mist-50:rgba(172, 228, 224, 0.50);
-  --smoke-gray:#4A4A4A;
-  --cool-silver:#D5D7DA;
-  --sunbeam-yellow:#FFFA89;
-  --pure-blank:#FDFDFD;
-  --midnight-teal:#052328;
-
-
-
+  --deep-teal: #024757;
+  --heading-color: #032e38;
+  --green-500: #22c55e;
+  --pastel-aqua: #ace4e0;
+  --industrial-gray: #696969;
+  --tidewater-blue: #277f93;
+  --mint-whisper: #eef7f6;
+  --sea-mist-fade: rgba(172, 228, 224, 0.3);
+  --sea-mist-50: rgba(172, 228, 224, 0.5);
+  --smoke-gray: #4a4a4a;
+  --cool-silver: #d5d7da;
+  --sunbeam-yellow: #fffa89;
+  --pure-blank: #fdfdfd;
+  --midnight-teal: #052328;
 
   /* linear-gradient */
-  
-
-
-
 }
