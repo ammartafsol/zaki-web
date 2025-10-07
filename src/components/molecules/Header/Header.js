@@ -7,27 +7,55 @@ import Button from "@/components/atoms/Button";
 import { BiMenu, BiOutline } from "react-icons/bi";
 import { webNavData } from "@/developmentContext/appData";
 import { imageUrl } from "@/resources/utils/helper";
-import Button from "@/components/atoms/Button";
+import { HiArrowRightCircle } from "react-icons/hi2";
+import { useRouter, usePathname } from "next/navigation";
+import clsx from "clsx";
 
 const Header = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+
   return (
-    <header className={classes.header}>
+    <header
+      className={clsx(classes.header, {
+        [classes.absolute]: pathname === "/",
+        [classes.relative]: pathname !== "/",
+      })}
+    >
       <Container>
         <div className={classes.headerContent}>
           {/* Logo */}
           <div className={classes.logo}>
-            <Image src="/app-images/web-logo.png" alt="logo" fill />
+            <Image
+              src={
+                pathname === "/"
+                  ? "/app-images/web-logo.png"
+                  : "/app-images/black-logo.svg"
+              }
+              alt="logo"
+              fill
+            />
           </div>
-
-          {/* Navigation Menu */}
           <nav className={classes.nav}>
-
+            {webNavData.map((item, index) => (
+              <Link
+                key={index}
+                href={item?.path}
+                className={clsx(
+                  classes.navLink,
+                  pathname === "/" && classes.whiteNavLink,
+                )}
+              >
+                {item?.title}
+              </Link>
+            ))}
           </nav>
-
-          {/* Mobile menu button */}
-          <button type="button" className={styles.mobileMenuButton}>
-            <BiMenu size={30} />
-          </button>
+          <Button
+            label="Finde Therapeuten"
+            variant="primary"
+            leftIcon={<HiArrowRightCircle size={16} />}
+            className={classes.ctaButton}
+          />
         </div>
       </Container>
     </header>
