@@ -1,11 +1,13 @@
 "use client";
-import classes from "./AboutUsTemplate.module.css";
+import classes from "./WhyImproselfTemplate.module.css";
 import { Container, Row, Col } from "react-bootstrap";
 import clsx from "clsx";
 // import { aboutUsPageData } from "@/developmentContext/aboutUsPage";
 import { useState } from "react";
 import Banner from "@/components/molecules/Banner";
-export default function AboutUsTemplate() {
+
+
+export default function WhyImproselfTemplate() {
     // const [data, setData] = useState(aboutUsPageData);
 
   return (
@@ -13,7 +15,7 @@ export default function AboutUsTemplate() {
       <Container>
         <Row>
           <Col lg={12}>
-           <Banner title="About Us" path="About" />
+           <Banner title="Why Improself" path="Why Improself?" />
           </Col>
         </Row>
       </Container>

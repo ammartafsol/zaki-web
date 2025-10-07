@@ -1,0 +1,61 @@
+.serviceCards {
+  border-radius: var(--br-16);
+  background: var(--white);
+  padding: var(--p-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--g-20);
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  justify-content: space-between;
+}
+.serviceCards:hover {
+  background: var( --tidewater-blue);
+}
+.serviceCards:hover .title,
+.serviceCards:hover .description,
+.serviceCards:hover .button {
+  color: var(--white) !important;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--g-10);
+}
+.image {
+  height: 266px;
+  width: 354px;
+  position: relative;
+}
+.image img {
+  object-fit: cover;
+  border-radius: var(--br-16);
+}
+
+.title {
+  color: var(--deep-teal);
+  font-family: var(--font-ranade);
+  line-height: var(--lh32);
+  text-transform: capitalize;
+}
+.description {
+  color: var(--midnight-teal);
+  font-family: var(--font-archivo);
+  line-height: var(--lh26);
+}
+.button {
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  color: var(--deep-teal) !important;
+  font-family: var(--font-archivo) !important;
+  line-height: var(--lh24) !important;
+  text-transform: capitalize !important;
+}
+
+@media (max-width: 1400px) {
+  .image {
+    width: 311px;
+    height: 179px;
+  }
+}

@@ -28,3 +28,9 @@ export const resetPasswordValues = {
   password: "",
   confirmPassword: "",
 };
+
+export const contactFormValues = {
+  name: "",
+  email: "",
+  message: "",
+};

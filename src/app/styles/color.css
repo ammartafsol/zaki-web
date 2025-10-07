@@ -30,7 +30,10 @@
   --pure-blank: #fdfdfd;
   --midnight-teal: #052328;
 
+  --text-night: #121212;
+
   /* linear-gradient */
   --grey-100: rgba(255, 255, 255, 0.3);
   --grey-200: #fffefa;
+  --grey-300: #e4e4e4;
 }

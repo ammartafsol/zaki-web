@@ -1,0 +1,22 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--g-16);
+}
+.bannerTitle {
+  color: var(--midnight-teal);
+  font-family: var(--font-ranade);
+  line-height: var(--lh52);
+}
+.bannerPath {
+  color: var(--midnight-teal);
+  font-family: var(--font-archivo);
+  line-height: var(--lh26);
+}
+.bannerPathLink {
+    color: #277F93;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}

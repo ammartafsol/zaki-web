@@ -30,13 +30,13 @@ const Header = () => {
               src={
                 pathname === "/"
                   ? "/app-images/web-logo.png"
-                  : "/app-images/black-logo.svg"
+                  : "/svgs/black-logo.svg"
               }
               alt="logo"
               fill
             />
           </div>
-          <nav className={classes.nav}>
+          <nav className={clsx(classes.nav, pathname === "/" && classes.whiteNav)}>
             {webNavData.map((item, index) => (
               <Link
                 key={index}
@@ -44,7 +44,9 @@ const Header = () => {
                 className={clsx(
                   classes.navLink,
                   pathname === "/" && classes.whiteNavLink,
-                )}
+                  pathname === item?.path && classes.activeNavLink,
+                )
+              }
               >
                 {item?.title}
               </Link>

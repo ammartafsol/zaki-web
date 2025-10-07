@@ -1,0 +1,8 @@
+.wrapper {
+    padding-block: var(--p-70);
+    background: url("/app-images/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
