@@ -1,37 +1,27 @@
 import React from "react";
-import styles from "./Header.module.css";
+import classes from "./Header.module.css";
 import Image from "next/image";
 import { Container } from "react-bootstrap";
 import Link from "next/link";
 import Button from "@/components/atoms/Button";
 import { BiMenu, BiOutline } from "react-icons/bi";
+import { webNavData } from "@/developmentContext/appData";
+import { imageUrl } from "@/resources/utils/helper";
+import Button from "@/components/atoms/Button";
 
 const Header = () => {
   return (
-    <header className={styles.header}>
-      <Container className="container-fluid">
-        <div className={styles.headerContent}>
+    <header className={classes.header}>
+      <Container>
+        <div className={classes.headerContent}>
           {/* Logo */}
-          <div className={styles.logo}>
-            <Image src="/app-images/logo.png" alt="logo" fill />
+          <div className={classes.logo}>
+            <Image src="/app-images/web-logo.png" alt="logo" fill />
           </div>
 
           {/* Navigation Menu */}
-          <nav className={styles.nav}>
-            <Link href="#features" className={styles.navLink}>
-              Features
-            </Link>
-            <Link href="#learning" className={styles.navLink}>
-              Learning Hub
-            </Link>
-            <Link href="#leaderboard" className={styles.navLink}>
-              Leaderboard
-            </Link>
-            {/* Action Buttons */}
-            <div className={styles.actionButtons}>
-              <Button label="Sign In" variant="outlined" />
-              <Button label="Start Free Trial" variant="primary" />
-            </div>
+          <nav className={classes.nav}>
+
           </nav>
 
           {/* Mobile menu button */}
