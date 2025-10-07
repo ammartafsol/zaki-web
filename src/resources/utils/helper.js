@@ -8,7 +8,9 @@ export const mergeClass = (...classes) => {
 
 // Formatters
 export const getFormattedParams = (label) => {
-  return capitalizeEachWord(label.replace(formRegEx, formRegExReplacer));
+  if (!label) return "-";
+
+  return capitalizeEachWord(label?.replace(formRegEx, formRegExReplacer));
 };
 
 export const getFormattedPrice = (price, currency = "$", toFixed) => {

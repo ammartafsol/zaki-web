@@ -1,0 +1,147 @@
+.card {
+  background: var(--white);
+
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+
+  transition: transform 180ms ease, box-shadow 220ms ease;
+}
+
+.card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
+}
+
+.header {
+  background: var(--mint-whisper);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar img {
+  object-fit: cover;
+}
+
+.userInfo {
+  flex: 1;
+}
+
+.name {
+  color: var(--heading-color);
+  font-family: var(--font-inter);
+  font-size: var(--fs18);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.email {
+  color: var(--industrial-gray);
+  font-family: var(--font-inter);
+  font-size: var(--fs14);
+  font-weight: 400;
+}
+
+.categorySection {
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(172, 228, 224, 0.56);
+  padding-bottom: 16px;
+}
+
+.categoryLabel {
+  color: var(--industrial-gray);
+  font-family: var(--font-inter);
+  font-size: var(--fs12);
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.categoryValue {
+  color: var(--heading-color);
+  font-family: var(--font-inter);
+  font-size: var(--fs16);
+  font-weight: 600;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 16px 0;
+}
+
+.detailsSection {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: start;
+}
+
+.detailsList {
+  display: grid;
+  gap: 12px;
+}
+
+.detailRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detailIcon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+.detailIcon img {
+  object-fit: contain;
+}
+
+.detailText {
+  color: var(--heading-color);
+  font-family: var(--font-inter);
+  font-size: var(--fs14);
+  font-weight: 400;
+}
+
+.priceSection {
+  text-align: center;
+}
+
+.price {
+  color: var(--heading-color);
+  font-family: var(--font-inter);
+  font-size: var(--fs24);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.priceLabel {
+  color: var(--heading-color);
+  font-family: var(--font-inter);
+  font-size: var(--fs12);
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .detailsSection {
+    grid-template-columns: 1fr;
+  }
+  .priceSection {
+    text-align: left;
+  }
+}

@@ -4,5 +4,6 @@ export const dashboardPopoverOptions = [
   {
     label: "View",
     icon: <FaEye />,
+    value: "view",
   },
 ];

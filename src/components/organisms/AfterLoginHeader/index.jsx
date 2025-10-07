@@ -34,7 +34,12 @@ export default function AfterLoginHeader() {
                   item?.path === pathname && classes.selectedNav
                 )}
               >
-                <div className={classes.icon}>
+                <div
+                  className={clsx(
+                    classes.icon,
+                    item?.path === pathname && classes.selectedNavIcon
+                  )}
+                >
                   <Image src={item?.icon} fill priority alt={item?.title} />
                 </div>
                 {item.title}

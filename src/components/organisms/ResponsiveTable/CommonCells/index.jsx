@@ -1,4 +1,7 @@
-import { getFormattedParams } from "@/resources/utils/helper";
+import {
+  getFormattedParams,
+  getFormattedPrice,
+} from "@/resources/utils/helper";
 import clsx from "clsx";
 import moment from "moment";
 import classes from "./CommonCells.module.css";
@@ -27,6 +30,14 @@ export const RenderTextCell = ({ cellValue: item, bold = false }) => {
   );
 };
 
+export const RenderAmountCell = ({ cellValue: item }) => {
+  return (
+    <span className={clsx(classes.amount, "maxLine1", classes.textCell)}>
+      {getFormattedPrice(item)}
+    </span>
+  );
+};
+
 export const RenderDateCell = ({ cellValue: item }) => {
   return (
     <span className={clsx(classes?.date, "maxLine1", classes.textCell)}>
@@ -36,16 +47,13 @@ export const RenderDateCell = ({ cellValue: item }) => {
 };
 
 export const RenderStatusCell = ({ cellValue: item }) => {
-  const isBoolean = typeof item === "boolean";
-  const displayValue = isBoolean ? (item ? "active" : "inactive") : item;
-
-  const statusClass = statusClassMap[displayValue];
+  const statusClass = statusClassMap[item];
 
   return (
     <span
       className={clsx(classes.status, statusClass && statusClass?.className)}
     >
-      {getFormattedParams(displayValue)}
+      {getFormattedParams(item)}
     </span>
   );
 };

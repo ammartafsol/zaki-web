@@ -1,0 +1,28 @@
+.routeDivIcon {
+  width: 14px;
+  height: 14px;
+  position: relative;
+}
+
+.routeDiv {
+  width: 28px !important;
+  padding: 0 !important;
+  height: 28px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleHeader {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.title {
+  color: var(--heading-color);
+  font-family: var(--font-inter);
+  text-transform: capitalize;
+  font-weight: 600;
+}

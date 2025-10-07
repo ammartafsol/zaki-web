@@ -53,11 +53,16 @@
   background: var(--white);
   color: var(--heading-color);
 }
+
 .selectedNav:hover {
   color: var(--white);
 }
 .selectedNav:hover .icon {
   filter: brightness(0) invert(1);
+}
+
+.selectedNavIcon {
+  filter: brightness(0) invert(0) saturate(100%);
 }
 
 /* Icon micro-interaction on hover */
