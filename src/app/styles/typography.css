@@ -1,5 +1,6 @@
 :root {
   /* Font Sizes */
+  --fs12: 12px;
   --fs14: 14px;
   --fs16: 16px;
   --fs18: 18px;
@@ -29,6 +30,7 @@
   --p-40: 40px;
 
   /* Margin */
+  --m-2: 2px;
   --m-5: 5px;
   --m-10: 10px;
   --m-15: 15px;
@@ -77,6 +79,10 @@ span {
 }
 
 /* Font Size Utility Classes */
+.fs12 {
+  font-size: var(--fs12);
+}
+
 .fs14 {
   font-size: var(--fs14);
 }
@@ -138,3 +144,73 @@ span {
   font-weight: 900;
 }
 
+/* Responsive Font Sizes for Root Element */
+@media (max-width: 1400px) {
+  :root {
+    --fs12: 12px;
+    --fs14: 13px;
+    --fs16: 15px;
+    --fs18: 17px;
+    --fs20: 19px;
+    --fs24: 22px;
+    --fs32: 30px;
+    --fs44: 40px;
+    --fs54: 48px;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --fs12: 11px;
+    --fs14: 12px;
+    --fs16: 14px;
+    --fs18: 16px;
+    --fs20: 18px;
+    --fs24: 20px;
+    --fs32: 28px;
+    --fs44: 36px;
+    --fs54: 42px;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --fs12: 10px;
+    --fs14: 11px;
+    --fs16: 13px;
+    --fs18: 15px;
+    --fs20: 17px;
+    --fs24: 19px;
+    --fs32: 26px;
+    --fs44: 32px;
+    --fs54: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --fs12: 9px;
+    --fs14: 10px;
+    --fs16: 12px;
+    --fs18: 14px;
+    --fs20: 16px;
+    --fs24: 18px;
+    --fs32: 24px;
+    --fs44: 28px;
+    --fs54: 34px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --fs12: 8px;
+    --fs14: 9px;
+    --fs16: 11px;
+    --fs18: 13px;
+    --fs20: 15px;
+    --fs24: 17px;
+    --fs32: 22px;
+    --fs44: 26px;
+    --fs54: 30px;
+  }
+}

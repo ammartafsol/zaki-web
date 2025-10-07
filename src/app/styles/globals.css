@@ -38,3 +38,9 @@ a {
   margin: 0px;
   padding: 0px 60px;
 }
+.error {
+  color: var(--error);
+  font-size: var(--fs12);
+  font-weight: 400;
+  margin-bottom: var(--m-2);
+}
