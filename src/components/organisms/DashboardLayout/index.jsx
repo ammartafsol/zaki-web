@@ -7,7 +7,7 @@ export default function DashboardLayout({ children }) {
   return (
     <div className={classes.dashboardLayout}>
       <Container className={"dashboardContainer"}>
-        <Row>
+        <Row className={classes.dashboardRow}>
           <Col md={12}>
             <AfterLoginHeader />
           </Col>

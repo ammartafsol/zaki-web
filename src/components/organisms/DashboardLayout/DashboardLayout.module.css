@@ -1,3 +1,6 @@
 .dashboardLayout {
   margin-block: 20px;
 }
+.dashboardRow {
+  gap: 35px;
+}

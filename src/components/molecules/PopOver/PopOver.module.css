@@ -1,0 +1,122 @@
+.overlay {
+  z-index: 100;
+  max-width: 200px;
+  min-width: 100px;
+  border-radius: 8px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  overflow-x: hidden;
+  background: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.icon {
+  cursor: pointer;
+  color: var(--industrial-gray);
+}
+
+.overlay li {
+  list-style: none;
+}
+
+.borderBottom {
+  border-bottom: 1px solid var(--border);
+}
+.borderTop {
+  border-top: 1px solid var(--border);
+}
+
+.overlay .overlayLink {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: var(--font-inter);
+  font-size: var(--fs14);
+  font-weight: 400;
+  cursor: pointer;
+  color: var(--heading-color);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  will-change: transform;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.overlayLink .label {
+  color: var(--heading-color);
+  font-family: var(--font-inter);
+  font-size: var(--fs14);
+  font-weight: 400;
+}
+
+.overlayLink:hover {
+  background: var(--mint-whisper);
+  color: var(--heading-color);
+}
+.overlayLink:first-child:hover {
+  border-radius: 8px 8px 0 0;
+}
+.overlayLink:last-child:hover {
+  border-radius: 0 0 8px 8px;
+}
+
+.overlayPopover :global(.popover-arrow) {
+  display: none;
+}
+
+.noOption {
+  padding: 12px 16px;
+  font-family: var(--font-inter);
+  font-size: var(--fs14);
+  color: var(--smoke-gray);
+}
+.btnDiv {
+  display: flex;
+  padding: 8px;
+  border-top: 1px solid var(--border);
+  flex-direction: column;
+}
+.btnDiv button {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 8px 12px !important;
+  font-family: var(--font-inter);
+  font-size: var(--fs14);
+}
+.iconDiv {
+  color: var(--industrial-gray);
+}
+.iconDiv svg {
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1/1;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.overlayLink:hover .iconDiv svg {
+  transform: scale(1.05);
+  color: var(--heading-color);
+}
+
+/* Keyframes */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

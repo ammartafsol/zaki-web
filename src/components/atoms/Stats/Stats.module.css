@@ -1,0 +1,73 @@
+.card {
+  border-radius: 20px;
+  background: #eef7f6;
+  border: 1px solid var(--border);
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 180ms ease, box-shadow 200ms ease,
+    background-color 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.title {
+  color: var(--midnight-teal);
+  font-size: var(--fs16);
+  font-weight: 600;
+}
+
+.iconPill {
+  height: 45px;
+  width: 45px;
+  border-radius: 14px;
+  background: var(--deep-teal);
+  display: grid;
+  place-items: center;
+  color: var(--white);
+}
+
+.iconPillImage {
+  width: 20px;
+  position: relative;
+  height: 20px;
+}
+.iconPillImage img {
+  object-fit: contain;
+}
+
+.contentRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.value {
+  color: var(--heading-color);
+  font-size: var(--fs44);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.delta {
+  font-weight: 500;
+  font-size: var(--fs16);
+  align-self: flex-end;
+}
+
+.positive {
+  color: var(--green-500);
+}
+
+.negative {
+  color: #ef4444;
+}

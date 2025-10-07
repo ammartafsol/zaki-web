@@ -1,5 +1,82 @@
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   position: relative;
+}
+.nav {
+  display: flex;
+  padding: 10px 16px;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 16px;
+  background: var(--deep-teal);
+}
+.navLink {
+  display: flex;
+  padding: 14px;
+  align-items: center;
+  cursor: pointer;
+  gap: 4px;
+  color: var(--white);
+  font-family: var(--font-sen);
+  border-radius: 16px;
+  font-size: var(--fs16);
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+.navLink:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navLink:focus-visible {
+  outline: none;
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 0 2px rgba(172, 228, 224, 0.65);
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+.icon img {
+  object-fit: contain;
+}
+
+.selectedNav {
+  background: var(--white);
+  color: var(--heading-color);
+}
+.selectedNav:hover {
+  color: var(--white);
+}
+.selectedNav:hover .icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Icon micro-interaction on hover */
+.navLink:hover .icon {
+  transform: scale(1.06);
+}
+
+.profile {
+  width: fit-content;
+  margin-inline: auto 0;
+  gap: 16px;
+}
+.profileImage {
+  border-radius: 8px;
+  border: 1px solid #ace4e0;
+  height: 44px;
+  width: 44px;
+  position: relative;
+}
+.profileImage img {
+  object-fit: cover;
 }

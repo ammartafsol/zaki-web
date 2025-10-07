@@ -36,6 +36,7 @@ export default function ResponsiveTable({
               ))}
             </tr>
           </thead>
+
           <tbody className={classes.tableBody}>
             {loading ? (
               <TableSkeleton rowsCount={RECORDS_LIMIT} colsData={tableHeader} />

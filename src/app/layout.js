@@ -1,7 +1,7 @@
 import { CustomProvider } from "@/store/customProvider";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Archivo, Inter } from "next/font/google";
+import { Archivo, Inter, Sen } from "next/font/google";
 import localFont from "next/font/local";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -27,6 +27,12 @@ const ranade = localFont({
   style: "normal",
 });
 
+const sen = Sen({
+  variable: "--font-sen",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata = {
   title: "Improself Web ",
   description: `Your go-to source for mental health insights, tools, and advice.`,
@@ -36,7 +42,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${archivo.variable} ${ranade.variable}`}
+        className={`${inter.variable} ${archivo.variable} ${ranade.variable} ${sen.variable}`}
         suppressHydrationWarning
       >
         <ToastContainer />
