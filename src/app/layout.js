@@ -1,7 +1,8 @@
 import { CustomProvider } from "@/store/customProvider";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Inter } from "next/font/google";
+import { Archivo, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./styles/globals.css";
@@ -11,15 +12,32 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const archivo = Archivo({
+  variable: "--font-archivo",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+// Local Georgia font
+const ranade = localFont({
+  src: "./fonts/ranade/Ranade-Variable.ttf",
+  variable: "--font-ranade",
+  weight: "400 500 600 700",
+  style: "normal",
+});
+
 export const metadata = {
-  title: "next-web",
-  description: `A Next.js web application with custom fonts and styles`,
+  title: "Improself Web ",
+  description: `Your go-to source for mental health insights, tools, and advice.`,
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable}`} suppressHydrationWarning>
+      <body
+        className={`${inter.variable} ${archivo.variable} ${ranade.variable}`}
+        suppressHydrationWarning
+      >
         <ToastContainer />
         <CustomProvider>
           {/* <SocketProvider> */}
