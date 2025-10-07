@@ -1,0 +1,23 @@
+.headingSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--g-10);
+}
+ .text {
+  color: var(--midnight-teal);
+  font-family: var(--font-archivo);
+  line-height: var(--lh22);
+  text-transform: uppercase;
+}
+ .title {
+  color: var(--midnight-teal);
+  font-family: var(--font-ranade);
+  line-height: var(--lh52);
+}
+ .description {
+  color: var(--text-night);
+  font-family: var(--font-archivo);
+  line-height: var(--lh30);
+}

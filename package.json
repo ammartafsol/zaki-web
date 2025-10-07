@@ -30,6 +30,7 @@
     "react-dom": "^19.1.1",
     "react-dropdown-select": "^4.12.2",
     "react-dropzone": "^14.3.8",
+    "react-elastic-carousel": "^0.11.5",
     "react-google-autocomplete": "^2.7.5",
     "react-icons": "^5.5.0",
     "react-multi-date-picker": "^4.5.2",

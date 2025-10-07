@@ -19,11 +19,10 @@
 
 .headerContent {
   border-radius: 30px;
-  padding: 20px 30px;
+  padding: var(--p-20) 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80px;
 }
 
 .logo {
@@ -38,16 +37,20 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: var(--g-20);
   flex: 1;
   justify-content: end;
   padding-right: 20px;
-  border-right: 1px solid var(--white);
+  border-right: 1px solid #E4E4E4;
   margin-right: 18px;
 }
 
+.whiteNav {
+  border-right: 1px solid var(--white);
+}
+
 .navLink {
-  color: var(--Text---Night-2, #052328);
+  color: var(--midnight-teal);
   font-family: var(--font-ranade);
   font-size: var(--fs16);
   font-weight: 400;
@@ -55,6 +58,13 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: color 0.2s ease-in-out;
+}
+.whiteNavLink {
+  color: var(--white);
+}
+.activeNavLink {
+  color: #d9e87b;
+  border-bottom: 1px solid #d9e87b;
 }
 
 .navLink:hover {
