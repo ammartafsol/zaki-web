@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./styles/globals.css";
+import { cookies } from "next/headers";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -42,9 +43,13 @@ export const metadata = {
   description: `Your go-to source for mental health insights, tools, and advice.`,
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const cookie = await cookies();
+  const cookieLang = cookie.get("googtrans")?.value;
+  console.log(cookieLang);
+
   return (
-    <html lang="en">
+    <html lang={cookieLang === "/en/de" ? "de" : "en"}>
       <body
         className={`${inter.variable} ${archivo.variable} ${ranade.variable} ${sen.variable}`}
         suppressHydrationWarning

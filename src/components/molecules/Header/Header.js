@@ -10,6 +10,7 @@ import { imageUrl } from "@/resources/utils/helper";
 import { HiArrowRightCircle } from "react-icons/hi2";
 import { useRouter, usePathname } from "next/navigation";
 import clsx from "clsx";
+import LanguageSwitcher from "@/components/atoms/LanguageSwitcher";
 
 const Header = () => {
   const router = useRouter();
@@ -52,6 +53,9 @@ const Header = () => {
               </Link>
             ))}
           </nav>
+          <div className={classes.languageSwitcherDiv}>
+            <LanguageSwitcher />
+          </div>
           <Button
             label="Finde Therapeuten"
             variant="primary"

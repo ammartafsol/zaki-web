@@ -4,10 +4,12 @@ export const loginFormValues = {
 };
 
 export const signUpFormValues = {
-  firstName: "",
-  lastName: "",
+  fullName: "",
   email: "",
   password: "",
+  confirmPassword: "",
+  phoneNumber: "",
+  callingCode: "",
 };
 
 export const updatePasswordValues = {

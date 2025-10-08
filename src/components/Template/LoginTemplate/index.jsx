@@ -19,7 +19,6 @@ export default function LoginTemplate() {
     initialValues: loginFormValues,
     validationSchema: LoginSchema,
     onSubmit: (values) => {
-      console.log(values);
     },
   });
 
