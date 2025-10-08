@@ -42,7 +42,7 @@ a {
   color: var(--error);
   font-size: var(--fs12);
   font-weight: 400;
-  margin-bottom: var(--m-2);
+  margin-top: 10px;
 }
 .maxLine1 {
   display: -webkit-box;
@@ -71,7 +71,6 @@ a {
 .opacity-80 {
   opacity: 0.8 !important;
 }
-
 
 .maxLine1 {
   display: -webkit-box;

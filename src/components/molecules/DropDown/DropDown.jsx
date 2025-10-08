@@ -16,8 +16,8 @@ const DropDown = ({
   isMulti,
   style,
   leftIcon,
-  errorText,
-  errorTextClass,
+  error,
+  errorClass,
   Components,
   labelClassName,
   indicatorColor = "var(--text-secondary)",
@@ -48,38 +48,58 @@ const DropDown = ({
   const customStyles = {
     control: (base, state) => ({
       ...base,
-      minHeight: 40,
+      minHeight: "auto",
       cursor: "pointer",
-      borderRadius: 8,
-      borderColor: state.isFocused ? "var(--primary)" : "var(--border-light)",
-      boxShadow: state.isFocused ? "0 0 0 3px rgba(47,104,250,.12)" : "none",
-      backgroundColor: "var(--bg-primary)",
-      "&:hover": { borderColor: "var(--gray-800)" },
+      borderRadius: 0,
+      border: "none",
+      boxShadow: "none",
+      backgroundColor: "transparent",
+      "&:hover": { border: "none" },
     }),
-    valueContainer: (base) => ({ ...base, padding: "2px 8px" }),
-    input: (base) => ({ ...base, color: "var(--text-primary)" }),
-    singleValue: (base) => ({ ...base, color: "var(--text-primary)" }),
-    placeholder: (base) => ({ ...base, color: "var(--text-placeholder)" }),
+    valueContainer: (base) => ({ ...base, padding: 0 }),
+    input: (base) => ({
+      ...base,
+      color: "var(--heading-color)",
+      fontFamily: "var(--font-inter)",
+      fontSize: "var(--fs16)",
+    }),
+    singleValue: (base) => ({
+      ...base,
+      color: "var(--heading-color)",
+      fontFamily: "var(--font-inter)",
+      fontSize: "var(--fs16)",
+    }),
+    placeholder: (base) => ({
+      ...base,
+      color: "var(--industrial-gray)",
+      fontFamily: "var(--font-inter)",
+      fontSize: "var(--fs16)",
+    }),
     menu: (base) => ({
       ...base,
-      border: "1px solid var(--border-light)",
-      borderRadius: 8,
+      border: "1px solid var(--border)",
+      borderRadius: 6,
       overflow: "hidden",
       zIndex: 10,
+      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
     }),
     option: (base, state) => ({
       ...base,
       backgroundColor: state.isSelected
-        ? "var(--blue-graph)"
+        ? "var(--tidewater-blue)"
         : state.isFocused
-        ? "var(--blue-bg)"
-        : "var(--bg-primary)",
-      color: state.isSelected ? "var(--white)" : "var(--text-primary)",
+        ? "var(--mint-whisper)"
+        : "var(--white)",
+      color: state.isSelected ? "var(--white)" : "var(--heading-color)",
       cursor: "pointer",
+      fontFamily: "var(--font-inter)",
+      fontSize: "var(--fs16)",
+      padding: "12px 16px",
+      transition: "background-color 160ms ease, color 160ms ease",
     }),
     multiValue: (base) => ({
       ...base,
-      background: "var(--blue-graph)",
+      background: "var(--tidewater-blue)",
       color: "var(--white)",
     }),
     multiValueLabel: (base) => ({ ...base, color: "var(--white)" }),
@@ -135,11 +155,7 @@ const DropDown = ({
           {...props}
         />
       </div>
-      {errorText && (
-        <p className={clsx("errorText", errorTextClass)}>
-          {errorText + "*"}
-        </p>
-      )}
+      {error && <p className={clsx("error")}>{error + "*"}</p>}
     </div>
   );
 };

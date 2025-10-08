@@ -7,3 +7,20 @@ export const dashboardPopoverOptions = [
     value: "view",
   },
 ];
+
+export const languages = [
+  {
+    title: "English",
+    _id: "66f296a825122",
+  },
+  {
+    title: "Spanish",
+    _id: "es",
+    _id: "66f296a800000000",
+  },
+  {
+    title: "French",
+
+    _id: "66f296a82512240000000000",
+  },
+];

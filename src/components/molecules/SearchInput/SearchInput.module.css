@@ -1,0 +1,9 @@
+.searchInput {
+  background: #f8f8f8;
+  border: none !important;
+}
+.searchIcon {
+  width: 18px;
+  height: 18px;
+  position: relative;
+}

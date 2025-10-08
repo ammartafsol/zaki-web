@@ -1,0 +1,17 @@
+.rowGap {
+  row-gap: 20px;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttonContainer button {
+  width: fit-content !important;
+}
+.photoContainer {
+  border-radius: 16px;
+  background: var(--mint-whisper);
+  padding: 14px;
+}

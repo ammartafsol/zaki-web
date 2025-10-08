@@ -1,9 +1,65 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
 
-.label{
-    color: var(--black-50);
-    font-size: var(--fs14);
-    margin-bottom: 8px;
-    font-weight: 400;
-    line-height: 20px;
-    transition: color .2s;
+.label {
+  color: var(--heading-color);
+  font-size: var(--fs14);
+  font-weight: 600;
+  font-family: var(--font-inter);
+  line-height: 20px;
+  margin-bottom: 6px;
+}
+
+.dropdownContainer {
+  position: relative;
+  display: flex;
+  padding: 1px 14px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--cool-silver);
+  background: var(--white);
+  box-shadow: 0 1px 2px 0 rgba(10, 13, 18, 0.05);
+  transition: border-color 180ms ease, box-shadow 200ms ease,
+    transform 180ms ease, background-color 180ms ease;
+}
+
+.dropdownContainer:hover {
+  border-color: var(--border);
+  box-shadow: 0 3px 8px 0 rgba(10, 13, 18, 0.08);
+}
+
+.dropdownContainer:focus-within {
+  border-color: var(--tidewater-blue);
+  background-color: var(--mint-whisper);
+}
+
+.reactSelect {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.leftIconBox {
+  display: flex;
+  align-items: center;
+  color: var(--industrial-gray);
+}
+
+.disabled {
+  opacity: 0.6;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .dropdownContainer {
+    transition: none;
+  }
+  .dropdownContainer:hover {
+    transform: none;
+  }
 }

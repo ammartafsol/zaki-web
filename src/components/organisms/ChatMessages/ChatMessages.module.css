@@ -1,0 +1,69 @@
+.chatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 16px;
+}
+.chatHeaderImage {
+  width: 56px;
+  height: 56px;
+  aspect-ratio: 1/1;
+  border-radius: 56px;
+  overflow: hidden;
+  position: relative;
+}
+
+.chatHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.chatHeaderImage img {
+  object-fit: cover;
+}
+.chatMessages {
+  height: 100%;
+  border-radius: 24px;
+  background-color: var(--white);
+  padding: 16px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.chatHeaderInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+}
+.chatHeaderInfo h1 {
+  font-size: var(--fs16);
+  font-weight: 500;
+
+  font-family: var(--font-inter);
+  color: #222;
+}
+.chatHeaderInfoText {
+  font-size: var(--fs12);
+  font-weight: 400;
+  font-family: var(--font-inter);
+  color: var(--industrial-gray);
+}
+
+.chatMessagesContainer {
+  min-height: calc(100vh - 385px);
+  overflow-y: auto;
+  margin-block: 10px;
+}
+
+.microphoneIcon {
+  width: 24px;
+  height: 24px;
+  color: #757575;
+  cursor: pointer;
+}
+
+.chatInput {
+  border-radius: 14px !important;
+}

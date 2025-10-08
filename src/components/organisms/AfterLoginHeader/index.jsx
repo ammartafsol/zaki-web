@@ -5,11 +5,12 @@ import { Col, Container, Row } from "react-bootstrap";
 import Image from "next/image";
 import Link from "next/link";
 import { nav_data } from "@/developmentContext/appData";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import clsx from "clsx";
 
 export default function AfterLoginHeader() {
   const pathname = usePathname();
+  const router = useRouter();
   // const { user } = useSelector((state) => state.authReducer);
   const user = {
     photo: "/app-images/user-profile.png",
@@ -67,7 +68,10 @@ export default function AfterLoginHeader() {
               </div>
               Notifications
             </Link>
-            <div className={classes.profileImage}>
+            <div
+              className={classes.profileImage}
+              onClick={() => router.push("/user/profile")}
+            >
               <Image
                 src={user?.photo ?? "/app-images/default-user.png"}
                 fill

@@ -2,6 +2,9 @@
   box-shadow: none !important;
   border: none !important;
   border-bottom: 1px solid rgba(172, 228, 224, 0.56) !important;
-  padding-bottom: 13px !important;
+  padding-bottom: 16px !important;
   border-radius: 0px !important;
+}
+.boxWrapper {
+  gap: 4px !important;
 }

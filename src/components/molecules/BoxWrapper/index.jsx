@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./BoxWrapper.module.css";
 import Tabs from "../Tabs/Tabs";
+import clsx from "clsx";
 
 export default function BoxWrapper({
   children,
@@ -8,9 +9,10 @@ export default function BoxWrapper({
   selectedTab,
   setSelectedTab,
   tabsOptions,
+  boxWrapperClass,
 }) {
   return (
-    <div className={classes.boxWrapper}>
+    <div className={clsx(classes.boxWrapper, boxWrapperClass)}>
       {showTabs && (
         <Tabs
           tabsOptions={tabsOptions}

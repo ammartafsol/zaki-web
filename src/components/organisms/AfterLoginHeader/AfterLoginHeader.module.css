@@ -81,6 +81,7 @@
   height: 44px;
   width: 44px;
   position: relative;
+  cursor: pointer;
 }
 .profileImage img {
   object-fit: cover;

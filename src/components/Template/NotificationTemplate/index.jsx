@@ -20,7 +20,7 @@ export default function NotificationTemplate() {
             <TitleHeader title="Notifications" />
           </Col>
           <Col md={12} className="p-0">
-            <BoxWrapper>
+            <BoxWrapper boxWrapperClass={classes.boxWrapper}>
               {loading === "get-data"
                 ? Array.from({ length: 6 }).map((item, index) => (
                     <Col md={12} key={index}>

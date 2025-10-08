@@ -1,0 +1,171 @@
+.rowGap {
+  row-gap: 22px;
+}
+.userImageDiv {
+  margin: 0 auto;
+}
+.userImage {
+  position: relative;
+  width: 107px;
+  height: 107px;
+  border-radius: 107px;
+  border: 3px solid rgba(172, 228, 224, 0.5);
+  overflow: hidden;
+}
+
+.userInfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+.userName {
+  color: var(--deep-teal);
+  font-family: var(--font-inter);
+  font-size: var(--fs16);
+  font-weight: 600;
+}
+
+.status {
+  color: var(--industrial-gray);
+  font-family: var(--font-inter);
+  font-size: var(--fs12);
+}
+
+.profileImage {
+  position: relative;
+  width: fit-content;
+}
+
+.statusDiv {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  border: 2.1px solid var(--cloud-white);
+  border-radius: 14px;
+  filter: drop-shadow(0 4px 5.6px rgba(0, 0, 0, 0.1));
+  position: absolute;
+
+  z-index: 1;
+  animation: pulse 2s infinite;
+}
+
+.roomStatusDiv {
+  right: -2px;
+  top: 0.2px;
+}
+
+.statusDiv.active {
+  background-color: var(--green-500);
+}
+
+.statusDiv.offline {
+  background-color: #c4cae8;
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.room {
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f3f9;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+
+  transition: all 0.3s ease-in-out;
+}
+.roomImage {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  border-radius: 48px;
+  overflow: hidden;
+}
+.roomImage img {
+  object-fit: cover;
+}
+
+.userStatusDiv {
+  right: 7px;
+  bottom: 10px;
+}
+
+.room:hover {
+  border-radius: 12px;
+  background: var(--white);
+  padding: 12px;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.roomName {
+  color: var(--smoke-gray);
+  font-family: var(--font-inter);
+  font-size: var(--fs16);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.roomLastMessage {
+  color: var(--industrial-gray);
+  font-family: var(--font-inter);
+  font-size: var(--fs14);
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.mediaWithText {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--industrial-gray);
+  font-family: var(--font-inter);
+  font-size: var(--fs14);
+  font-weight: 400;
+}
+
+.mediaIcon {
+  color: var(--industrial-gray);
+  flex-shrink: 0;
+}
+
+.mediaText {
+  color: var(--industrial-gray);
+  font-family: var(--font-inter);
+  font-size: var(--fs14);
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.roomsContainer {
+  max-height: calc(100vh - 510px);
+  overflow-y: auto;
+}
+
+.roomsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.roomsContainer {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

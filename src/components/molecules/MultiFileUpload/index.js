@@ -1,15 +1,19 @@
 "use client";
 
-import LottieLoader from "@/components/atoms/LottieLoader/LottieLoader";
-import RenderToast from "@/components/atoms/RenderToast";
-import useAxios from "@/interceptor/axios-functions";
-import { imageUrl, mergeClass } from "@/resources/utils/helper";
+import { imageUrl } from "@/resources/utils/helper";
+import {
+  getMediaType,
+  getSupportedImageTypes,
+} from "@/resources/utils/mediaUpload";
+import clsx from "clsx";
 import { useState } from "react";
 import { useDropzone } from "react-dropzone";
 import { FaFileAudio, FaFileContract } from "react-icons/fa";
 import { IoArrowUpCircleOutline, IoCloseOutline } from "react-icons/io5";
 import classes from "./MultiFileUpload.module.css";
-import { getMediaType, getSupportedImageTypes } from "@/resources/utils/mediaUpload";
+import LottieLoader from "@/components/organisms/LottieLoader/LottieLoader";
+import RenderToast from "@/components/atoms/RenderToast";
+import useAxios from "@/interceptor/axios-functions";
 
 const MultiFileUpload = ({
   label,
@@ -113,10 +117,7 @@ const MultiFileUpload = ({
         {iconComponent}
         {isSingleFileUpload && !hideDeleteIcon && (
           <div
-            className={mergeClass(
-              classes?.removeFile,
-              disabled && classes.disabled
-            )}
+            className={clsx(classes?.removeFile, disabled && classes.disabled)}
             onClick={() => {
               disabled
                 ? null
@@ -152,10 +153,10 @@ const MultiFileUpload = ({
 
   return (
     <div>
-      <div className={mergeClass(classes.mainDiv, containerClass)}>
+      <div className={clsx(classes.mainDiv, containerClass)}>
         {label && <p className={`fs-13 ${classes.labelStyle}`}>{label}</p>}
         <div
-          className={mergeClass(classes.fileInputDiv, className)}
+          className={clsx(classes.fileInputDiv, className)}
           style={{
             ...(containerStyleObject && { ...containerStyleObject }),
           }}
@@ -185,7 +186,7 @@ const MultiFileUpload = ({
               className={classes.fileItem}
             >
               <span
-                className={mergeClass(
+                className={clsx(
                   classes.removeFile,
                   disabled && classes.disabled
                 )}

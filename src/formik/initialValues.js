@@ -34,3 +34,19 @@ export const contactFormValues = {
   email: "",
   message: "",
 };
+
+export const profileFormValues = {
+  fullName: "",
+  email: "",
+  phoneNumber: "",
+  callingCode: "",
+  location: "",
+  language: "",
+  photo: null,
+};
+
+export const changePasswordFormValues = {
+  currentPassword: "",
+  password: "",
+  confirmPassword: "",
+};

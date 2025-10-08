@@ -105,3 +105,27 @@
   opacity: 0.8;
   cursor: not-allowed;
 }
+
+.btn[color-variant="secondary-outline"] {
+  border: 1px solid var(--deep-teal);
+  background: var(--white);
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 12px 20px;
+  color: var(--deep-teal);
+}
+.btn[color-variant="secondary-outline"]:hover:not(:disabled) {
+  background: var(--white);
+  color: var(--deep-teal);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+.btn[color-variant="secondary-outline"]:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+.btn[color-variant="secondary-outline"]:disabled,
+.btn[color-variant="secondary-outline"]:disabled label {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
