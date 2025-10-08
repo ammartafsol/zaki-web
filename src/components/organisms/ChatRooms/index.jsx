@@ -28,7 +28,7 @@ export default function ChatRooms({
   }
 
   return (
-    <BoxWrapper>
+    <BoxWrapper boxWrapperClass={classes.boxWrapper}>
       <Container fluid>
         <Row className={classes.rowGap}>
           {currentUser && (

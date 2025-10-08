@@ -93,7 +93,7 @@ const DropDown = ({
       color: state.isSelected ? "var(--white)" : "var(--heading-color)",
       cursor: "pointer",
       fontFamily: "var(--font-inter)",
-      fontSize: "var(--fs16)",
+      fontSize: "var(--fs14)",
       padding: "12px 16px",
       transition: "background-color 160ms ease, color 160ms ease",
     }),

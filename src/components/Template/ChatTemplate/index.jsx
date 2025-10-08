@@ -1,21 +1,25 @@
 "use client";
-import SearchInput from "@/components/molecules/SearchInput";
+import BoxWrapper from "@/components/molecules/BoxWrapper";
+import NoDataFound from "@/components/atoms/NoDataFound/NoDataFound";
 import TitleHeader from "@/components/molecules/TitleHeader";
 import ChatMessages from "@/components/organisms/ChatMessages";
 import ChatRooms from "@/components/organisms/ChatRooms";
 import { chatData } from "@/developmentContext/chatData";
-import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import classes from "./ChatTemplate.module.css";
 
 export default function ChatTemplate() {
   const [data, setData] = useState(chatData?.rooms);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState("");
   const [selectedRoom, setSelectedRoom] = useState({
     roomSlug: "",
     selectedUser: null,
   });
   const [search, setSearch] = useState("");
-  const [messages, setMessages] = useState(chatData?.messages);
+  const [messages, setMessages] = useState("");
+
+  console.log(messages);
 
   return (
     <Container fluid>
@@ -32,10 +36,23 @@ export default function ChatTemplate() {
           />
         </Col>
         <Col md={8}>
-          <ChatMessages
-            selectedUser={selectedRoom?.selectedUser}
-            messages={messages}
-          />
+          {selectedRoom?.selectedUser && selectedRoom?.roomSlug ? (
+            <ChatMessages
+              selectedUser={selectedRoom?.selectedUser}
+              messagesData={chatData?.messages}
+              setMessages={setMessages}
+              messages={messages}
+            />
+          ) : (
+            <BoxWrapper boxWrapperClass={classes.boxWrapper}>
+              <NoDataFound
+                title="No Chat Selected"
+                subtitle="Select a room to start chatting"
+                image="/app-images/chat.png"
+                size="small"
+              />
+            </BoxWrapper>
+          )}
         </Col>
       </Row>
     </Container>

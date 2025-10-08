@@ -6,9 +6,8 @@ import { FaPaperclip, FaRegSmile, FaImages, FaFileAlt } from "react-icons/fa";
 import { RxLink2 } from "react-icons/rx";
 
 export default function ChatMediaPopover({
-  onPickFiles = () => {},
-  onPickImages = () => {},
-  onPickEmojis = () => {},
+  onPickMedia = () => {},
+
   placement = "left",
   position = "top", // "bottom" | "top"
 }) {
@@ -48,32 +47,12 @@ export default function ChatMediaPopover({
             <div
               className={classes.item}
               onClick={() => {
-                onPickFiles();
-                setOpen(false);
-              }}
-            >
-              <FaFileAlt className={classes.icon} />
-              <span className={classes.label}>Files</span>
-            </div>
-            <div
-              className={classes.item}
-              onClick={() => {
-                onPickImages();
+                onPickMedia();
                 setOpen(false);
               }}
             >
               <FaImages className={classes.icon} />
-              <span className={classes.label}>Images / Videos</span>
-            </div>
-            <div
-              className={classes.item}
-              onClick={() => {
-                onPickEmojis();
-                setOpen(false);
-              }}
-            >
-              <FaRegSmile className={classes.icon} />
-              <span className={classes.label}>Emojis</span>
+              <span className={classes.label}>Upload from the device</span>
             </div>
           </div>
         </div>

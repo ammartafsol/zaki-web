@@ -21,6 +21,11 @@
   text-align: center;
 }
 
+.boxWrapper {
+  height: 100%;
+  justify-content: flex-start !important;
+}
+
 .userName {
   color: var(--deep-teal);
   font-family: var(--font-inter);

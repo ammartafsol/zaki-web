@@ -79,6 +79,15 @@ a {
   overflow: hidden;
 }
 
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--deep-teal);
+  border-radius: 10px;
+}
+
 @media screen and (min-width: 1400px) {
   .dashboardContainer {
     max-width: 1400px;

@@ -1,15 +1,16 @@
+import Footer from "@/components/molecules/Footer";
+import WebsiteHeader from "@/components/molecules/WebsiteHeader";
 import { CustomProvider } from "@/store/customProvider";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Archivo, Inter, Sen } from "next/font/google";
 import localFont from "next/font/local";
+import "react-photo-view/dist/react-photo-view.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./styles/globals.css";
-import WebsiteHeader from "@/components/molecules/WebsiteHeader";
 import "swiper/css";
 import "swiper/css/pagination";
-import Footer from "@/components/molecules/Footer";
+import "./styles/globals.css";
 
 const inter = Inter({
   variable: "--font-inter",

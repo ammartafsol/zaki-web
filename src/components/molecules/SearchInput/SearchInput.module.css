@@ -1,6 +1,7 @@
 .searchInput {
-  background: #f8f8f8;
+  background: var(--cloud-white) !important;
   border: none !important;
+  border-radius: 14px !important;
 }
 .searchIcon {
   width: 18px;

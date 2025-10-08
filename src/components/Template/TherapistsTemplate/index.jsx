@@ -8,10 +8,19 @@ import TherapistsCard from "@/components/molecules/TherapistsCard";
 import LoadingSkeleton from "@/components/atoms/LoadingSkeleton";
 import { therapistsData } from "@/developmentContext/therapistsData";
 import NoDataFound from "@/components/atoms/NoDataFound/NoDataFound";
+import { categoryOptions } from "@/developmentContext/popover-otpions";
 
 export default function TherapistsTemplate() {
   const [data, setData] = useState(therapistsData || []);
   const [loading, setLoading] = useState("");
+  const [filter, setFilter] = useState({
+    search: "",
+    language: null,
+    slots: "",
+    category: null,
+    location: "",
+    price: "",
+  });
 
   return (
     <Container fluid>
@@ -19,7 +28,25 @@ export default function TherapistsTemplate() {
         <Col md={12} className="p-0">
           <TitleHeader title="Find Your Therapists" />
 
-          <BoxWrapper>
+          <BoxWrapper
+            showSearch={true}
+            setSearch={(e) => setFilter("search", e)}
+            search={filter?.search}
+            //language props
+            showLanguage={true}
+            setLanguage={(e) => setFilter("language", e)}
+            language={filter?.language}
+            //slots props
+            showSlots={true}
+            setSlots={(e) => setFilter("slots", e)}
+            slots={filter?.slots}
+            slotsOptions={[]}
+            // category props
+            showCategory={true}
+            setCategory={(e) => setFilter("category", e)}
+            category={filter?.category}
+            categoryOptions={categoryOptions}
+          >
             <Row className="w-100">
               {loading === "get-data" ? (
                 Array.from({ length: 6 }).map((item, index) => (

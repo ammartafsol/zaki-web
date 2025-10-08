@@ -24,3 +24,36 @@ export const languages = [
     _id: "66f296a82512240000000000",
   },
 ];
+
+export const languageOptions = [
+  {
+    label: "English",
+    value: "en",
+  },
+  {
+    label: "German",
+    value: "de",
+  },
+];
+
+export const categoryOptions = [
+  {
+    title: "Category 1",
+    slug: "category1",
+  },
+  {
+    title: "Category 2",
+    slug: "category2",
+  },
+];
+
+export const locationOptions = [
+  {
+    title: "Location 1",
+    slug: "location1",
+  },
+  {
+    title: "Location 2",
+    slug: "location2",
+  },
+];

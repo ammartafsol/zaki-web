@@ -10,3 +10,13 @@
   gap: 24px;
   width: 100%;
 }
+.searchWrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.languageDropdown {
+  border: none !important;
+  border-radius: 14px !important;
+  background: var(--cloud-white) !important;
+}

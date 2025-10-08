@@ -11,6 +11,7 @@ export default function NoDataFound({
   onRefresh,
   refreshText = "Try Again",
   showRefresh = false,
+  image = null,
   size = "medium",
 }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -53,7 +54,7 @@ export default function NoDataFound({
         )}
       >
         <Image
-          src="/app-images/no-data.png"
+          src={image ?? "/app-images/no-data.png"}
           alt="No data found illustration"
           width={200}
           height={200}
