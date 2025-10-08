@@ -7,6 +7,8 @@
   --fs20: 20px;
   --fs24: 24px;
   --fs32: 32px;
+  --fs36: 36px;
+  --fs42: 42px;
   --fs44: 44px;
   --fs54: 54px;
 
@@ -68,6 +70,11 @@
   --g-20: 20px;
   --g-24: 24px;
   --g-32: 32px;
+  --g-40: 40px;
+  --g-42: 42px;
+  --g-50: 50px;
+  --g-60: 60px;
+  --g-50: 50px;
 }
 
 body {
@@ -126,6 +133,14 @@ span {
   font-size: var(--fs32);
 }
 
+.fs36 {
+  font-size: var(--fs36);
+}
+
+.fs42 {
+  font-size: var(--fs42);
+}
+
 .fs44 {
   font-size: var(--fs44);
 }
@@ -173,6 +188,8 @@ span {
     --fs20: 19px;
     --fs24: 22px;
     --fs32: 30px;
+    --fs36: 34px;
+    --fs42: 38px;
     --fs44: 40px;
     --fs54: 45px;
 
@@ -189,6 +206,8 @@ span {
     --fs20: 18px;
     --fs24: 20px;
     --fs32: 28px;
+    --fs36: 32px;
+    --fs42: 36px;
     --fs44: 36px;
     --fs54: 42px;
   }

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import classes from "./HomeTemplate.module.css";
 import { Container, Row, Col } from "react-bootstrap";
-import { homePageData } from "@/developmentContext/homePage";
+import { homePageData } from "@/developmentContext/webiste/homePage";
 import clsx from "clsx";
 import { useState } from "react";
 import HeroSection from "@/components/molecules/HeroSection";
@@ -19,6 +19,7 @@ import ContactForm from "@/components/molecules/ContactForm";
 import { useFormik } from "formik";
 import { contactFormValues } from "@/formik/initialValues";
 import { ContactFormSchema } from "@/formik/schema";
+import FaqSection from "@/components/molecules/FaqSection";
 
 
 export default function HomeTemplate() {
@@ -218,6 +219,17 @@ export default function HomeTemplate() {
             </Row>
           </div>
         </Container>
+      )}
+      {data?.sectionSeven && (
+        <div className={clsx(classes.sectionSeven)}>
+          <Container>
+            <Row>
+              <Col lg={12}>
+            <FaqSection data={data?.sectionSeven} />
+              </Col>
+            </Row>
+          </Container>
+        </div>
       )}
     </main>
   );

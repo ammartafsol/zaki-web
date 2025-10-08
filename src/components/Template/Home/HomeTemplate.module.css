@@ -165,7 +165,9 @@
   object-fit: contain;
   border-radius: 50%;
 }
-
+.sectionSeven{
+  padding-block: var(--p-100);
+}
 @media (max-width: 1400px) {
   .heroSection {
     padding-top: 159px;
