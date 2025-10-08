@@ -17,7 +17,7 @@ export default function TrustedProfessionalsSection({
           </div>
         </div>
       )}
-      {data?.title && data?.description && data?.text && (
+      {(data?.title && data?.description && data?.text) && (
         <div className={classes.content}>
           <p className={clsx(classes.text, "fs14 fw-600")}>{data?.text}</p>
           <h2 className={clsx(classes.title, "fs44 fw-500")}>{data?.title}</h2>
@@ -26,10 +26,10 @@ export default function TrustedProfessionalsSection({
           </p>
         </div>
       )}
-      {data?.title && data?.text && (
+      {(data?.heading || data?.subHeading) && (
         <div className={classes.content}>
-          <p className={clsx(classes.text, "fs14 fw-600")}>{data?.text}</p>
-          <h2 className={clsx(classes.title, "fs44 fw-500")}>{data?.title}</h2>
+          <p className={clsx(classes.text, "fs14 fw-600")}>{data?.subHeading}</p>
+          <h2 className={clsx(classes.title, "fs44 fw-500")}>{data?.heading}</h2>
         </div>
       )}
       {data?.stats && (

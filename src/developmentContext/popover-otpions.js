@@ -24,3 +24,14 @@ export const languages = [
     _id: "66f296a82512240000000000",
   },
 ];
+
+export const LANGUAGE_OPTIONS= [
+  {
+    label: "En",
+    value: "en",
+  },
+  {
+    label: "De",
+    value: "de",
+  },
+];

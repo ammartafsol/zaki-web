@@ -74,3 +74,16 @@ export const ChangePasswordFormSchema = Yup.object({
   password: Yup.string().required("Password is required"),
   confirmPassword: Yup.string().required("Confirm password is required"),
 });
+
+export const SignUpSchema = Yup.object({
+  fullName: Yup.string().required("Full name is required"),
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required"),
+  password: Yup.string().required("Password is required"),
+  confirmPassword: Yup.string().required("Confirm password is required"),
+  phoneNumber: Yup.string()
+    .matches(/^\+?[\d\s\-\(\)]+$/, "Please enter a valid phone number")
+    .required("Phone number is required"),
+  callingCode: Yup.string().required("Calling code is required"),
+});

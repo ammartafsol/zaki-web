@@ -28,8 +28,8 @@ export const whyImproselfPageData = {
     ],
   },
   sectionTwo: {
-    title: "The Improself Advantage",
-    text: "What Makes Us Different",
+    heading: "The Improself Advantage",
+    subHeading: "What Makes Us Different",
     logo: "/app-images/Logo.png",
     image: "/app-images/section1-image.png",
     arr: [
