@@ -1,0 +1,56 @@
+.journeySection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  background: var(--Secondary---Breeze, #ace4e0);
+  padding: var(--p-45);
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--g-16);
+}
+.text {
+  color: var(--midnight-teal);
+  font-family: var(--font-archivo);
+  line-height: var(--lh22);
+  text-transform: uppercase;
+}
+
+.title {
+    color: var(--midnight-teal);
+    font-family: var(--font-ranade);
+    line-height: var(--lh52);
+    text-transform: capitalize;
+    width: 100%;
+}
+.description {
+    color: var(--text-night);
+    font-family: var(--font-archivo);
+    line-height: var(--lh30);
+}
+
+.rightImage {
+  position: relative;
+  width: 570px;
+  height: 381px;
+}
+.rightImage img {
+  object-fit: contain;
+}
+
+.buttonsDiv {
+    margin-top: var(--m-20);
+  display: flex;
+  gap: var(--g-16);
+}
+
+@media (max-width: 1400px) {
+  .rightImage {
+    width: 450px;
+    height: 311px;
+  }
+
+}

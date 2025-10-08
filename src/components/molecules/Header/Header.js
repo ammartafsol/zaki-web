@@ -25,7 +25,7 @@ const Header = () => {
       <Container>
         <div className={classes.headerContent}>
           {/* Logo */}
-          <div className={classes.logo}>
+          <div className={classes.logo} onClick={() => router.push("/")}>
             <Image
               src={
                 pathname === "/"

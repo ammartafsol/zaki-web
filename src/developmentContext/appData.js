@@ -1,3 +1,7 @@
+import { TbBrandTwitterFilled } from "react-icons/tb";
+import { FaLinkedinIn } from "react-icons/fa";
+import { PiInstagramLogoFill } from "react-icons/pi";
+
 export const webNavData = [
   {
     title: "About",
@@ -18,7 +22,7 @@ export const webNavData = [
 ];
 
 export const FOOTER_DATA = {
-  image: "/app-images/contact-image.png",
+  logo: "/svgs/footer-logo.svg",
   links: [
     {
       title: "About",
@@ -36,29 +40,22 @@ export const FOOTER_DATA = {
       title: "FAQ",
       path: "/faq",
     },
+  ],
+  socialLinks: [
     {
-      sublinks: [
-        {
-          title: "X",
-          path: "#",
-          icon: "/app-images/twitter.png",
-        },
-        {
-          title: "Facebook",
-          path: "#",
-          icon: "/app-images/fb.png",
-        },
-        {
-          title: "Instagram",
-          path: "#",
-          icon: "/app-images/instagram.png",
-        },
-        {
-          title: "LinkedIn",
-          path: "#",
-          icon: "/app-images/linkedin.png",
-        },
-      ],
+      title: "X",
+      path: "#",
+      icon: <TbBrandTwitterFilled />,
+    },
+    {
+      title: "LinkedIn",
+      path: "#",
+      icon: <FaLinkedinIn />,
+    },
+    {
+      title: "Instagram",
+      path: "#",
+      icon: <PiInstagramLogoFill />,
     },
   ],
   legalLinks: [

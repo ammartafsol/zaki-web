@@ -36,7 +36,7 @@
   font-family: var(--font-archivo);
   line-height: var(--lh30);
 }
-.statIcon{
+.statIcon {
   width: 63px;
   height: 63px;
   position: relative;
@@ -44,44 +44,95 @@
 .statIcon img {
   object-fit: contain;
 }
-.stats{
+.stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.statDetail{
+.statDetail {
   display: flex;
   gap: var(--g-20);
   padding-block: var(--p-40);
   border-bottom: 1px solid var(--border);
   border-left: 1px solid var(--border);
 }
-.statDetail:first-child{
+.statDetail:first-child {
   border-left: none;
 }
-.statDetail:nth-child(2){
+.statDetail:nth-child(2) {
   padding-left: var(--p-40);
 }
-.statDetail:nth-child(3){
+.statDetail:nth-child(3) {
   border-left: none;
   border-bottom: none;
 }
-.statDetail:last-child{
+.statDetail:last-child {
   padding-left: var(--p-40);
   border-bottom: none;
 }
-.statContent{
+.statContent {
   display: flex;
   flex-direction: column;
   gap: var(--g-5);
 }
 
-.statTitle{
+.statTitle {
   color: var(--midnight-teal);
   font-family: var(--font-archivo);
   line-height: var(--lh40); /* 125% */
 }
-.statDescription{
+.statDescription {
   color: var(--midnight-teal);
   font-family: var(--font-archivo);
   line-height: var(--lh30);
+}
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+  gap: var(--g-20);
+}
+.cardItems {
+  border-radius: 12px;
+  padding: var(--p-20);
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+    ),
+    #c5f1ee;
+  display: flex;
+  gap: var(--g-20);
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.cardItems:hover {
+  background: var(--deep-teal);
+}
+.cardItems:hover .cardTitle,
+.cardItems:hover .cardDescription {
+  color: var(--white);
+}
+.cardItems:hover .cardIcon img {
+  filter: brightness(0) invert(1);
+}
+.cardIcon {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.cardIcon img {
+  object-fit: contain;
+}
+.cardTitle {
+  color: var(--midnight-teal);
+  font-family: var(--font-ranade);
+  line-height: var(--lh40);
+}
+.cardDescription {
+  color: var(--text-night);
+  font-family: var(--font-archivo);
+  line-height: var(--lh20);
+  max-width: 80%;
 }

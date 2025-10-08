@@ -7,6 +7,9 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./styles/globals.css";
 import WebsiteHeader from "@/components/molecules/WebsiteHeader";
+import "swiper/css";
+import "swiper/css/pagination";
+import Footer from "@/components/molecules/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -51,6 +54,7 @@ export default function RootLayout({ children }) {
           {/* <SocketProvider> */}
           {children}
           {/* </SocketProvider> */}
+          <Footer />
         </CustomProvider>
       </body>
     </html>

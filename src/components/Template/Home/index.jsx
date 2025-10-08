@@ -20,6 +20,7 @@ import { useFormik } from "formik";
 import { contactFormValues } from "@/formik/initialValues";
 import { ContactFormSchema } from "@/formik/schema";
 import FaqSection from "@/components/molecules/FaqSection";
+import ReviewsCards from "@/components/molecules/ReviewsCards";
 
 
 export default function HomeTemplate() {
@@ -154,8 +155,8 @@ export default function HomeTemplate() {
       )}
       {data?.sectionFour && (
         <div className={clsx(classes.sectionFour)}>
-          <Container>
-            <Row>
+          <Container fluid className="px-0">
+            <Row className="gy-5">
               <Col lg={12}>
                 <HeadingSection
                   title={data?.sectionFour?.title}
@@ -165,6 +166,9 @@ export default function HomeTemplate() {
                   descriptionClass="text-white opacity-80"
                   textClass="text-white"
                 />
+              </Col>
+              <Col lg={12}>
+                <ReviewsCards data={data?.sectionFour?.reviews} />
               </Col>
             </Row>
           </Container>

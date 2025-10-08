@@ -121,28 +121,56 @@ export const homePageData = {
       {
         fullName: "John Doe",
         review:
-          "I've been using Improself for a few months now and it's been a great experience.",
+          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
         country: "Germany",
         rating: 5,
       },
       {
         fullName: "Jane Doe",
         review:
-          "I've been using Improself for a few months now and it's been a great experience.",
+          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
         country: "Germany",
         rating: 5,
       },
       {
         fullName: "John Doe",
         review:
-          "I've been using Improself for a few months now and it's been a great experience.",
+          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
         country: "Germany",
         rating: 5,
       },
       {
         fullName: "John Doe",
         review:
-          "I've been using Improself for a few months now and it's been a great experience.",
+          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
+        country: "Germany",
+        rating: 5,
+      },
+      {
+        fullName: "John Doe",
+        review:
+          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
+        country: "Germany",
+        rating: 5,
+      },
+      {
+        fullName: "Jane Doe",
+        review:
+          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
+        country: "Germany",
+        rating: 3,
+      },
+      {
+        fullName: "John Doe",
+        review:
+          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
+        country: "Germany",
+        rating: 5,
+      },
+      {
+        fullName: "John Doe",
+        review:
+          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
         country: "Germany",
         rating: 5,
       },
