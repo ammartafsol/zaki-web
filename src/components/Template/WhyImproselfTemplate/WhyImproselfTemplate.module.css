@@ -5,4 +5,35 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+  .sectionOne{
+    padding-top: var(--p-80);
+  }
+  .sectionTwo{
+    padding-block: var(--p-80);
+  }
   
+  .sectionThree{
+    padding-block: var(--p-80);
+    background: var(--deep-teal);
+  }
+  .sectionFour{
+    padding-block: var(--p-80);
+  }
+  .sectionTwo {
+    padding-top: var(--p-100);
+    padding-bottom: var(--p-100);
+  }
+  .sectionTwoImage {
+    position: relative;
+    width: 500px;
+    height: 641px;
+  }
+  .sectionTwoImage img {
+    object-fit: cover;
+    border-radius: var(--br-20);
+  }
+  .sectionTwoImageContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }

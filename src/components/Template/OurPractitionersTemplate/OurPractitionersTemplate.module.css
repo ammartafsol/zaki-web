@@ -1,8 +1,112 @@
 .wrapper {
-    padding-block: var(--p-70);
-    background: url("/app-images/bg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
+  padding-block: var(--p-70);
+  background: url("/app-images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sectionOne {
+  padding-top: var(--p-80);
+}
+.sectionOneImage {
+  height: 420px !important;
+}
+.sectionTwo {
+  padding-block: var(--p-80);
+}
+.sectionOneDescription {
+  color: var(--text-night);
+  text-align: center;
+  font-family: var(--font-archivo);
+  line-height: var(--lh30);
+  max-width: 62%;
+  margin: 0 auto;
+  margin-top: var(--m-40);
+}
+.sectionThree {
+  background-image: url("/app-images/contact-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: var(--p-40);
+  height: 100%;
+  border-radius: var(--br-20);
+  margin-bottom: var(--m-80);
+}
+.sectionThreeContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--g-16);
+  height: 100%;
+  justify-content: center;
+}
+.sectionThreeImage {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 100px;
+  margin-left: -20px;
+  transition: transform 0.2s ease;
+}
+.imagesSection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+.sectionThreeImage:first-child {
+  margin-left: 0;
+}
+
+.sectionThreeImage:nth-child(1) {
+  z-index: 1;
+}
+.sectionThreeImage:nth-child(2) {
+  z-index: 2;
+}
+.sectionThreeImage:nth-child(3) {
+  z-index: 3;
+}
+.sectionThreeImage:nth-child(4) {
+  z-index: 4;
+}
+.sectionSixImage:nth-child(5) {
+  z-index: 5;
+}
+.sectionThreeImage:nth-child(6) {
+  z-index: 6;
+}
+.sectionThreeImage:nth-child(7) {
+  z-index: 7;
+}
+.sectionThreeImage:nth-child(8) {
+  z-index: 8;
+}
+.sectionThreeImage:nth-child(9) {
+  z-index: 9;
+}
+.sectionThreeImage:nth-child(10) {
+  z-index: 10;
+}
+
+.sectionThreeImage:hover {
+  transform: scale(1.1);
+  z-index: 999 !important;
+}
+
+.sectionThreeImage img {
+  object-fit: contain;
+  border-radius: 50%;
+}
+.sectionThreeContent .title {
+  color: #052328;
+  font-family: var(--font-ranade);
+  line-height: var(--lh47);
+
+}
+.sectionThreeContent .description {
+  color: rgba(5, 35, 40, 0.80);
+  font-family: var(--font-inter);
+  line-height: var(--lh28);
+}

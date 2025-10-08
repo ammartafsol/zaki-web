@@ -5,3 +5,39 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.sectionTwo,
+.sectionThree {
+  padding-block: var(--p-100);
+}
+.sectionOne {
+  padding-top: var(--p-80);
+}
+.sectionThree {
+  background: var(--deep-teal);
+}
+.sectionFour{
+  padding-top: var(--p-100);
+}
+.sectionFive{
+  padding-bottom: var(--p-80);
+}
+.statsClass {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+.statsDetailClass {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-block: 0 !important;
+}
+.statsDetailClass:nth-child(1),
+.statsDetailClass:nth-child(2),
+.statsDetailClass:nth-child(3) {
+  border-bottom: none !important;
+}
+.statsDetailClass:nth-child(3) {
+  border-left: 1px solid var(--white-2) !important;
+  padding-left: var(--p-40) !important;
+}

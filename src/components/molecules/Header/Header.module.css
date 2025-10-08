@@ -29,6 +29,7 @@
   position: relative;
   width: 174px;
   height: 69px;
+  cursor: pointer;
 }
 .logo img {
   object-fit: contain;

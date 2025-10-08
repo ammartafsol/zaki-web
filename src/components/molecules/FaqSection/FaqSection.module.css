@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   gap: var(--g-20);
+  padding-inline: var(--p-50);
 }
 .left {
   display: flex;
@@ -84,10 +85,13 @@
     width: 500px;
     height: 570px;
   }
+  .title {
+    max-width: 65%;
+  }
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .faqSection {
     flex-direction: column;
   }
