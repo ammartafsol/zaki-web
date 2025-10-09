@@ -7,3 +7,15 @@
 .addReviewButton{
     max-width: fit-content !important;
 }
+.reviewSection{
+    border-radius: 20px;
+    background: #EEF7F6;
+    padding: var(--p-20);
+    margin-top: var(--m-20);
+}
+.reviewSectionTitle{
+    color: var(--heading-color);
+    font-family: var(--font-inter);
+    text-transform: capitalize;
+    margin-bottom: var(--m-20);
+}

@@ -13,10 +13,13 @@ import { Container, Row, Col } from "react-bootstrap";
 import classes from "./AppointmentTemplate.module.css";
 import { TABS_OPTIONS } from "@/developmentContext/tabs";
 import { useRouter } from "next/navigation";
+import { getUserRoleCookie } from "@/resources/utils/cookie";
 
 export default function AppointmentTemplate() {
   const router = useRouter();
-
+  const role = getUserRoleCookie();
+  console.log(role);
+  
   const [data, setData] = useState(appointmentData);
   const [loading, setLoading] = useState("");
   const [selectedTab, setSelectedTab] = useState(TABS_OPTIONS[0].value);
@@ -27,7 +30,11 @@ export default function AppointmentTemplate() {
 
   const onClickPopover = (label, rowItem) => {
     if (label == "view") {
-      router.push(`/user/appointments/detail`);
+      if (role === "user") {
+        router.push(`/user/appointments/detail`);
+      } else {
+        router.push(`/therapist/appointments/detail`);
+      }
     }
   };
 

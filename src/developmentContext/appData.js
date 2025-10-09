@@ -112,4 +112,5 @@ export const therapist_nav_data = [
   },
   { title: "Chat", path: "/therapist/chat", icon: "/svgs/chat.svg" },
   { title: "Wallet", path: "/therapist/wallet", icon: "/svgs/wallet.svg" },
+  { title: "Category", path: "/therapist/category", icon: "/svgs/category.svg" },
 ];

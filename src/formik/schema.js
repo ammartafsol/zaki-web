@@ -93,3 +93,7 @@ export const AddReviewFormSchema = Yup.object({
   rating: Yup.number().min(1, "Rating is required"),
   review: Yup.string().required("Review is required"),
 });
+
+export const SuggestCategoryFormSchema = Yup.object({
+  categoryName: Yup.string().required("Category name is required"),
+});

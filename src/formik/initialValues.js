@@ -58,3 +58,7 @@ export const addReviewFormValues = {
   rating: 0,
   review: "",
 };
+
+export const suggestCategoryFormValues = {
+  categoryName: "",
+};
