@@ -7,6 +7,7 @@ export default function middleware(req) {
   ];
   return NextResponse.next();
 
+  
   if (cookies.has(TOKEN_COOKIE_NAME)) {
     if (nextUrl.pathname === "/login") {
       return NextResponse.redirect(new URL("/dashboard", req.url));
