@@ -11,21 +11,29 @@ import Link from "next/link";
 import { FiLock, FiMail } from "react-icons/fi";
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { setTokenCookie } from "@/resources/utils/cookie";
+import RenderToast from "@/components/atoms/RenderToast";
+import { handleEncrypt } from "@/interceptor/encryption";
+import { TOKEN_COOKIE_NAME } from "@/resources/utils/cookie";
 
 export default function LoginTemplate() {
+  const router = useRouter();
   const [loading, setLoading] = useState("");
 
   const loginForm = useFormik({
     initialValues: loginFormValues,
     validationSchema: LoginSchema,
-    onSubmit: (values) => {},
+    onSubmit: (values) => {
+      handleSubmit(values);
+    },
   });
 
   const users = [
     {
-      email: "admin@yopmail.com",
+      email: "therapist@yopmail.com",
       password: "12345678",
-      role: "admin",
+      role: "therapist",
       accessToken: "12345678",
     },
     {
@@ -36,24 +44,30 @@ export default function LoginTemplate() {
   ];
 
   const handleSubmit = async (values) => {
-    // setLoading("login");
+    setLoading("submit-form");
+    console.log(values);
 
-    if (
-      values.email === "admin@yopmail.com" &&
-      values.password === "12345678"
-    ) {
-      router.push("/dashboard");
-      Cookies.set(TOKEN_COOKIE_NAME, handleEncrypt("12345678"));
+    // Find the matching user in the array
+    const foundUser = users.find(
+      (user) => user.email === values.email && user.password === values.password
+    );
+
+    if (foundUser) {
+      if (foundUser.role === "therapist") {
+        router.push("/therapist/dashboard");
+      } else {
+        router.push("/user/dashboard");
+      }
+      // setTokenCookie(foundUser.accessToken);
+      // setUserMetadataCookie(foundUser);
+
+      // saveLoginUserData(foundUser);
       RenderToast({
         message: "Login successful",
         type: "success",
       });
-    } else {
-      RenderToast({
-        message: "Invalid email or password",
-        type: "error",
-      });
     }
+    setLoading("");
   };
 
   return (
