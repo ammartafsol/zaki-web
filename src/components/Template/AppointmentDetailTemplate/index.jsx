@@ -8,6 +8,8 @@ import { TABS_OPTIONS } from "@/developmentContext/tabs";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import Button from "@/components/atoms/Button";
+import classes from "./AppointmentDetailTemplate.module.css";
 
 export default function AppointmentDetailTemplate() {
   const router = useRouter();
@@ -26,7 +28,11 @@ export default function AppointmentDetailTemplate() {
     <Container fluid>
       <Row>
         <Col md={12} className="p-0">
-          <TitleHeader title="Appointment Detail" />
+          <div className={classes.titleHeader}>
+            <TitleHeader title="Appointment Detail" />
+            <Button label="Add Review" variant="secondary" className={classes.addReviewButton} />
+          </div>
+
           <BoxWrapper>
             {loading === "get-data" ? (
               <LoadingSkeleton width={"100%"} height={500} />
