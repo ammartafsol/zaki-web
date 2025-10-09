@@ -1,4 +1,4 @@
-// import LoadingTemplate from "@/components/templates/LoadingTemplate";
+import LoadingTemplate from "@/components/templates/LoadingTemplate";
 import { LANGUAGE_OPTIONS } from "@/developmentContext/popover-otpions";
 import { mergeClass } from "@/resources/utils/helper";
 import Cookies from "js-cookie";
@@ -6,7 +6,8 @@ import { useEffect, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { useDispatch } from "react-redux";
 import classes from "./LanguageSwitcher.module.css";
- 
+import { setLanguage } from "@/store/common/commonSlice";
+
 export default function LanguageSwitcher({
   className,
   languageSwitcherClass,
@@ -20,11 +21,11 @@ export default function LanguageSwitcher({
   const [loading, setLoading] = useState(false);
   const googleTrans = Cookies.get("googtrans");
   let oldData = null;
- 
+
   // 🔹 On mount: check cookie and set selected language
   useEffect(() => {
     const cookieLang = Cookies.get("googtrans"); // e.g. "/en/ar"
- 
+
     if (cookieLang) {
       const langCode = cookieLang.split("/")[2]; // extract "ar"
       const match = LANGUAGE_OPTIONS.find((opt) => opt.value === langCode);
@@ -33,25 +34,26 @@ export default function LanguageSwitcher({
       }
     }
   }, []);
- 
+
   // 🔹 Handle language change
   const handleLanguageChange = (lang) => {
     setLoading(true);
     setOpen(false);
- 
+
     try {
       // Remove existing cookie
       Cookies.remove("googtrans", { path: "/" });
- 
+
       // Set new cookie dynamically
       const newLangValue = `/en/${lang.value}`;
       Cookies.set("googtrans", newLangValue, {
         path: "/",
         expires: 365,
       });
- 
+
       setSelectedLanguage(lang);
- 
+      dispatch(setLanguage(lang.value));
+
       // Reload required for Google Translate
       window.location.reload();
     } catch (error) {
@@ -62,7 +64,7 @@ export default function LanguageSwitcher({
     setLoading(false);
     setOpen(false);
   };
- 
+
   // 🔹 Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -70,9 +72,9 @@ export default function LanguageSwitcher({
         setOpen(false);
       }
     };
- 
+
     document.addEventListener("mousedown", handleClickOutside);
- 
+
     return () => {
       // Clean up event listener properly
       try {
@@ -82,7 +84,6 @@ export default function LanguageSwitcher({
       }
     };
   }, []);
- 
   return (
     <div
       className={mergeClass(className, classes.languageSwitcherWrapper)}
@@ -107,7 +108,7 @@ export default function LanguageSwitcher({
           )}
         />
       </div>
- 
+
       {open && (
         <ul className={mergeClass(classes.dropdownMenu, dropdownMenuClass)}>
           {LANGUAGE_OPTIONS.map((lang) => (
@@ -125,7 +126,7 @@ export default function LanguageSwitcher({
           ))}
         </ul>
       )}
- 
+
       {/* Loading overlay */}
       {loading && (
         <div className={classes.loadingOverlay}>

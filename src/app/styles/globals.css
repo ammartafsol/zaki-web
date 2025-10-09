@@ -19,6 +19,9 @@ body {
   font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  top: 0px !important;
+  position: relative !important;
 }
 
 * {
@@ -88,10 +91,12 @@ a {
   border-radius: 10px;
 }
 
+/* Hide the Google Translate top banner */
 .skiptranslate {
   display: none !important;
 }
 
+/* Hide Google Translate widget but keep functionality */
 #google_translate_element {
   display: none !important;
 }
@@ -111,6 +116,56 @@ a {
   display: none !important;
 }
 .goog-te-gadget {
+  display: none !important;
+}
+
+/* Additional Google Translate popover hiding rules */
+.goog-te-combo {
+  display: none !important;
+}
+
+.goog-te-menu2 {
+  display: none !important;
+}
+
+.goog-te-menu2-item {
+  display: none !important;
+}
+
+.goog-te-menu2-item div {
+  display: none !important;
+}
+
+.goog-te-menu2-item span {
+  display: none !important;
+}
+
+/* Hide Google Translate popover completely */
+body {
+  top: 0 !important;
+}
+
+/* Hide any remaining Google Translate elements */
+[class*="goog-te"] {
+  display: none !important;
+}
+
+/* Hide Google Translate iframe */
+iframe[src*="translate.googleapis.com"] {
+  display: none !important;
+}
+
+/* Hide Google Translate popup/overlay */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* Additional popover hiding */
+.goog-te-menu-frame {
+  display: none !important;
+}
+
+.goog-te-menu {
   display: none !important;
 }
 
