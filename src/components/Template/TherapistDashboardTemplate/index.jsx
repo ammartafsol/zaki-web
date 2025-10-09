@@ -39,7 +39,7 @@ export default function TherapistDashboardTemplate() {
       <Container fluid>
         <Row>
           <Col md={7}>
-            <Row>
+            <Row className={classes.statsRow}>
               {loading === "get-data"
                 ? Array.from({ length: 4 }).map((item, index) => (
                     <Col md={6} className="mb-4" key={index}>
@@ -64,21 +64,23 @@ export default function TherapistDashboardTemplate() {
                 <p className={classes.appointmentsTitle}>Next Appointments</p>
                 <div className={classes.appointmentsList}>
                   <p className={classes.appointmentDate}>Wednesday, 9th Oct</p>
-                  {data?.newAppointments?.map((item) => (
-                    <div className={classes.appointmentCard} key={item?.id}>
-                      <div className={classes.appointmentTime}>
-                        <Image
-                          src="/svgs/clock.svg"
-                          alt="clock"
-                          width={16}
-                          height={16}
-                        />
-                        <span className={classes.appointmentTime}>Time</span>{" "}
-                        {moment(item?.time).format("hh:mm A")}
+                  <div className={classes.appointmentCardList}>
+                    {data?.newAppointments?.map((item) => (
+                      <div className={classes.appointmentCard} key={item?.id}>
+                        <div className={classes.appointmentTime}>
+                          <Image
+                            src="/svgs/clock.svg"
+                            alt="clock"
+                            width={14}
+                            height={14}
+                          />
+                          <span className={classes.appointmentTime}>
+                            Time : {moment(item?.time).format("hh:mm A")}
+                          </span>
+                        </div>
                       </div>
-                      <p className={classes.appointmentType}>{item?.type}</p>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </Calendar>
