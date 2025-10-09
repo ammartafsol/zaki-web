@@ -14,6 +14,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import classes from "./WalletTemplate.module.css";
 import Image from "next/image";
 import { WALLET_TABS_OPTIONS } from "@/developmentContext/tabs";
+import Button from "@/components/atoms/Button";
 
 export default function WalletTemplate() {
   const userRole = getUserRoleCookie();
@@ -69,6 +70,50 @@ export default function WalletTemplate() {
               tableHeader={userRoleTableHeader}
               loading={loading === "get-data"}
               totalRecords={totalRecords}
+              renderItem={({ item, key, rowIndex, renderValue }) => {
+                const rowItem = data[rowIndex];
+                if (renderValue) {
+                  return renderValue(item, rowItem);
+                }
+                if (key == "action") {
+                  return (
+                    <div className={classes.actionButtons}>
+                      {rowItem?.status === "pending" ? (
+                        <Button
+                          label="Mark as Received"
+                          variant="transparent"
+                          onClick={() => {}}
+                          leftIcon={
+                            <div className={classes.leftIcon}>
+                              <Image
+                                src="/svgs/tick-mark.svg"
+                                alt="download"
+                                fill
+                              />
+                            </div>
+                          }
+                        />
+                      ) : (
+                        <Button
+                          label="Download Invoice"
+                          variant="transparent"
+                          onClick={() => {}}
+                          leftIcon={
+                            <div className={classes.leftIcon}>
+                              <Image
+                                src="/svgs/invoice.svg"
+                                alt="download"
+                                fill
+                              />
+                            </div>
+                          }
+                        />
+                      )}
+                    </div>
+                  );
+                }
+                return item || "";
+              }}
             />
           </BoxWrapper>
         </Col>
