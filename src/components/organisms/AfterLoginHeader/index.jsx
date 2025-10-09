@@ -1,15 +1,23 @@
 "use client";
 import { nav_data, therapist_nav_data } from "@/developmentContext/appData";
-import { getUserRoleCookie } from "@/resources/utils/cookie";
+import {
+  getUserRoleCookie,
+  USER_ROLE_COOKIE_NAME,
+} from "@/resources/utils/cookie";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Col, Container, Row } from "react-bootstrap";
+import { useState, useRef, useEffect } from "react";
 import classes from "./AfterLoginHeader.module.css";
+import { TbLogout2 } from "react-icons/tb";
+import { PiUserCircleFill } from "react-icons/pi";
 
 export default function AfterLoginHeader() {
   const userRole = getUserRoleCookie();
+  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+  const popoverRef = useRef(null);
 
   const pathname = usePathname();
   const router = useRouter();
@@ -19,6 +27,35 @@ export default function AfterLoginHeader() {
   };
 
   const navData = userRole === "therapist" ? therapist_nav_data : nav_data;
+
+  // Close popover when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (popoverRef.current && !popoverRef.current.contains(event.target)) {
+        setIsPopoverOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleLogout = () => {
+    Cookies.remove(USER_ROLE_COOKIE_NAME);
+
+    // Redirect to home page
+    router.push("/");
+    setIsPopoverOpen(false);
+  };
+
+  const handleProfileClick = () => {
+    router.push(
+      userRole === "therapist" ? "/therapist/profile" : "/user/profile"
+    );
+    setIsPopoverOpen(false);
+  };
 
   return (
     <Container fluid>
@@ -55,7 +92,11 @@ export default function AfterLoginHeader() {
         <Col md={3}>
           <div className={clsx(classes.nav, classes.profile)}>
             <Link
-              href={userRole === "therapist" ? "/therapist/notifications" : "/user/notifications"}
+              href={
+                userRole === "therapist"
+                  ? "/therapist/notifications"
+                  : "/user/notifications"
+              }
               className={clsx(
                 classes.navLink,
                 classes.selectedNav,
@@ -72,18 +113,37 @@ export default function AfterLoginHeader() {
               </div>
               Notifications
             </Link>
-            <div
-              className={classes.profileImage}
-              onClick={() => router.push(
-                userRole === "therapist" ? "/therapist/profile" : "/user/profile"
+            <div className={classes.profileContainer} ref={popoverRef}>
+              <div
+                className={classes.profileImage}
+                onClick={() => setIsPopoverOpen(!isPopoverOpen)}
+              >
+                <Image
+                  src={user?.photo ?? "/app-images/default-user.png"}
+                  fill
+                  priority
+                  alt="Profile"
+                />
+              </div>
+
+              {isPopoverOpen && (
+                <div className={classes.popover}>
+                  <button
+                    className={classes.popoverItem}
+                    onClick={handleProfileClick}
+                  >
+                    <PiUserCircleFill className={classes.icon} />
+                    Profile
+                  </button>
+                  <button
+                    className={classes.popoverItem}
+                    onClick={handleLogout}
+                  >
+                    <TbLogout2 className={classes.icon} />
+                    Logout
+                  </button>
+                </div>
               )}
-            >
-              <Image
-                src={user?.photo ?? "/app-images/default-user.png"}
-                fill
-                priority
-                alt="Profile"
-              />
             </div>
           </div>
         </Col>

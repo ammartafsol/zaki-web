@@ -75,6 +75,12 @@
   margin-inline: auto 0;
   gap: 16px;
 }
+
+.profileContainer {
+  position: relative;
+  display: inline-block;
+}
+
 .profileImage {
   border-radius: 8px;
   border: 1px solid #ace4e0;
@@ -82,7 +88,78 @@
   width: 44px;
   position: relative;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
+
+.profileImage:hover {
+  border-color: var(--sunbeam-yellow);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 .profileImage img {
   object-fit: cover;
+  border-radius: 8px;
+}
+
+.popover {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  z-index: 1000;
+  animation: popoverFadeIn 0.2s ease-out;
+}
+
+@keyframes popoverFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popoverItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-family: var(--font-sen);
+  font-size: 14px;
+  color: var(--heading-color);
+  text-align: left;
+}
+
+.popoverItem:first-child {
+  border-radius: 12px 12px 0 0;
+}
+
+.popoverItem:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+.popoverItem:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.popoverItem:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  position: relative;
 }
