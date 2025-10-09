@@ -11,6 +11,9 @@ const statusClassMap = {
   upcoming: {
     className: classes.upcomingStatus,
   },
+  pending: {
+    className: classes.upcomingStatus,
+  },
   completed: {
     className: classes.completedStatus,
   },
@@ -30,9 +33,16 @@ export const RenderTextCell = ({ cellValue: item, bold = false }) => {
   );
 };
 
-export const RenderAmountCell = ({ cellValue: item }) => {
+export const RenderAmountCell = ({ cellValue: item, bold }) => {
   return (
-    <span className={clsx(classes.amount, "maxLine1", classes.textCell)}>
+    <span
+      className={clsx(
+        classes.amount,
+        "maxLine1",
+        classes.textCell,
+        bold && classes.bold
+      )}
+    >
       {getFormattedPrice(item)}
     </span>
   );

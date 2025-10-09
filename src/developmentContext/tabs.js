@@ -12,3 +12,14 @@ export const TABS_OPTIONS = [
     value: "completed",
   },
 ];
+
+export const WALLET_TABS_OPTIONS = [
+  {
+    label: "Received",
+    value: "received",
+  },
+  {
+    label: "Paid",
+    value: "paid",
+  },
+];

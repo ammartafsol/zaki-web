@@ -14,7 +14,6 @@
 }
 
 .titleHeader {
-  margin-bottom: 24px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -25,4 +24,10 @@
   font-family: var(--font-inter);
   text-transform: capitalize;
   font-weight: 600;
+}
+.titleHeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
 }
