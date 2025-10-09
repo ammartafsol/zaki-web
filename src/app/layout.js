@@ -46,7 +46,6 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const cookie = await cookies();
   const cookieLang = cookie.get("googtrans")?.value;
-  console.log(cookieLang);
 
   return (
     <html lang={cookieLang === "/en/de" ? "de" : "en"}>

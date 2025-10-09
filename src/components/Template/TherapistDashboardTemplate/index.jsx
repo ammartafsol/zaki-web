@@ -17,7 +17,10 @@ import { GoArrowUpRight } from "react-icons/go";
 import classes from "./TherapistDashboardTemplate.module.css";
 import clsx from "clsx";
 import NotificationCard from "@/components/molecules/NotificationCard";
+import Calendar from "@/components/molecules/Calendar";
+import { sampleAppointments } from "@/developmentContext/calendarData";
 import { useRouter } from "next/navigation";
+import NotificationSection from "@/components/organisms/NotificationSection";
 
 export default function TherapistDashboardTemplate() {
   const router = useRouter();
@@ -28,6 +31,11 @@ export default function TherapistDashboardTemplate() {
     console.log(label, rowItem);
   };
 
+  const handleDateSelect = (date, appointments) => {
+    console.log("Selected date:", date);
+    console.log("Appointments for this date:", appointments);
+  };
+
   return (
     <div className={classes.dashboardTemplate}>
       <Container fluid>
@@ -36,16 +44,25 @@ export default function TherapistDashboardTemplate() {
             <Row>
               {loading === "get-data"
                 ? Array.from({ length: 4 }).map((item, index) => (
-                    <Col md={6} lg={6} className="mb-4" key={index}>
+                    <Col md={6} className="mb-4" key={index}>
                       <LoadingSkeleton width={"100%"} height={200} />
                     </Col>
                   ))
                 : statsData(data)?.map((item) => (
-                    <Col md={6} lg={6} className="mb-4" key={item?.title}>
+                    <Col md={6} className="mb-4" key={item?.title}>
                       <Stats data={item} />
                     </Col>
                   ))}
             </Row>
+          </Col>
+
+          <Col md={6}>
+            <div className={classes.calendarWrapper}>
+              <Calendar
+                appointments={sampleAppointments}
+                onDateSelect={handleDateSelect}
+              />
+            </div>
           </Col>
 
           <Col md={8}>
@@ -81,16 +98,7 @@ export default function TherapistDashboardTemplate() {
             </div>
           </Col>
           <Col md={4}>
-            <div className={classes.notificationCard}>
-              <div className={classes.header}>
-                <p className={classes.title}>Notifications</p>
-                <Button
-                  variant="secondary"
-                  onClick={() => router.push("/notifications")}
-                  leftIcon={<GoArrowUpRight />}
-                  className={classes.notificationButton}
-                />
-              </div>
+            <NotificationSection>
               <Row className={classes.notificationsRow}>
                 {loading === "get-data"
                   ? Array.from({ length: 3 }).map((item, index) => (
@@ -104,19 +112,7 @@ export default function TherapistDashboardTemplate() {
                       </Col>
                     ))}
               </Row>
-
-              <div
-                className={classes.footer}
-                onClick={() => router.push("/notifications")}
-              >
-                <p className={clsx("fs14", classes.footerTitle)}>
-                  See all Notifications
-                </p>
-                <div className={classes.routeDiv}>
-                  <MdKeyboardArrowRight />
-                </div>
-              </div>
-            </div>
+            </NotificationSection>
           </Col>
         </Row>
       </Container>

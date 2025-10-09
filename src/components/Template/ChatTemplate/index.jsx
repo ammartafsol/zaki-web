@@ -19,8 +19,6 @@ export default function ChatTemplate() {
   const [search, setSearch] = useState("");
   const [messages, setMessages] = useState("");
 
-  console.log(messages);
-
   return (
     <Container fluid>
       <Row>

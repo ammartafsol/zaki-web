@@ -18,6 +18,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { GoArrowUpRight } from "react-icons/go";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import classes from "./DashboardTemplate.module.css";
+import NotificationSection from "@/components/organisms/NotificationSection";
 
 export default function DashboardTemplate() {
   const router = useRouter();
@@ -81,16 +82,7 @@ export default function DashboardTemplate() {
             </div>
           </Col>
           <Col md={4}>
-            <div className={classes.notificationCard}>
-              <div className={classes.header}>
-                <p className={classes.title}>Notifications</p>
-                <Button
-                  variant="secondary"
-                  onClick={() => router.push("/notifications")}
-                  leftIcon={<GoArrowUpRight />}
-                  className={classes.notificationButton}
-                />
-              </div>
+            <NotificationSection>
               <Row className={classes.notificationsRow}>
                 {loading === "get-data"
                   ? Array.from({ length: 3 }).map((item, index) => (
@@ -104,19 +96,7 @@ export default function DashboardTemplate() {
                       </Col>
                     ))}
               </Row>
-
-              <div
-                className={classes.footer}
-                onClick={() => router.push("/notifications")}
-              >
-                <p className={clsx("fs14", classes.footerTitle)}>
-                  See all Notifications
-                </p>
-                <div className={classes.routeDiv}>
-                  <MdKeyboardArrowRight />
-                </div>
-              </div>
-            </div>
+            </NotificationSection>
           </Col>
         </Row>
       </Container>
