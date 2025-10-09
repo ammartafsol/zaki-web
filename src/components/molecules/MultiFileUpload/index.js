@@ -14,6 +14,7 @@ import classes from "./MultiFileUpload.module.css";
 import LottieLoader from "@/components/organisms/LottieLoader/LottieLoader";
 import RenderToast from "@/components/atoms/RenderToast";
 import useAxios from "@/interceptor/axios-functions";
+import Image from "next/image";
 
 const MultiFileUpload = ({
   label,
@@ -52,16 +53,13 @@ const MultiFileUpload = ({
       });
     }
 
-    setFiles([...files, ..._acceptedFiles], true);
+    setFiles([...(Array.isArray(files) ? files : []), ..._acceptedFiles], true);
   };
 
   // removeFile
   const removeFile = async (key) => {
     if (typeof key === "object") {
-      setFiles(
-        files.filter((file) => file.name !== key.name),
-        false
-      );
+      setFiles(Array.isArray(files) ? files : [], false);
     } else {
       setIsDeleteApiCalling(true);
       const { response } = await Patch({
@@ -72,7 +70,7 @@ const MultiFileUpload = ({
         },
       });
       if (response) {
-        let updatedFiles = files.filter((file) => file?.key !== key);
+        let updatedFiles = Array.isArray(files) ? files : [];
         setFiles(updatedFiles, false);
         RenderToast({
           message: "File deleted successfully",
@@ -84,6 +82,7 @@ const MultiFileUpload = ({
   };
 
   const renderFileComponent = (file) => {
+    console.log(file);
     const isLocalFile = file?.name ? true : false;
     const fileType = getMediaType(
       isLocalFile ? file?.type : file?.key?.split(".").pop()
@@ -97,17 +96,19 @@ const MultiFileUpload = ({
         />
       </div>
     ) : fileType === "docs" ? (
-      <FaFileContract
-        title="View File"
-        size={35}
-        className={classes.file}
-        onClick={() =>
-          window.open(
-            isLocalFile ? URL.createObjectURL(file) : imageUrl(file?.key),
-            "_blank"
-          )
-        }
-      />
+      <div className={classes?.fileContainer}>
+        <FaFileContract
+          title="View File"
+          size={35}
+          className={classes.file}
+          onClick={() =>
+            window.open(
+              isLocalFile ? URL.createObjectURL(file) : imageUrl(file?.key),
+              "_blank"
+            )
+          }
+        />
+      </div>
     ) : fileType === "audio" ? (
       <FaFileAudio title="View Audio" size={35} className={classes.file} />
     ) : undefined;
@@ -152,9 +153,11 @@ const MultiFileUpload = ({
   });
 
   return (
-    <div>
+    <div className={classes.mainContainer}>
       <div className={clsx(classes.mainDiv, containerClass)}>
-        {label && <p className={`fs-13 ${classes.labelStyle}`}>{label}</p>}
+        {label && (
+          <p className={`fs18 fw-600 ${classes.labelStyle}`}>{label}</p>
+        )}
         <div
           className={clsx(classes.fileInputDiv, className)}
           style={{
@@ -169,8 +172,18 @@ const MultiFileUpload = ({
             />
 
             <div className={classes.fileDesc}>
-              <IoArrowUpCircleOutline className={classes.icon} />
-              <p className={classes.desc}>Upload {uploadText}</p>
+              <Image
+                src="/svgs/upload.svg"
+                alt="upload"
+                width={43}
+                height={43}
+              />
+              {/* <IoArrowUpCircleOutline className={classes.icon} /> */}
+              <p className={classes.desc}>
+                Browse and chose the files you want to upload from your computer
+                {uploadText}
+              </p>
+              <Image src="/svgs/add.svg" alt="upload" width={24} height={24} />
             </div>
           </div>
         </div>
@@ -178,7 +191,7 @@ const MultiFileUpload = ({
         {(isDeleteApiCalling || loading) && <LottieLoader />}
       </div>
       {errorText && <p className={`errorText`}>{errorText}</p>}
-      {files?.length > 0 && (
+      {Array.isArray(files) && files?.length > 0 && (
         <div className={classes.filePreviewList}>
           {files?.map((file, index) => (
             <div

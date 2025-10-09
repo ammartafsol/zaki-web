@@ -89,7 +89,7 @@ export default function ContactForm({ form, setShowModal }) {
             <Button
               label="Update Password"
               variant="secondary-outline"
-              onClick={() => setShowModal(true)}
+              onClick={() => setShowModal("update-password")}
             />
           </div>
         </Col>

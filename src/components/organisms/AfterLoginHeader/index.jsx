@@ -74,7 +74,9 @@ export default function AfterLoginHeader() {
             </Link>
             <div
               className={classes.profileImage}
-              onClick={() => router.push("/user/profile")}
+              onClick={() => router.push(
+                userRole === "therapist" ? "/therapist/profile" : "/user/profile"
+              )}
             >
               <Image
                 src={user?.photo ?? "/app-images/default-user.png"}

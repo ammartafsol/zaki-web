@@ -112,5 +112,18 @@ export const therapist_nav_data = [
   },
   { title: "Chat", path: "/therapist/chat", icon: "/svgs/chat.svg" },
   { title: "Wallet", path: "/therapist/wallet", icon: "/svgs/wallet.svg" },
-  { title: "Category", path: "/therapist/category", icon: "/svgs/category.svg" },
 ];
+
+export const userData = {
+  fullName: "John Doe",
+  email: "john.doe@example.com",
+  phoneNumber: "1234567890",
+  location: "123 Main St, Anytown, USA",
+  language: "English",
+  photo: "/app-images/default-user.png",
+  categories: [
+    "Psychodynamic Therapy",
+    "Cognitive Behavioral Therapy",
+    "Humanistic Therapy",
+  ],
+};

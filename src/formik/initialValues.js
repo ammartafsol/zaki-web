@@ -46,6 +46,8 @@ export const profileFormValues = {
   location: "",
   language: "",
   photo: null,
+  documents: [],
+  
 };
 
 export const changePasswordFormValues = {

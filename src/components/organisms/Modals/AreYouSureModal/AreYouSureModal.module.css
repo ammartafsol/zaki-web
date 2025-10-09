@@ -16,7 +16,7 @@
 }
 
 .headerTitle {
-  font-weight: 600;
+font-family: var(--font-inter);
 }
 
 .modalBody {
@@ -31,7 +31,7 @@
   text-align: center;
   background: linear-gradient(
     135deg,
-    var(--white-color) 0%,
+    var(--white) 0%,
     var(--modal-bg-light) 100%
   );
 }
@@ -52,7 +52,7 @@
 }
 
 .warningIcon {
-  color: var(--warning-color);
+  color: var(--deep-teal);
   animation: pulse 2s infinite;
   display: flex;
   align-items: center;
@@ -60,7 +60,7 @@
 }
 
 .dangerIcon {
-  color: var(--danger-color);
+  color: var(--error);
   animation: shake 0.5s ease-in-out;
   display: flex;
   align-items: center;
@@ -68,7 +68,7 @@
 }
 
 .infoIcon {
-  color: var(--info-color);
+  color: var(--deep-teal);
   animation: bounce 1s ease-in-out;
   display: flex;
   align-items: center;
@@ -76,7 +76,7 @@
 }
 
 .successIcon {
-  color: var(--success-color);
+  color: var(  --green-500);
   animation: scale 0.3s ease-in-out;
   display: flex;
   align-items: center;
@@ -84,7 +84,7 @@
 }
 
 .defaultIcon {
-  color: var(--default-color);
+  color: var(--deep-teal);
   display: flex;
   align-items: center;
   justify-content: center;

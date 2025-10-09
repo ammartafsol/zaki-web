@@ -19,7 +19,7 @@ export default function HeroSection({ data }) {
           variant="primary"
           leftIcon={<HiArrowRightCircle size={20} />}
         />
-        <Button label="Treten Sie als Therapeut bei" variant="outlined" />
+        <Button label="Treten Sie als Therapeut bei" variant="secondary-outlined" />
       </div>
     </div>
   );

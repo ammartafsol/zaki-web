@@ -15,6 +15,7 @@ import classes from "./WalletTemplate.module.css";
 import Image from "next/image";
 import { WALLET_TABS_OPTIONS } from "@/developmentContext/tabs";
 import Button from "@/components/atoms/Button";
+import AreYouSureModal from "@/components/organisms/Modals/AreYouSureModal";
 
 export default function WalletTemplate() {
   const userRole = getUserRoleCookie();
@@ -24,6 +25,7 @@ export default function WalletTemplate() {
   const userRoleData = userRole === "therapist" ? walletData2 : walletData;
 
   const [data, setData] = useState(userRoleData);
+  const [showModal, setShowModal] = useState(false);
 
   const [loading, setLoading] = useState("");
   const [totalRecords, setTotalRecords] = useState(0);
@@ -82,7 +84,9 @@ export default function WalletTemplate() {
                         <Button
                           label="Mark as Received"
                           variant="transparent"
-                          onClick={() => {}}
+                          onClick={() => {
+                            setShowModal(true);
+                          }}
                           leftIcon={
                             <div className={classes.leftIcon}>
                               <Image
@@ -118,6 +122,14 @@ export default function WalletTemplate() {
           </BoxWrapper>
         </Col>
       </Row>
+      <AreYouSureModal
+        show={showModal}
+        setShow={setShowModal}
+        type="warning"
+        title="Are you sure you want to mark as received?"
+        subTitle="This action cannot be undone. Please confirm to proceed."
+        onClick={() => {}}
+      />
     </Container>
   );
 }

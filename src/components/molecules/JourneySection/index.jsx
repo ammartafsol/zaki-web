@@ -17,7 +17,7 @@ export default function JourneySection({ data }) {
         </p>
         <div className={classes.buttonsDiv}>
             <Button label="Finde Therapeuten" variant="primary" leftIcon={<HiArrowRightCircle size={20} />} />
-            <Button label="Treten Sie als Therapeut bei" variant="transparent" />
+            <Button label="Treten Sie als Therapeut bei" variant="primary-outlined" />
         </div>
       </div>
       <div className={classes.right}>

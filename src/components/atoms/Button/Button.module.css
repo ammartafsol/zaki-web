@@ -47,36 +47,36 @@
 }
 
 /* Outlined variant: border and text #000080, transparent bg */
-.btn[color-variant="outlined"] {
+.btn[color-variant="secondary-outlined"] {
   border: 1px solid var(--white);
   background: var(--grey-100);
   color: var(--white);
 }
 
-.btn[color-variant="outlined"]:hover:not(:disabled) {
+.btn[color-variant="secondary-outlined"]:hover:not(:disabled) {
   background: var(--grey-100);
   transform: translateY(-1px);
   box-shadow: 0 6px 18px rgba(255, 255, 255, 0.3);
 }
 
-.btn[color-variant="outlined"]:active:not(:disabled) {
+.btn[color-variant="secondary-outlined"]:active:not(:disabled) {
   transform: translateY(0);
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.3);
 }
 
-.btn[color-variant="transparent"] {
+.btn[color-variant="primary-outlined"] {
   border: 1px solid var(--deep-teal);
   background: var(--grey-200);
   color: var(--deep-teal);
 }
-.btn[color-variant="transparent"]:hover:not(:disabled) {
+.btn[color-variant="primary-outlined"]:hover:not(:disabled) {
   background-color: var(--deep-teal);
   color: var(--grey-200);
   border: 1px solid var(--grey-200);
   transform: translateY(-1px);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
-.btn[color-variant="transparent"]:active:not(:disabled) {
+.btn[color-variant="primary-outlined"]:active:not(:disabled) {
   transform: translateY(0);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }

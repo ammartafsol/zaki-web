@@ -93,7 +93,7 @@ export default function HomeTemplate() {
                       {data?.sectionTwo?.description}
                     </p>
                   </div>
-                  <Button label="Explore Our Services" variant="transparent" />
+                  <Button label="Explore Our Services" variant="primary-outlined" />
                 </div>
               </Col>
 
@@ -135,7 +135,7 @@ export default function HomeTemplate() {
                     />
                     <Button
                       label="Treten Sie als Therapeut bei"
-                      variant="transparent"
+                      variant="primary-outlined"
                     />
                   </div>
                 </div>

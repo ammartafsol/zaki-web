@@ -1,28 +1,38 @@
+.mainContainer {
+  width: 100%;
+}
 .mainDiv {
   position: relative;
-  height: 100px;
-  width: 120px;
+  /* height: 100px; */
+  width: 100%;
   border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  padding: 10px;
+  /* overflow: hidden; */
+  /* border: 1px solid var(--border); */
+  /* padding: 10px; */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   cursor: pointer;
+  flex-direction: column;
+  gap: 10px;
 }
 .fileInputDiv {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 169px;
   transition: all 0.3s ease-in-out;
   text-align: center;
   gap: 8px;
+  border-radius: 16px;
+  background: #eef7f6;
+  padding: 24px 14px;
+  border: 1px solid transparent;
 }
 .fileInputDiv:hover {
-  background: var(--mint-whisper);
+  background: var(--sea-mist-fade);
+  border: 1px solid var(--tidewater-blue);
 }
 .input {
   display: none;
@@ -30,6 +40,11 @@
 .inputContainer {
 }
 .fileDesc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
 }
 .icon {
   margin-bottom: 8px;
@@ -37,6 +52,58 @@
   color: var(--primary);
 }
 .desc {
-  font-size: 12px;
-  color: var(--primary);
+  color: var(--heading-color);
+  text-align: center;
+  font-family: var(--font-inter);
+  font-size: var(--fs14);
+  font-weight: 300;
+  margin: 0 auto;
+  max-width: 270px;
+}
+.labelStyle {
+  color: var(--heading-color);
+  font-family: var(--font-inter);
+  line-height: var(--lh20);
+  text-transform: capitalize;
+}
+.filePreviewList{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.imageContainer img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  display: block;
+}
+.removeFile{
+  background-color: var(--tidewater-blue);
+  padding: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color:var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fileContainer{
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  max-width: 100%;
+}
+.fileContainer svg{
+  color: var(--tidewater-blue);
+  font-size: 35px;
 }

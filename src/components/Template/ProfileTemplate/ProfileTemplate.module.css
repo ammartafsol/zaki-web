@@ -1,0 +1,25 @@
+.title {
+  color: var(--heading-color);
+  font-family: var(--font-inter);
+  line-height: var(--lh20);
+  text-transform: capitalize;
+}
+.categories {
+  width: 100%;
+}
+.category {
+  border-bottom: 1px solid rgba(172, 228, 224, 0.56);;
+  padding: var(--p-16) var(--p-16);
+  margin-bottom: var(--m-20);
+  width: 100%;
+}
+.addCategory {
+  display: flex;
+  align-items: center;
+  gap: var(--g-10);
+  cursor: pointer;
+}
+.addCategoryText {
+  color: var(--tidewater-blue);
+  font-family: var(--font-inter);
+}

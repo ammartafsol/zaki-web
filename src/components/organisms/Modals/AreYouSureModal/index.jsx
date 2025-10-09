@@ -1,6 +1,6 @@
 "use client";
 import Button from "@/components/atoms/Button";
-import { mediaUrl, mergeClass } from "@/resources/utils/helper";
+import { imageUrl, mergeClass } from "@/resources/utils/helper";
 import {
   FiAlertCircle,
   FiAlertTriangle,
@@ -9,7 +9,7 @@ import {
   FiInfo,
 } from "react-icons/fi";
 import { useRouter } from "next/navigation";
-import ModalSkeleton from "../ModalSkeleton";
+import ModalSkeleton from "@/components/organisms/Modals/ModalSkeleton/ModalSkeleton";
 import classes from "./AreYouSureModal.module.css";
 import Link from "next/link";
 
@@ -65,8 +65,10 @@ const AreYouSureModal = ({
 
   return (
     <ModalSkeleton
+      variant="secondary"
       setShow={setShow}
       show={show}
+      size="lg"
       showCloseIcon={showCloseIcon}
       header=""
       modalStyles={mergeClass(
@@ -84,13 +86,13 @@ const AreYouSureModal = ({
         {/* Title Section */}
         <div className={classes.titleSection}>
           <h2
-            className={mergeClass("fs-24 fw-700", classes.title)}
+            className={mergeClass("fs20 fw-700", classes.title)}
             style={{ color: "var(--modal-text-primary)" }}
           >
             {title}
           </h2>
           <p
-            className={mergeClass("fs-16 fw-400", classes.subtitle)}
+            className={mergeClass("fs14 fw-400", classes.subtitle)}
             style={{ color: "var(--modal-text-secondary)" }}
           >
             {subTitle}
@@ -101,14 +103,14 @@ const AreYouSureModal = ({
         <div className={classes.actionSection}>
           <Button
             disabled={isLoading}
-            variant="rejectBtn"
+            variant="secondary-outline"
             label="Cancel"
             onClick={() => setShow(false)}
             className={classes.button}
           />
           <Button
             disabled={isLoading}
-            variant="secondaryTwo"
+            variant="secondary"
             label={isLoading ? "Please wait..." : "Confirm"}
             onClick={onClick}
             className={classes.button}

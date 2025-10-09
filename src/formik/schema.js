@@ -67,6 +67,7 @@ export const ProfileFormSchema = Yup.object({
   location: Yup.string().required("Location is required"),
   language: Yup.object().required("Language is required"),
   photo: Yup.mixed().required("Photo is required"),
+  documents: Yup.array().of(Yup.mixed().optional()),
 });
 
 export const ChangePasswordFormSchema = Yup.object({
