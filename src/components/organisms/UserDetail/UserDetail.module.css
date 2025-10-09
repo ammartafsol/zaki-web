@@ -144,6 +144,11 @@
 .addReviewButton {
   max-width: fit-content !important;
 }
+.reviewSection {
+  border-radius: 20px;
+  background: #EEF7F6;
+  padding: var(--p-20);
+}
 
 @media (max-width: 768px) {
   .detailsSection {

@@ -96,19 +96,8 @@ const UploadImageBoxNew = ({
             </label>
           )}
 
-          {edit && (
-            <Button
-              className={clsx(classes.uploadButton, uploadButtonClass)}
-              label={"Upload"}
-              variant="secondary"
-              onClick={() => {
-                inputRef.current.click();
-                onEdit();
-              }}
-            />
-          )}
 
-          { state ? (
+          {state ? (
             <Button
               className={clsx(classes.uploadButton, uploadButtonClass)}
               leftIcon={<MdModeEdit />}
@@ -118,7 +107,19 @@ const UploadImageBoxNew = ({
                 onEdit();
               }}
             />
-          ) : null}
+          ) : (
+            edit && (
+              <Button
+                className={clsx(classes.uploadButton, uploadButtonClass)}
+                label={"Upload"}
+                variant="secondary"
+                onClick={() => {
+                  inputRef.current.click();
+                  onEdit();
+                }}
+              />
+            )
+          )}
         </div>
 
         {/* Input For Image/Video Upload */}

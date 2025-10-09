@@ -10,10 +10,15 @@ import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import classes from "./AppointmentDetailTemplate.module.css";
 import AddReviewModal from "@/components/organisms/Modals/AddReviewModal";
+import ReviewSection from "@/components/molecules/ReviewSection";
+import { getUserRoleCookie } from "@/resources/utils/cookie";
+import clsx from "clsx";
 
 export default function AppointmentDetailTemplate() {
   const router = useRouter();
   const [showModal, setShowModal] = useState(false);
+  const role = getUserRoleCookie();
+  console.log(role);
 
   const [data, setData] = useState(appointmentDetailData);
   const [loading, setLoading] = useState("");
@@ -21,7 +26,11 @@ export default function AppointmentDetailTemplate() {
 
   const onClickPopover = (label, rowItem) => {
     if (label == "view") {
-      router.push(`/user/appointments/detail`);
+      if (role === "user") {
+        router.push(`/user/appointments/detail`);
+      } else {
+        router.push(`/therapist/appointments/detail`);
+      }
     }
   };
 
@@ -38,6 +47,20 @@ export default function AppointmentDetailTemplate() {
               <UserDetail data={data} setShowModal={setShowModal} />
             )}
           </BoxWrapper>
+          {role === "therapist" && (
+            <div className={classes.reviewSection}>
+              <p className={clsx(classes.reviewSectionTitle, "fs18 fw-600")}>
+                Reviews
+              </p>
+              <Row className="gy-4">
+                {data?.review?.slice(0, 6).map((item, index) => (
+                  <Col lg={6} key={index}>
+                    <ReviewSection data={item} />
+                  </Col>
+                ))}
+              </Row>
+            </div>
+          )}
         </Col>
       </Row>
       {showModal && <AddReviewModal show={showModal} setShow={setShowModal} />}

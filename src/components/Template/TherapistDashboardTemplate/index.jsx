@@ -19,6 +19,8 @@ import NotificationCard from "@/components/molecules/NotificationCard";
 import Calendar from "@/components/molecules/Calendar";
 import { useRouter } from "next/navigation";
 import NotificationSection from "@/components/organisms/NotificationSection";
+import moment from "moment";
+import Image from "next/image";
 
 export default function TherapistDashboardTemplate() {
   const router = useRouter();
@@ -59,12 +61,21 @@ export default function TherapistDashboardTemplate() {
               date={selectedDate}
             >
               <div className={classes.appointmentsSection}>
-                <p className={classes.appointmentsTitle}>New Appointments</p>
+                <p className={classes.appointmentsTitle}>Next Appointments</p>
                 <div className={classes.appointmentsList}>
-                  {data?.appointments?.map((item) => (
+                  <p className={classes.appointmentDate}>Wednesday, 9th Oct</p>
+                  {data?.newAppointments?.map((item) => (
                     <div className={classes.appointmentCard} key={item?.id}>
-                      <p className={classes.appointmentTime}>{item?.time}</p>
-                      <p className={classes.appointmentTitle}>{item?.title}</p>
+                      <div className={classes.appointmentTime}>
+                        <Image
+                          src="/svgs/clock.svg"
+                          alt="clock"
+                          width={16}
+                          height={16}
+                        />
+                        <span className={classes.appointmentTime}>Time</span>{" "}
+                        {moment(item?.time).format("hh:mm A")}
+                      </div>
                       <p className={classes.appointmentType}>{item?.type}</p>
                     </div>
                   ))}

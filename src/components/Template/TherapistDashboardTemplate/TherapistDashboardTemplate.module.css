@@ -32,3 +32,23 @@
   line-height: 120%;
   text-transform: capitalize;
 }
+.appointmentCard{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.appointmentDate {
+  color: var(--heading-color);
+  font-family: var(--font-inter);
+  font-size: var(--fs16);
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.appointmentTime {
+  color: var(--heading-color);
+  font-family: var(--font-inter);
+  font-size: var(--fs12);
+  font-weight: 500;
+  text-transform: capitalize;
+}
