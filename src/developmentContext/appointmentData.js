@@ -144,4 +144,5 @@ export const appointmentDetailData = {
   location: "United States",
   language: "English",
   price: 90,
+  review: false,
 };

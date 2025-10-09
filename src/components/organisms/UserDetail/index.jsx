@@ -5,8 +5,9 @@ import { FaCalendar, FaClock, FaMapMarkerAlt, FaGlobe } from "react-icons/fa";
 import moment from "moment";
 import { RenderStatusCell } from "../ResponsiveTable/CommonCells";
 import { getFormattedPrice } from "@/resources/utils/helper";
+import Button from "@/components/atoms/Button";
 
-export default function UserDetail({ data }) {
+export default function UserDetail({ data, setShowModal }) {
   return (
     <div className={classes.card}>
       <div className={classes.header}>
@@ -65,6 +66,16 @@ export default function UserDetail({ data }) {
           <div className={classes.priceLabel}>Price</div>
         </div>
       </div>
+      {data?.review === false && (
+        <div className={classes.addReview}>
+          <Button
+            label="Add Review"
+            variant="secondary"
+            className={classes.addReviewButton}
+            onClick={() => setShowModal(true)}
+          />
+        </div>
+      )}
     </div>
   );
 }

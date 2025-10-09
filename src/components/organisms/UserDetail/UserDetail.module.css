@@ -136,6 +136,14 @@
   font-size: var(--fs12);
   font-weight: 400;
 }
+.addReview {
+  width: 100%;
+  justify-content: flex-end;
+  display: flex;
+}
+.addReviewButton {
+  max-width: fit-content !important;
+}
 
 @media (max-width: 768px) {
   .detailsSection {

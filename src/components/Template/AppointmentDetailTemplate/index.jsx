@@ -8,11 +8,12 @@ import { TABS_OPTIONS } from "@/developmentContext/tabs";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Button from "@/components/atoms/Button";
 import classes from "./AppointmentDetailTemplate.module.css";
+import AddReviewModal from "@/components/organisms/Modals/AddReviewModal";
 
 export default function AppointmentDetailTemplate() {
   const router = useRouter();
+  const [showModal, setShowModal] = useState(false);
 
   const [data, setData] = useState(appointmentDetailData);
   const [loading, setLoading] = useState("");
@@ -28,20 +29,18 @@ export default function AppointmentDetailTemplate() {
     <Container fluid>
       <Row>
         <Col md={12} className="p-0">
-          <div className={classes.titleHeader}>
-            <TitleHeader title="Appointment Detail" />
-            <Button label="Add Review" variant="secondary" className={classes.addReviewButton} />
-          </div>
+          <TitleHeader title="Appointment Detail" />
 
           <BoxWrapper>
             {loading === "get-data" ? (
               <LoadingSkeleton width={"100%"} height={500} />
             ) : (
-              <UserDetail data={data} />
+              <UserDetail data={data} setShowModal={setShowModal} />
             )}
           </BoxWrapper>
         </Col>
       </Row>
+      {showModal && <AddReviewModal show={showModal} setShow={setShowModal} />}
     </Container>
   );
 }

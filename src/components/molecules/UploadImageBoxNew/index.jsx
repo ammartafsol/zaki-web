@@ -22,6 +22,8 @@ const UploadImageBoxNew = ({
   onEdit = () => {},
   acceptedType,
   error,
+  uploadButtonClass,
+  labelClass,
 }) => {
   const inputRef = useRef(null);
 
@@ -87,14 +89,14 @@ const UploadImageBoxNew = ({
         </div>
         <div className={classes.labelContainer}>
           {label && (
-            <label className={`${classes.label} ${subLabel && "m-0"}`}>
+            <label className={`${classes.label} ${subLabel && "m-0"} ${labelClass}`}>
               {label}
             </label>
           )}
 
           {edit && (
             <Button
-              className={classes.uploadButton}
+              className={clsx(classes.uploadButton, uploadButtonClass)}
               label={"Upload"}
               variant="secondary"
               onClick={() => {

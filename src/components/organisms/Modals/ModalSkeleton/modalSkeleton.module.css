@@ -53,6 +53,11 @@
 
 .heading {
   color: var(--heading-color);
+  font-family: var(--font-inter);
+  font-size: var(--fs24);
+  font-weight: 600;
+  line-height: var(--lh24);
+  text-transform: capitalize;
 }
 
 .subheading {
@@ -63,14 +68,15 @@
   background: var(--white);
   border-radius: 8px;
   border: 1px solid var(--border);
+  height: 100%;
 
   /* Shadow/xs */
   box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
 }
 .footer {
-  border-top: 1px solid var(--border);
-  background: var(--white-1);
   padding: var(--fs14);
+  border-top: 1px solid var(--grey-400);
+  background: var(--sea-mist-50);
 }
 .footerSecondary {
   justify-content: flex-start;
@@ -116,4 +122,5 @@
 
   margin-right: 20px !important;
   width: 390px !important;
+  padding-block: var(--p-30);
 }
