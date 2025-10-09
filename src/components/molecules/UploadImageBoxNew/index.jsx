@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { IoIosAdd } from "react-icons/io";
-import { MdClose, MdModeEdit } from "react-icons/md";
+import { MdClose, MdModeEdit, MdModeEditOutline } from "react-icons/md";
 import classes from "./UploadImageBoxNew.module.css";
 import Image from "next/image";
 import { imageUrl } from "@/resources/utils/helper";
@@ -89,7 +89,9 @@ const UploadImageBoxNew = ({
         </div>
         <div className={classes.labelContainer}>
           {label && (
-            <label className={`${classes.label} ${subLabel && "m-0"} ${labelClass}`}>
+            <label
+              className={`${classes.label} ${subLabel && "m-0"} ${labelClass}`}
+            >
               {label}
             </label>
           )}
@@ -105,6 +107,18 @@ const UploadImageBoxNew = ({
               }}
             />
           )}
+
+          { state ? (
+            <Button
+              className={clsx(classes.uploadButton, uploadButtonClass)}
+              leftIcon={<MdModeEdit />}
+              variant="secondary"
+              onClick={() => {
+                inputRef.current.click();
+                onEdit();
+              }}
+            />
+          ) : null}
         </div>
 
         {/* Input For Image/Video Upload */}
