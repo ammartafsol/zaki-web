@@ -14,8 +14,12 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { setTokenCookie } from "@/resources/utils/cookie";
 import RenderToast from "@/components/atoms/RenderToast";
-import { handleEncrypt } from "@/interceptor/encryption";
-import { TOKEN_COOKIE_NAME } from "@/resources/utils/cookie";
+import { handleDecrypt, handleEncrypt } from "@/interceptor/encryption";
+import {
+  TOKEN_COOKIE_NAME,
+  USER_ROLE_COOKIE_NAME,
+} from "@/resources/utils/cookie";
+import Cookies from "js-cookie";
 
 export default function LoginTemplate() {
   const router = useRouter();
@@ -40,6 +44,7 @@ export default function LoginTemplate() {
       email: "user@yopmail.com",
       password: "12345678",
       role: "user",
+      accessToken: "12345678",
     },
   ];
 
@@ -58,6 +63,12 @@ export default function LoginTemplate() {
       } else {
         router.push("/user/dashboard");
       }
+      Cookies.set(TOKEN_COOKIE_NAME, handleEncrypt(foundUser.accessToken), {
+        expires: 90,
+      });
+      Cookies.set(USER_ROLE_COOKIE_NAME, handleEncrypt(foundUser.role), {
+        expires: 90,
+      });
       // setTokenCookie(foundUser.accessToken);
       // setUserMetadataCookie(foundUser);
 
