@@ -104,11 +104,14 @@
   gap: var(--g-20);
   flex-direction: column;
   height: 100%;
-  transition: all 0.3s ease-in-out;
+  transition: background 0.4s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .cardItems:hover {
   background: var(--deep-teal);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 .cardItems:hover .cardTitle,
 .cardItems:hover .cardDescription {
@@ -124,15 +127,18 @@
 }
 .cardIcon img {
   object-fit: contain;
+  transition: filter 0.4s ease-in-out;
 }
 .cardTitle {
   color: var(--midnight-teal);
   font-family: var(--font-ranade);
   line-height: var(--lh40);
+  transition: color 0.4s ease-in-out;
 }
 .cardDescription {
   color: var(--text-night);
   font-family: var(--font-archivo);
   line-height: var(--lh20);
   max-width: 80%;
+  transition: color 0.4s ease-in-out;
 }

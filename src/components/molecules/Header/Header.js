@@ -1,18 +1,20 @@
-import React from "react";
-import classes from "./Header.module.css";
-import Image from "next/image";
-import { Container } from "react-bootstrap";
-import Link from "next/link";
 import Button from "@/components/atoms/Button";
-import { BiMenu, BiOutline } from "react-icons/bi";
-import { webNavData } from "@/developmentContext/appData";
-import { imageUrl } from "@/resources/utils/helper";
-import { HiArrowRightCircle } from "react-icons/hi2";
-import { useRouter, usePathname } from "next/navigation";
-import clsx from "clsx";
 import LanguageSwitcher from "@/components/atoms/LanguageSwitcher";
+import { webNavData } from "@/developmentContext/appData";
+import clsx from "clsx";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { Container } from "react-bootstrap";
+import { HiArrowRightCircle } from "react-icons/hi2";
+import { useSelector } from "react-redux";
+import classes from "./Header.module.css";
 
 const Header = () => {
+  const { language } = useSelector((state) => state.commonReducer);
+
+  let isDe = language === "de";
+
   const router = useRouter();
   const pathname = usePathname();
 
@@ -26,7 +28,10 @@ const Header = () => {
       <Container>
         <div className={classes.headerContent}>
           {/* Logo */}
-          <div className={classes.logo} onClick={() => router.push("/")}>
+          <div
+            className={clsx(classes.logo, isDe && classes.deLogo)}
+            onClick={() => router.push("/")}
+          >
             <Image
               src={
                 pathname === "/"
@@ -37,17 +42,19 @@ const Header = () => {
               fill
             />
           </div>
-          <nav className={clsx(classes.nav, pathname === "/" && classes.whiteNav)}>
+          <nav
+            className={clsx(classes.nav, pathname === "/" && classes.whiteNav)}
+          >
             {webNavData.map((item, index) => (
               <Link
                 key={index}
                 href={item?.path}
                 className={clsx(
                   classes.navLink,
+                  isDe && classes.deNavLink,
                   pathname === "/" && classes.whiteNavLink,
-                  pathname === item?.path && classes.activeNavLink,
-                )
-              }
+                  pathname === item?.path && classes.activeNavLink
+                )}
               >
                 {item?.title}
               </Link>
@@ -60,7 +67,7 @@ const Header = () => {
             label="Finde Therapeuten"
             variant="primary"
             leftIcon={<HiArrowRightCircle size={16} />}
-            className={classes.ctaButton}
+            className={clsx(classes.ctaButton, isDe && classes.deCtaButton)}
           />
         </div>
       </Container>

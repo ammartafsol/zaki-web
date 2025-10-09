@@ -32,12 +32,29 @@
   font-style: normal;
   font-weight: 400;
   line-height: var(--lh25);
-  transition: all 0.3s ease-in;
-  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+  text-decoration: none;
 }
+
+.footerLink::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--sunbeam-yellow);
+  transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
 .footerLink:hover {
   color: var(--sunbeam-yellow);
-  border-bottom: 2px solid var(--sunbeam-yellow);
+}
+
+.footerLink:hover::after {
+  width: 100%;
+  left: 0;
 }
 .socialLinksDiv {
   display: flex;
@@ -71,12 +88,30 @@
   display: flex;
   gap: var(--g-20);
 }
-.legalLink , .copyright {
+.legalLink,
+.copyright {
   color: var(--white);
   font-family: var(--font-ranade);
   font-size: 14px;
   font-weight: 400;
   line-height: var(--lh22);
+}
+
+.legalLink {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.legalLink::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--sunbeam-yellow);
+  transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
 }
 .legalLink:not(:last-child) {
   border-right: 1px solid var(--white);
@@ -84,13 +119,16 @@
 }
 
 .copyright span {
-    border-left: 1px solid var(--white);
-    padding-left: var(--p-20);
-    margin-left: var(--m-20);
+  border-left: 1px solid var(--white);
+  padding-left: var(--p-20);
+  margin-left: var(--m-20);
 }
 
 .legalLink:hover {
   color: var(--sunbeam-yellow);
-
 }
 
+.legalLink:hover::after {
+  width: 100%;
+  left: 0;
+}

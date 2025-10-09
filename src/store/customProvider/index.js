@@ -1,56 +1,10 @@
 "use client";
-import useAxios from "@/interceptor/axios-functions";
-import Aos from "aos";
-import { useEffect, useState } from "react";
-import { Provider, useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/lib/integration/react";
 import store, { persistor } from "..";
-import { signOutRequest } from "../auth/authSlice";
 
 export function CustomProvider({ children }) {
-  useEffect(() => {
-    Aos.init();
-  }, []);
-
-  return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <ApisProvider>{children}</ApisProvider>
-      </PersistGate>
-    </Provider>
-  );
-}
-
-export default function ApisProvider({ children }) {
-  let accessToken = useSelector((state) => state.authReducer.accessToken);
-  const dispatch = useDispatch();
-  const { Get } = useAxios();
-  const [ready, setReady] = useState(false);
-
-  const getCommonData = async () => {
-    const [{ response: userResponse }] = await Promise?.all([
-      Get({ route: "users/me" }),
-    ]);
-    if (userResponse) {
-      dispatch(setExample(userResponse?.data?.data));
-    }
-  };
-
-  useEffect(() => {
-    if (accessToken) {
-      // console.log("Access Token:", accessToken);
-    }
-  }, [accessToken]);
-
-  useEffect(() => {
-    if (!accessToken) {
-      dispatch(signOutRequest());
-    } else {
-      // getCommonData();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   useEffect(() => {
     const addGoogleTranslateScript = () => {
       // Create the google_translate_element div if it doesn't exist
@@ -71,7 +25,7 @@ export default function ApisProvider({ children }) {
         new window.google.translate.TranslateElement(
           {
             pageLanguage: "en",
-            includedLanguages: "en,ar",
+            includedLanguages: "en,de",
             layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
           },
           "google_translate_element"
@@ -138,25 +92,19 @@ export default function ApisProvider({ children }) {
             }
           }
         };
-
-        setReady(true); // ✅ app is safe to render
       };
     };
 
     if (!window.google?.translate?.TranslateElement) {
       addGoogleTranslateScript();
-    } else {
-      setReady(true);
     }
   }, []);
 
-  if (!ready) {
-    return (
-      <div style={{ visibility: "hidden" }}>
-        {/* <LoadingTemplate /> */}
-      </div>
-    );
-  }
-
-  return children;
+  return (
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        {children}
+      </PersistGate>
+    </Provider>
+  );
 }
