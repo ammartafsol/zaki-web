@@ -66,7 +66,7 @@
   line-height: var(--lh20);
   text-transform: capitalize;
 }
-.filePreviewList{
+.filePreviewList {
   margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -86,24 +86,29 @@
   border-radius: 20px;
   display: block;
 }
-.removeFile{
+.removeFile {
   background-color: var(--tidewater-blue);
   padding: 5px;
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  color:var(--white);
+  color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.fileContainer{
+.fileContainer {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   /* align-items: center; */
   max-width: 100%;
 }
-.fileContainer svg{
+.fileContainer svg {
   color: var(--tidewater-blue);
   font-size: 35px;
+}
+.fileItem {
+ display: flex;
+ /* justify-content: center; */
+ gap: 10px;
 }

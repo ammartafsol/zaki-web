@@ -98,8 +98,7 @@ const MultiFileUpload = ({
     ) : fileType === "docs" ? (
       <div className={classes?.fileContainer}>
         <FaFileContract
-          title="View File"
-          size={35}
+          size={100}
           className={classes.file}
           onClick={() =>
             window.open(
