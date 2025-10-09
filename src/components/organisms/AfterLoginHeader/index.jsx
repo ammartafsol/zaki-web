@@ -4,17 +4,25 @@ import classes from "./AfterLoginHeader.module.css";
 import { Col, Container, Row } from "react-bootstrap";
 import Image from "next/image";
 import Link from "next/link";
-import { nav_data } from "@/developmentContext/appData";
+import { nav_data, therapist_nav_data } from "@/developmentContext/appData";
 import { usePathname, useRouter } from "next/navigation";
 import clsx from "clsx";
+import { getUserMetadataCookie } from "@/resources/utils/cookie";
 
 export default function AfterLoginHeader() {
+  const userMetadata = getUserMetadataCookie();
+  const userRole = userMetadata?.role;
+
+  console.log(userRole);
+
   const pathname = usePathname();
   const router = useRouter();
   // const { user } = useSelector((state) => state.authReducer);
   const user = {
     photo: "/app-images/user-profile.png",
   };
+
+  const navData = userRole === "therapist" ? therapist_nav_data : nav_data;
 
   return (
     <Container fluid>
@@ -26,7 +34,7 @@ export default function AfterLoginHeader() {
         </Col>
         <Col md={7}>
           <div className={classes.nav}>
-            {nav_data?.map((item) => (
+            {navData?.map((item) => (
               <Link
                 href={item.path}
                 key={item.path}

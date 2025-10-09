@@ -93,3 +93,23 @@ export const nav_data = [
   { title: "Chat", path: "/user/chat", icon: "/svgs/chat.svg" },
   { title: "Wallet", path: "/user/wallet", icon: "/svgs/wallet.svg" },
 ];
+
+export const therapist_nav_data = [
+  {
+    title: "Dashboard",
+    path: "/therapist/dashboard",
+    icon: "/svgs/dashboard.svg",
+  },
+  {
+    title: "Appointments",
+    path: "/therapist/appointments",
+    icon: "/svgs/therapists.svg",
+  },
+  {
+    title: "Calendar",
+    path: "/therapist/calendar",
+    icon: "/svgs/appointments.svg",
+  },
+  { title: "Chat", path: "/therapist/chat", icon: "/svgs/chat.svg" },
+  { title: "Wallet", path: "/therapist/wallet", icon: "/svgs/wallet.svg" },
+];

@@ -2,26 +2,25 @@
 import Button from "@/components/atoms/Button";
 import LoadingSkeleton from "@/components/atoms/LoadingSkeleton";
 import Stats from "@/components/atoms/Stats";
-import NotificationCard from "@/components/molecules/NotificationCard";
 import PopOver from "@/components/molecules/PopOver";
 import ResponsiveTable from "@/components/organisms/ResponsiveTable/ResponsiveTable";
+import { MdKeyboardArrowRight } from "react-icons/md";
 import {
   dashboardData,
   dashboardTableHeader,
   statsData,
 } from "@/developmentContext/dashboardData";
 import { dashboardPopoverOptions } from "@/developmentContext/popover-otpions";
-import clsx from "clsx";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { GoArrowUpRight } from "react-icons/go";
-import { MdKeyboardArrowRight } from "react-icons/md";
-import classes from "./DashboardTemplate.module.css";
+import classes from "./TherapistDashboardTemplate.module.css";
+import clsx from "clsx";
+import NotificationCard from "@/components/molecules/NotificationCard";
+import { useRouter } from "next/navigation";
 
-export default function DashboardTemplate() {
+export default function TherapistDashboardTemplate() {
   const router = useRouter();
-
   const [data, setData] = useState(dashboardData);
   const [loading, setLoading] = useState("");
 
@@ -33,21 +32,22 @@ export default function DashboardTemplate() {
     <div className={classes.dashboardTemplate}>
       <Container fluid>
         <Row>
-          <Col md={12}>
+          <Col md={6}>
             <Row>
               {loading === "get-data"
                 ? Array.from({ length: 4 }).map((item, index) => (
-                    <Col md={6} lg={3} className="mb-4" key={index}>
+                    <Col md={6} lg={6} className="mb-4" key={index}>
                       <LoadingSkeleton width={"100%"} height={200} />
                     </Col>
                   ))
                 : statsData(data)?.map((item) => (
-                    <Col md={6} lg={3} className="mb-4" key={item?.title}>
+                    <Col md={6} lg={6} className="mb-4" key={item?.title}>
                       <Stats data={item} />
                     </Col>
                   ))}
             </Row>
           </Col>
+
           <Col md={8}>
             <div className={classes.tableWrapper}>
               <p className={classes.tableTitle}>Upcoming Appointments</p>
