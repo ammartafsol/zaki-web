@@ -47,6 +47,11 @@ export const getUserMetadataCookie = () => {
   return userMetadata ? handleDecrypt(userMetadata) : null;
 };
 
+export const getUserRoleCookie = () => {
+  const userRole = Cookies.get(USER_ROLE_COOKIE_NAME);
+  return userRole ? handleDecrypt(userRole) : null;
+};
+
 export const removeUserMetadataCookie = () => {
   Cookies.remove(USER_METADATA_COOKIE_NAME);
 };

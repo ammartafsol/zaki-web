@@ -13,12 +13,10 @@ import {
 import { dashboardPopoverOptions } from "@/developmentContext/popover-otpions";
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { GoArrowUpRight } from "react-icons/go";
 import classes from "./TherapistDashboardTemplate.module.css";
 import clsx from "clsx";
 import NotificationCard from "@/components/molecules/NotificationCard";
 import Calendar from "@/components/molecules/Calendar";
-import { sampleAppointments } from "@/developmentContext/calendarData";
 import { useRouter } from "next/navigation";
 import NotificationSection from "@/components/organisms/NotificationSection";
 
@@ -26,21 +24,19 @@ export default function TherapistDashboardTemplate() {
   const router = useRouter();
   const [data, setData] = useState(dashboardData);
   const [loading, setLoading] = useState("");
+  const [selectedDate, setSelectedDate] = useState(null);
 
   const onClickPopover = (label, rowItem) => {
     console.log(label, rowItem);
   };
 
-  const handleDateSelect = (date, appointments) => {
-    console.log("Selected date:", date);
-    console.log("Appointments for this date:", appointments);
-  };
+  console.log(selectedDate);
 
   return (
     <div className={classes.dashboardTemplate}>
       <Container fluid>
         <Row>
-          <Col md={6}>
+          <Col md={7}>
             <Row>
               {loading === "get-data"
                 ? Array.from({ length: 4 }).map((item, index) => (
@@ -56,13 +52,25 @@ export default function TherapistDashboardTemplate() {
             </Row>
           </Col>
 
-          <Col md={6}>
-            <div className={classes.calendarWrapper}>
-              <Calendar
-                appointments={sampleAppointments}
-                onDateSelect={handleDateSelect}
-              />
-            </div>
+          <Col md={5} className="mb-4">
+            <Calendar
+              setSelectedDate={setSelectedDate}
+              setDate={setSelectedDate}
+              date={selectedDate}
+            >
+              <div className={classes.appointmentsSection}>
+                <p className={classes.appointmentsTitle}>New Appointments</p>
+                <div className={classes.appointmentsList}>
+                  {data?.appointments?.map((item) => (
+                    <div className={classes.appointmentCard} key={item?.id}>
+                      <p className={classes.appointmentTime}>{item?.time}</p>
+                      <p className={classes.appointmentTitle}>{item?.title}</p>
+                      <p className={classes.appointmentType}>{item?.type}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Calendar>
           </Col>
 
           <Col md={8}>

@@ -1,39 +1,20 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
-import { FaClock } from "react-icons/fa";
 import classes from "./Calendar.module.css";
 import clsx from "clsx";
 
-export default function Calendar({ appointments = [], onDateSelect }) {
+export default function Calendar({ setSelectedDate, setDate, date, children }) {
   const [currentMonth, setCurrentMonth] = useState(new Date());
-  const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedAppointments, setSelectedAppointments] = useState([]);
-
-  // Get appointments for a specific date
-  const getAppointmentsForDate = (date) => {
-    if (!appointments || appointments.length === 0) return [];
-
-    return appointments.filter((appointment) => {
-      const appointmentDate = new Date(appointment.date);
-      return (
-        appointmentDate.getDate() === date.getDate() &&
-        appointmentDate.getMonth() === date.getMonth() &&
-        appointmentDate.getFullYear() === date.getFullYear()
-      );
-    });
-  };
 
   // Handle date click
-  const handleDateClick = (date) => {
-    setSelectedDate(date);
-    const dayAppointments = getAppointmentsForDate(date);
-    setSelectedAppointments(dayAppointments);
-
-    if (onDateSelect) {
-      onDateSelect(date, dayAppointments);
+  const handleDateClick = (selectedDate) => {
+    if (setDate) {
+      setDate(selectedDate);
     }
+
+    setSelectedDate(selectedDate);
   };
 
   // Navigation functions
@@ -73,11 +54,6 @@ export default function Calendar({ appointments = [], onDateSelect }) {
     return days;
   };
 
-  // Check if date has appointments
-  const hasAppointments = (date) => {
-    return getAppointmentsForDate(date).length > 0;
-  };
-
   // Check if date is today
   const isToday = (date) => {
     const today = new Date();
@@ -89,12 +65,12 @@ export default function Calendar({ appointments = [], onDateSelect }) {
   };
 
   // Check if date is selected
-  const isSelected = (date) => {
-    if (!selectedDate) return false;
+  const isSelected = (dateToCheck) => {
+    if (!date) return false;
     return (
-      date.getDate() === selectedDate.getDate() &&
-      date.getMonth() === selectedDate.getMonth() &&
-      date.getFullYear() === selectedDate.getFullYear()
+      dateToCheck.getDate() === date.getDate() &&
+      dateToCheck.getMonth() === date.getMonth() &&
+      dateToCheck.getFullYear() === date.getFullYear()
     );
   };
 
@@ -160,8 +136,7 @@ export default function Calendar({ appointments = [], onDateSelect }) {
               classes.dayButton,
               !day && classes.emptyDay,
               day && isToday(day) && classes.today,
-              day && isSelected(day) && classes.selectedDay,
-              day && hasAppointments(day) && classes.hasAppointments
+              day && isSelected(day) && classes.selectedDay
             )}
             onClick={() => day && handleDateClick(day)}
             disabled={!day}
@@ -171,42 +146,8 @@ export default function Calendar({ appointments = [], onDateSelect }) {
         ))}
       </div>
 
-      {/* Selected Date Appointments */}
-      {selectedDate && (
-        <div className={classes.appointmentsSection}>
-          <h4 className={classes.appointmentsTitle}>Next Appointment</h4>
-
-          {selectedAppointments.length > 0 ? (
-            <div className={classes.appointmentDetails}>
-              <div className={classes.appointmentDate}>
-                {selectedDate.toLocaleDateString("en-US", {
-                  weekday: "long",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </div>
-
-              {selectedAppointments.map((appointment, index) => (
-                <div key={index} className={classes.appointmentItem}>
-                  <div className={classes.appointmentTime}>
-                    <FaClock size={14} />
-                    <span>Time {appointment.time}</span>
-                  </div>
-                  {appointment.title && (
-                    <div className={classes.appointmentTitle}>
-                      {appointment.title}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className={classes.noAppointments}>
-              No appointments scheduled for this date
-            </div>
-          )}
-        </div>
-      )}
+      {/* Children content */}
+      {children}
     </div>
   );
 }

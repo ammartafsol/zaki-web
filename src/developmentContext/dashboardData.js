@@ -86,6 +86,17 @@ export const dashboardData = {
         "John Smith has registered as a therapist and is awaiting profile verification.",
     },
   ],
+  newAppointments: [
+    {
+      time: "2025-01-01T00:00:00.000Z",
+    },
+    {
+      time: "2025-01-01T08:00:00.000Z",
+    },
+    {
+      time: "2025-01-01T12:00:00.000Z",
+    },
+  ],
 };
 
 export const statsData = (data) => [

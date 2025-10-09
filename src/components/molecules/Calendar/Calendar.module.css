@@ -3,7 +3,7 @@
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  /* height: 100%; */
   width: 100%;
 }
 
@@ -37,6 +37,7 @@
   font-weight: 600;
   color: var(--heading-color);
   margin: 0;
+  letter-spacing: 1px;
 }
 
 .dayHeaders {
@@ -48,9 +49,9 @@
 
 .dayHeader {
   font-family: var(--font-sen);
-  font-size: var(--fs12);
+  font-size: var(--fs16);
   font-weight: 500;
-  color: var(--text-secondary);
+  color: var(--heading-color);
   text-align: center;
   padding: 8px 4px;
 }
@@ -66,7 +67,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 12px 8px;
+  padding: 5px;
   border-radius: 8px;
   font-family: var(--font-sen);
   font-size: var(--fs14);
@@ -74,7 +75,6 @@
   color: var(--heading-color);
   transition: all 0.2s ease;
   position: relative;
-  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,15 +95,15 @@
 }
 
 .today {
-  background-color: var(--primary-light, #e3f2fd);
-  color: var(--primary, #1976d2);
+  background-color: var(--sea-mist-fade);
+  color: var(--tidewater-blue);
   font-weight: 600;
 }
 
 .selectedDay {
-  background-color: var(--primary, #4b5563);
+  background-color: var(--pastel-aqua);
   color: var(--white);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .hasAppointments {
@@ -118,7 +118,7 @@
   transform: translateX(-50%);
   width: 4px;
   height: 4px;
-  background-color: var(--primary, #4b5563);
+  background-color: var(--tidewater-blue);
   border-radius: 50%;
 }
 
@@ -165,7 +165,7 @@
   gap: 6px;
   font-family: var(--font-sen);
   font-size: var(--fs12);
-  color: var(--text-secondary);
+  color: var(--industrial-gray);
 }
 
 .appointmentTitle {
@@ -178,7 +178,7 @@
 .noAppointments {
   font-family: var(--font-sen);
   font-size: var(--fs14);
-  color: var(--text-secondary);
+  color: var(--industrial-gray);
   text-align: center;
   padding: 20px;
   background: var(--cloud-white);

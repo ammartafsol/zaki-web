@@ -1,19 +1,15 @@
 "use client";
-import React from "react";
-import classes from "./AfterLoginHeader.module.css";
-import { Col, Container, Row } from "react-bootstrap";
+import { nav_data, therapist_nav_data } from "@/developmentContext/appData";
+import { getUserRoleCookie } from "@/resources/utils/cookie";
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import { nav_data, therapist_nav_data } from "@/developmentContext/appData";
 import { usePathname, useRouter } from "next/navigation";
-import clsx from "clsx";
-import { getUserMetadataCookie } from "@/resources/utils/cookie";
+import { Col, Container, Row } from "react-bootstrap";
+import classes from "./AfterLoginHeader.module.css";
 
 export default function AfterLoginHeader() {
-  const userMetadata = getUserMetadataCookie();
-  const userRole = userMetadata?.role;
-
-  console.log(userRole);
+  const userRole = getUserRoleCookie();
 
   const pathname = usePathname();
   const router = useRouter();
