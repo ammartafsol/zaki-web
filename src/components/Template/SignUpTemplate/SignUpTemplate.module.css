@@ -101,3 +101,18 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+.uploadImageBoxNew{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  width: 100%;
+}
+.uploadImageLabel{
+  font-size: var(--fs14) !important;
+  font-weight: 600 !important;
+  line-height: var(--lh20) !important;
+  color: var(--heading-color) !important;
+  margin-bottom: 0 !important;
+}

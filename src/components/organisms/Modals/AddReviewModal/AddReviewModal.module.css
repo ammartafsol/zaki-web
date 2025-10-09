@@ -1,0 +1,29 @@
+.rowGap {
+    row-gap: 20px;
+  }
+  .footerContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+  .cancelButton {
+    max-width: fit-content !important;
+    border-radius: var(--br-12) !important;
+    border: none !important;
+  }
+  .addReviewButton {
+    max-width: fit-content !important;
+    border-radius: var(--br-12) !important;
+  }
+  .ratingContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .ratingLabel {
+    color: var(--heading-color);
+    font-size: var(--fs14);
+    font-weight: 600;
+    line-height: var(--lh20);
+  }

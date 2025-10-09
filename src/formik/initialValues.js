@@ -10,6 +10,7 @@ export const signUpFormValues = {
   confirmPassword: "",
   phoneNumber: "",
   callingCode: "",
+  photo: null,
 };
 
 export const updatePasswordValues = {
@@ -51,4 +52,9 @@ export const changePasswordFormValues = {
   currentPassword: "",
   password: "",
   confirmPassword: "",
+};
+
+export const addReviewFormValues = {
+  rating: 0,
+  review: "",
 };

@@ -12,6 +12,7 @@ import { FiLock, FiMail, FiUser } from "react-icons/fi";
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import CustomPhoneInput from "@/components/atoms/PhoneInput/PhoneInput";
+import UploadImageBoxNew from "@/components/molecules/UploadImageBoxNew";
 
 export default function SignUpTemplate() {
   const [loading, setLoading] = useState("");
@@ -43,6 +44,15 @@ export default function SignUpTemplate() {
               </div>
 
               <div className={classes.form}>
+                <UploadImageBoxNew
+                  state={signUpForm.values.photo}
+                  setValue={(val) => signUpForm.setFieldValue("photo", val)}
+                  error={signUpForm.touched.photo && signUpForm.errors.photo}
+                  label="Profile Picture"
+                  edit={false}
+                  containerClass={classes.uploadImageBoxNew}
+                  labelClass={classes.uploadImageLabel}
+                />
                 <Input
                   label="Full Name"
                   type="text"

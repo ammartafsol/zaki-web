@@ -86,4 +86,10 @@ export const SignUpSchema = Yup.object({
     .matches(/^\+?[\d\s\-\(\)]+$/, "Please enter a valid phone number")
     .required("Phone number is required"),
   callingCode: Yup.string().required("Calling code is required"),
+  photo: Yup.mixed().optional(),
+});
+
+export const AddReviewFormSchema = Yup.object({
+  rating: Yup.number().min(1, "Rating is required"),
+  review: Yup.string().required("Review is required"),
 });
