@@ -17,11 +17,11 @@ export default function BlogsCards({ data }) {
           fill
         />
       </div>
-      <p className={clsx(classes.createdAt, "fs16 fw-600")}>
+      <p className={clsx(classes.createdAt, "fs16 fw-600")} translate="no">
         {moment(data?.createdAt).format("DD MMM")}
       </p>
       <div className={classes.blogsCardsContent}>
-        <p className={clsx(classes.category, "fs14 fw-600")} translate="no">
+        <p className={clsx(classes.category, "fs14 fw-600")} >
           {data?.category}
         </p>
         <h3 className={clsx(classes.title, "fs24 fw-500 maxLine1")}>
