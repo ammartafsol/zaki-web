@@ -55,7 +55,7 @@ export default function AfterLoginHeader() {
         <Col md={3}>
           <div className={clsx(classes.nav, classes.profile)}>
             <Link
-              href={"/user/notifications"}
+              href={userRole === "therapist" ? "/therapist/notifications" : "/user/notifications"}
               className={clsx(
                 classes.navLink,
                 classes.selectedNav,

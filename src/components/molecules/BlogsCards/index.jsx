@@ -21,7 +21,7 @@ export default function BlogsCards({ data }) {
         {moment(data?.createdAt).format("DD MMM")}
       </p>
       <div className={classes.blogsCardsContent}>
-        <p className={clsx(classes.category, "fs14 fw-600")}>
+        <p className={clsx(classes.category, "fs14 fw-600")} translate="no">
           {data?.category}
         </p>
         <h3 className={clsx(classes.title, "fs24 fw-500 maxLine1")}>

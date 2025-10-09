@@ -32,10 +32,12 @@
   font-style: normal;
   font-weight: 400;
   line-height: var(--lh25);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in;
+  border-bottom: 2px solid transparent;
 }
 .footerLink:hover {
   color: var(--sunbeam-yellow);
+  border-bottom: 2px solid var(--sunbeam-yellow);
 }
 .socialLinksDiv {
   display: flex;
@@ -89,5 +91,6 @@
 
 .legalLink:hover {
   color: var(--sunbeam-yellow);
+
 }
 
