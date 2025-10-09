@@ -31,6 +31,7 @@ const DropDown = ({
   required = false,
   dropDownContainer = "",
   menuPlacement = "auto",
+  placeholderStyle,
   ...props
 }) => {
   const DropdownIndicator = (props) => {
@@ -74,6 +75,8 @@ const DropDown = ({
       color: "var(--industrial-gray)",
       fontFamily: "var(--font-inter)",
       fontSize: "var(--fs16)",
+
+      ...placeholderStyle,
     }),
     menu: (base) => ({
       ...base,

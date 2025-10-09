@@ -12,6 +12,7 @@
 }
 .searchWrapper {
   display: flex;
+  width: 100%;
   gap: 12px;
 }
 
@@ -19,4 +20,18 @@
   border: none !important;
   border-radius: 14px !important;
   background: var(--cloud-white) !important;
+}
+
+.boxWrapperHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+.searchInput {
+  max-width: 300px;
+}
+.searchWrapperTabs {
+  width: max-content;
 }

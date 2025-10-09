@@ -1,0 +1,84 @@
+.pricePopover {
+  border-radius: 14px;
+  background: var(--cloud-white);
+  display: flex;
+  padding: 4px 14px;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pricePopover:hover {
+  background: var(--hover-bg, #f5f5f5);
+}
+
+.pricePopoverLabel {
+  font-family: var(--font-sen);
+  font-size: var(--fs16);
+  font-weight: 500;
+  color: var(--heading-color);
+}
+
+.arrowIcon {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.pricePopoverContent {
+  position: absolute;
+  top: calc(100% + 8px);
+  background-color: var(--white);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+  min-width: 200px;
+  max-width: 300px;
+  width: max-content;
+  animation: slideDown 0.2s ease-out;
+  /* Prevent overflow */
+  max-width: min(300px, calc(100vw - 40px));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add a small arrow pointing up to the popover */
+.pricePopoverContent::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  background: var(--white);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+/* Arrow positioning for right-aligned popover */
+.pricePopoverContent[style*="right: 0"]::before {
+  left: auto;
+  right: 20px;
+}

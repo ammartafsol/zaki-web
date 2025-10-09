@@ -8,7 +8,10 @@ import TherapistsCard from "@/components/molecules/TherapistsCard";
 import LoadingSkeleton from "@/components/atoms/LoadingSkeleton";
 import { therapistsData } from "@/developmentContext/therapistsData";
 import NoDataFound from "@/components/atoms/NoDataFound/NoDataFound";
-import { categoryOptions } from "@/developmentContext/popover-otpions";
+import {
+  categoryOptions,
+  locationOptions,
+} from "@/developmentContext/popover-otpions";
 
 export default function TherapistsTemplate() {
   const [data, setData] = useState(therapistsData || []);
@@ -18,7 +21,7 @@ export default function TherapistsTemplate() {
     language: null,
     slots: "",
     category: null,
-    location: "",
+    location: null,
     price: "",
   });
 
@@ -32,6 +35,7 @@ export default function TherapistsTemplate() {
             showSearch={true}
             setSearch={(e) => setFilter("search", e)}
             search={filter?.search}
+            searchInputClass={classes.searchInput}
             //language props
             showLanguage={true}
             setLanguage={(e) => setFilter("language", e)}
@@ -46,6 +50,14 @@ export default function TherapistsTemplate() {
             setCategory={(e) => setFilter("category", e)}
             category={filter?.category}
             categoryOptions={categoryOptions}
+            // location props
+            showLocation={true}
+            setLocation={(e) => setFilter("location", e)}
+            location={filter?.location}
+            locationOptions={locationOptions}
+            // price props
+            showPrice={true}
+            setPrice={(e) => setFilter("price", e)}
           >
             <Row className="w-100">
               {loading === "get-data" ? (

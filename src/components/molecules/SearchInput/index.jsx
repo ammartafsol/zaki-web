@@ -9,19 +9,17 @@ export default function SearchInput({
   ...props
 }) {
   return (
-    <div>
-      <Input
-        value={value}
-        setValue={setValue}
-        placeholder={placeholder}
-        rightIcon={
-          <div className={classes.searchIcon}>
-            <Image src="/svgs/search-icon.svg" alt="search" fill />
-          </div>
-        }
-        containerClass={classes.searchInput}
-        {...props}
-      />
-    </div>
+    <Input
+      value={value}
+      setValue={setValue}
+      placeholder={placeholder}
+      rightIcon={
+        <div className={classes.searchIcon}>
+          <Image src="/svgs/search-icon.svg" alt="search" fill />
+        </div>
+      }
+      containerClass={classes.searchInput}
+      {...props}
+    />
   );
 }
