@@ -18,9 +18,43 @@ export default function LoginTemplate() {
   const loginForm = useFormik({
     initialValues: loginFormValues,
     validationSchema: LoginSchema,
-    onSubmit: (values) => {
-    },
+    onSubmit: (values) => {},
   });
+
+  const users = [
+    {
+      email: "admin@yopmail.com",
+      password: "12345678",
+      role: "admin",
+      accessToken: "12345678",
+    },
+    {
+      email: "user@yopmail.com",
+      password: "12345678",
+      role: "user",
+    },
+  ];
+
+  const handleSubmit = async (values) => {
+    // setLoading("login");
+
+    if (
+      values.email === "admin@yopmail.com" &&
+      values.password === "12345678"
+    ) {
+      router.push("/dashboard");
+      Cookies.set(TOKEN_COOKIE_NAME, handleEncrypt("12345678"));
+      RenderToast({
+        message: "Login successful",
+        type: "success",
+      });
+    } else {
+      RenderToast({
+        message: "Invalid email or password",
+        type: "error",
+      });
+    }
+  };
 
   return (
     <div className={classes.wrapper}>
