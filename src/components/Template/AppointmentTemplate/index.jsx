@@ -8,7 +8,7 @@ import {
   appointmentTableHeader,
 } from "@/developmentContext/appointmentData";
 import { dashboardPopoverOptions } from "@/developmentContext/popover-otpions";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import classes from "./AppointmentTemplate.module.css";
 import { TABS_OPTIONS } from "@/developmentContext/tabs";
@@ -20,6 +20,10 @@ export default function AppointmentTemplate() {
   const [data, setData] = useState(appointmentData);
   const [loading, setLoading] = useState("");
   const [selectedTab, setSelectedTab] = useState(TABS_OPTIONS[0].value);
+  const [filter, setFilter] = useState({
+    search: "",
+    date: "",
+  });
 
   const onClickPopover = (label, rowItem) => {
     if (label == "view") {
@@ -37,6 +41,15 @@ export default function AppointmentTemplate() {
             selectedTab={selectedTab}
             setSelectedTab={setSelectedTab}
             tabsOptions={TABS_OPTIONS}
+            // search props
+            showSearch={true}
+            setSearch={(e) => setFilter((prev) => ({ ...prev, search: e }))}
+            search={filter?.search}
+            searchInputClass={classes.searchInput}
+            // date props
+            showDatePicker={true}
+            setDate={(e) => setFilter((prev) => ({ ...prev, date: e }))}
+            date={filter?.date}
           >
             <ResponsiveTable
               data={data}
