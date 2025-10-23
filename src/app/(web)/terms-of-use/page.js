@@ -1,3 +1,6 @@
-export default function TermsPage() {
-  return <div>Terms of Use</div>;
+import TermsandConditionTemplate from "@/components/Template/TermsandConditionTemplate";
+
+
+export default function TermsandConditionPage() {
+  return <TermsandConditionTemplate />;
 }

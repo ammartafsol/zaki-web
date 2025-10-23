@@ -1,0 +1,33 @@
+.wrapper {
+    padding-block: var(--p-70);
+    background: url("/app-images/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+.content{
+  padding-block: var(--p-40);
+  font-family: var(--font-ranade);
+
+}
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  font-family: var(--font-ranade);
+  font-size: var(--fs32);
+  font-weight: 500;
+  line-height: var(--lh32);
+  color: var(--text-night);
+  margin-bottom: var(--m-10);
+}
+.content p {
+  font-family: var(--font-ranade);
+  font-size: var(--fs14);
+  font-weight: 400;
+  line-height: var(--lh22);
+  color: var(--text-night);
+  margin-bottom: var(--m-20);
+}

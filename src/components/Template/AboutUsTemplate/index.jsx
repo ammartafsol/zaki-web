@@ -58,7 +58,7 @@ export default function AboutUsTemplate() {
               </Col>
               <Col lg={12}>
                 <Row className="gy-5">
-                  {data?.sectionTwo?.arr?.map((item, index) => (
+                  {data?.sectionTwo?.therapists?.map((item, index) => (
                     <Col lg={3} md={6} sm={12} key={index}>
                       <ExpertTherapists data={item} />
                     </Col>

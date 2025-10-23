@@ -1,3 +1,6 @@
+import PrivacyPolicyTemplate from "@/components/Template/PrivacyPolicyTemplate";
+
+
 export default function PrivacyPolicyPage() {
-  return <div>Privacy Policy</div>;
+  return <PrivacyPolicyTemplate />;
 }

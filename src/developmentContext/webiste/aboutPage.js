@@ -54,7 +54,7 @@ clients.
     description:
       "A team of licensed therapists focused on your mental health and growth.",
     text: "Our Teams",
-    arr: [
+    therapists: [
       {
         fullName: "Dr. Emily Stevens",
         specialization: "Lead Therapist",
@@ -144,7 +144,7 @@ clients.
     title: "Your Questions Answered",
     text: "For practitioners",
     icon: "/app-images/faq-image.png",
-    arr: [
+    faqs: [
       {
         question: "How can I schedule an appointment?",
         answer:

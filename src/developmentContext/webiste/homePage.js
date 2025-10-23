@@ -42,7 +42,7 @@ export const homePageData = {
     description:
       "We offer a wide range of services to meet your personal needs",
     text: "What We Do",
-    arr: [
+    services: [
       {
         title: "Individual Counseling",
         description:
@@ -86,7 +86,7 @@ export const homePageData = {
     title: "An Easy-To-Follow Therapy Approach",
     description:
       "Supporting you from consultation to care for a smooth path to mental well-being.",
-    arr: [
+    steps: [
       {
         title: "Contact Consultation",
         description:
@@ -181,7 +181,7 @@ export const homePageData = {
     title: "Improself Blog & Resources",
     description:
       "Your go-to source for mental health insights, tools, and advice.",
-    arr: [
+    blogs: [
       {
         createdAt: "2025-01-01",
         category: "Therapy",
@@ -215,7 +215,7 @@ export const homePageData = {
       "Bleib informiert – starte mit uns in eine neue Ära des Wohlbefindens!",
     description:
       "Sei unter den Ersten, die erfahren, wann Improself live geht, und begleite uns auf dem Weg zu mehr Gesundheit und Lebensqualität. Melde dich jetzt für unseren Newsletter an und verpasse keine Neuigkeiten!",
-    arr: [
+    users: [
       {
         photo: "/app-images/user-image.png",
         fullName: "John Doe",
@@ -237,7 +237,7 @@ export const homePageData = {
     title: "Your Questions Answered",
     text: "For practitioners",
     icon: "/app-images/faq-image.png",
-    arr: [
+    faqs: [
       {
         question: "How can I schedule an appointment?",
         answer:

@@ -30,7 +30,7 @@ export default function FaqSection({ data }) {
         </div>
 
         <div className={classes.accordion}>
-          {data?.arr.map((item, index) => {
+          {data?.faqs?.map((item, index) => {
             const isExpanded = expandedItems[index] || false;
             return (
               <Accordion

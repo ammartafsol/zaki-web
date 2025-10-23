@@ -32,7 +32,7 @@ export const whyImproselfPageData = {
     subHeading: "What Makes Us Different",
     logo: "/app-images/Logo.png",
     image: "/app-images/section1-image.png",
-    arr: [
+    advantages: [
       {
         title: "Certified Therapists",
         description: "Work only with trusted, qualified professionals.",

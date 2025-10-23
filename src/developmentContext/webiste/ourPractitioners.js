@@ -9,7 +9,7 @@ export const ourPractitionersPageData = {
     title: "Meet Our Expert Therapists",
     description:
       "A team of licensed therapists focused on your mental health and growth.",
-    arr: [
+    therapists: [
       {
         fullName: "Dr. Emily Stevens",
         specialization: "Lead Therapist",
@@ -57,7 +57,7 @@ export const ourPractitionersPageData = {
       "Bleib informiert – starte mit uns in eine neue Ära des Wohlbefindens!",
     description:
       "Sei unter den Ersten, die erfahren, wann Improself live geht, und begleite uns auf dem Weg zu mehr Gesundheit und Lebensqualität. Melde dich jetzt für unseren Newsletter an und verpasse keine Neuigkeiten!",
-    arr: [
+    users: [
       {
         photo: "/app-images/user-image.png",
         fullName: "John Doe",

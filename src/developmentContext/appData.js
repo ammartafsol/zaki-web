@@ -75,7 +75,9 @@ export const pagesWithHeader = [
   "/why-improself",
   "/our-practitioners",
   "/faq",
+  "/privacy-policy",
   "/",
+  "/terms-of-use",
 ];
 
 export const nav_data = [

@@ -70,7 +70,7 @@ export default function OurPractitionersTemplate() {
               </Col>
               <Col lg={12}>
                 <Row className="gy-5">
-                  {data?.sectionTwo?.arr?.map((item, index) => (
+                  {data?.sectionTwo?.therapists?.map((item, index) => (
                     <Col lg={3} md={6} sm={12} key={index}>
                       <ExpertTherapists data={item} />
                     </Col>
@@ -88,7 +88,7 @@ export default function OurPractitionersTemplate() {
               <Col lg={6}>
                 <div className={classes.sectionThreeContent}>
                   <div className={classes.imagesSection}>
-                    {data?.sectionThree?.arr.slice(0, 8).map((item, index) => (
+                    {data?.sectionThree?.users?.slice(0, 8).map((item, index) => (
                       <div key={index} className={classes.sectionThreeImage}>
                         {item?.photo && (
                           <Image

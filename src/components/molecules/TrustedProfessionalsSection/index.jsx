@@ -55,9 +55,9 @@ export default function TrustedProfessionalsSection({
         </div>
       )}
 
-      {data?.arr && (
+      {data?.advantages && (
         <div className={clsx(classes.card, statsClass)}>
-          {data?.arr.map((item, index) => (
+          {data?.advantages.map((item, index) => (
             <div
               className={clsx(classes.cardItems, statsDetailClass)}
               key={index}

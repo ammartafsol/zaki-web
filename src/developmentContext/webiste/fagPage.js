@@ -3,7 +3,7 @@ export const faqPageData = {
     title: "Your Questions Answered",
     text: "For practitioners",
     icon: "/app-images/faq-image.png",
-    arr: [
+    faqs: [
       {
         question: "How can I schedule an appointment?",
         answer:

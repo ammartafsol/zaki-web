@@ -99,7 +99,7 @@ export default function HomeTemplate() {
 
               <Col lg={12}>
                 <Row className="gy-4">
-                  {data?.sectionTwo?.arr.map((item, index) => (
+                  {data?.sectionTwo?.services?.map((item, index) => (
                     <Col lg={4} key={index}>
                       <ServiceCards data={item} />
                     </Col>
@@ -142,7 +142,7 @@ export default function HomeTemplate() {
               </Col>
               <Col lg={6}>
                 <Row className="gy-4">
-                  {data?.sectionThree?.arr.map((item, index) => (
+                  {data?.sectionThree?.steps?.map((item, index) => (
                     <Col lg={12} key={index}>
                       <StepsCards data={item} index={index} />
                     </Col>
@@ -187,7 +187,7 @@ export default function HomeTemplate() {
               </Col>
               <Col lg={12}>
                 <Row className="gy-4">
-                  {data?.sectionFive?.arr.map((item, index) => (
+                  {data?.sectionFive?.blogs?.map((item, index) => (
                     <Col lg={4} key={index}>
                       <BlogsCards data={item} />
                     </Col>
@@ -205,7 +205,7 @@ export default function HomeTemplate() {
               <Col lg={6}>
                 <div className={classes.sectionSixContent}>
                   <div className={classes.imagesSection}>
-                    {data?.sectionSix?.arr.slice(0, 8).map((item, index) => (
+                    {data?.sectionSix?.users?.slice(0, 8).map((item, index) => (
                       <div key={index} className={classes.sectionSixImage}>
                         {item.photo && (
                           <Image src={item.photo} alt={`Profile ${index + 1}`} fill />
