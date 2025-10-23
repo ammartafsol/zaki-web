@@ -1,13 +1,23 @@
 "use client";
-import React from "react";
+import { useMobileViewHook } from "@/resources/hooks/useMobileViewHook";
+import MobileDrawer from "@/components/molecules/WebsiteHeader/MobileDrawer";
 import Header from "@/components/molecules/Header/Header";
-import { pagesWithHeader } from "@/developmentContext/appData";
-import { usePathname } from "next/navigation";
 
-export default function WebsiteHeader() {
-  const pathname = usePathname();
+const WebsiteHeader = () => {
+  const { isMobile } = useMobileViewHook(800);
 
-  if (pagesWithHeader.includes(pathname)) {
-    return <Header />;
-  }
-}
+
+  return (
+    <>
+      {isMobile ? (
+        <MobileDrawer/>
+      ) : (
+        <> 
+          <Header />
+        </>
+      )}
+    </>
+  );
+};
+
+export default WebsiteHeader;

@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Archivo, Inter, Sen } from "next/font/google";
 import localFont from "next/font/local";
 import "react-photo-view/dist/react-photo-view.css";
+import "react-modern-drawer/dist/index.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "swiper/css";
