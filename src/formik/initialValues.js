@@ -1,8 +1,3 @@
-export const loginFormValues = {
-  email: "",
-  password: "",
-};
-
 export const signUpFormValues = {
   fullName: "",
   email: "",
@@ -12,6 +7,13 @@ export const signUpFormValues = {
   callingCode: "",
   photo: null,
 };
+
+
+export const loginFormValues = {
+  email: "",
+  password: "",
+};
+
 
 export const updatePasswordValues = {
   currentPassword: "",
