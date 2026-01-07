@@ -21,15 +21,17 @@ export default function BlogsCards({ data }) {
         {moment(data?.createdAt).format("DD MMM")}
       </p>
       <div className={classes.blogsCardsContent}>
-        <p className={clsx(classes.category, "fs14 fw-600")} >
-          {data?.category}
-        </p>
-        <h3 className={clsx(classes.title, "fs24 fw-500 maxLine1")}>
-          {data?.title}
-        </h3>
-        <p className={clsx(classes.description, "fs16 fw-400")}>
-          {data?.description}
-        </p>
+        <div className={classes.blogsCardsContentLeft}>
+          <p className={clsx(classes.category, "fs14 fw-600")}>
+            {data?.category}
+          </p>
+          <h3 className={clsx(classes.title, "fs24 fw-500 maxLine1")}>
+            {data?.title}
+          </h3>
+          <p className={clsx(classes.description, "fs16 fw-400")}>
+            {data?.description}
+          </p>
+        </div>
         <div className={classes.blogsCardsFooter}>
           <Button
             label="Read More"

@@ -1,53 +1,53 @@
 export const ourPractitionersPageData = {
   sectionOne: {
     description:
-      "It is a trusted counseling and therapy center, staffed by experienced professionals dedicated to listening, supporting, and guiding you. We believe in everyone's potential to heal and grow with the right care.",
+      "Es ist ein vertrauenswürdiges Beratungs- und Therapiezentrum, besetzt mit erfahrenen Fachkräften, die sich dem Zuhören, Unterstützen und Begleiten widmen. Wir glauben an das Potenzial jedes Einzelnen, mit der richtigen Betreuung zu heilen und zu wachsen.",
     image: "/app-images/about-image.png",
   },
 
   sectionTwo: {
-    title: "Meet Our Expert Therapists",
+    title: "Lerne unsere Expertentherapeuten kennen",
     description:
-      "A team of licensed therapists focused on your mental health and growth.",
+      "Ein Team lizenzierter Therapeuten, die sich auf deine psychische Gesundheit und dein Wachstum konzentrieren.",
     therapists: [
       {
         fullName: "Dr. Emily Stevens",
-        specialization: "Lead Therapist",
+        specialization: "Leitende Therapeutin",
         photo: "/app-images/therapists.png",
       },
       {
         fullName: "John Doe",
-        specialization: "Family Therapist",
+        specialization: "Familientherapeut",
         photo: "/app-images/therapists.png",
       },
       {
         fullName: "John Doe",
-        specialization: "Child & Adolescent Therapist",
+        specialization: "Kinder- & Jugendtherapeut",
         photo: "/app-images/therapists.png",
       },
       {
         fullName: "John Doe",
-        specialization: "Clinical Psychologist",
+        specialization: "Klinischer Psychologe",
         photo: "/app-images/therapists.png",
       },
       {
         fullName: "Dr. Emily Stevens",
-        specialization: "Lead Therapist",
+        specialization: "Leitende Therapeutin",
         photo: "/app-images/therapists.png",
       },
       {
         fullName: "John Doe",
-        specialization: "Family Therapist",
+        specialization: "Familientherapeut",
         photo: "/app-images/therapists.png",
       },
       {
         fullName: "John Doe",
-        specialization: "Child & Adolescent Therapist",
+        specialization: "Kinder- & Jugendtherapeut",
         photo: "/app-images/therapists.png",
       },
       {
         fullName: "John Doe",
-        specialization: "Clinical Psychologist",
+        specialization: "Klinischer Psychologe",
         photo: "/app-images/therapists.png",
       },
     ],

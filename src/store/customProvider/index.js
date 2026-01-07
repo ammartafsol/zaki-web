@@ -24,8 +24,8 @@ export function CustomProvider({ children }) {
       window.googleTranslateElementInit = () => {
         new window.google.translate.TranslateElement(
           {
-            pageLanguage: "en",
-            includedLanguages: "en,de",
+            pageLanguage: "de",
+            includedLanguages: "de,en",
             layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
           },
           "google_translate_element"
@@ -44,7 +44,7 @@ export function CustomProvider({ children }) {
               const comboElement = document.querySelector(".goog-te-combo");
               if (comboElement && comboElement.value) {
                 const currentValue = comboElement.value;
-                comboElement.value = "en"; // Switch to English first
+                comboElement.value = "de"; // Switch to English first
                 comboElement.dispatchEvent(new Event("change"));
                 setTimeout(() => {
                   comboElement.value = currentValue; // Switch back to current language

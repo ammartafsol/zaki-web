@@ -7,6 +7,7 @@ export default function TrustedProfessionalsSection({
   data,
   statsClass,
   statsDetailClass,
+  showStats = true,
 }) {
   return (
     <div className={classes.section}>
@@ -32,7 +33,7 @@ export default function TrustedProfessionalsSection({
           <h2 className={clsx(classes.title, "fs44 fw-500")}>{data?.heading}</h2>
         </div>
       )}
-      {data?.stats && (
+      {data?.stats && showStats && (
         <div className={clsx(classes.stats, statsClass)}>
           {data?.stats.map((stat, index) => (
             <div

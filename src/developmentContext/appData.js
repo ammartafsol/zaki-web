@@ -4,15 +4,15 @@ import { PiInstagramLogoFill } from "react-icons/pi";
 
 export const webNavData = [
   {
-    title: "About",
+    title: "Über uns",
     path: "/about-us",
   },
   {
-    title: "Why Improself?",
+    title: "Warum Improself?",
     path: "/why-improself",
   },
   {
-    title: "Our Practitioners",
+    title: "Unsere Praktizierenden",
     path: "/our-practitioners",
   },
   {
@@ -25,15 +25,15 @@ export const FOOTER_DATA = {
   logo: "/svgs/footer-logo.svg",
   links: [
     {
-      title: "About",
+      title: "Über uns",
       path: "/about-us",
     },
     {
-      title: "Why Improself?",
+      title: "Warum Improself?",
       path: "/why-improself",
     },
     {
-      title: "Our Practitioners",
+      title: "Unsere Praktizierenden",
       path: "/our-practitioners",
     },
     {
@@ -60,11 +60,11 @@ export const FOOTER_DATA = {
   ],
   legalLinks: [
     {
-      title: "Terms of Use",
+      title: "Nutzungsbedingungen",
       path: "/terms-of-use",
     },
     {
-      title: "Privacy Policy",
+      title: "Datenschutzerklärung",
       path: "/privacy-policy",
     },
   ],

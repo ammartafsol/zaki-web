@@ -8,204 +8,206 @@ export const homePageData = {
   },
 
   sectionOne: {
-    title: "Trusted professionals dedicated to your mental",
+    title: "Vertrauensvolle Fachkräfte, die sich deiner mentalen Gesundheit widmen",
     description:
-      "Improself is a reputable center for counseling and psychological therapy, with a team of experienced professionals ready to listen and support you. We believe that everyone has the ability to heal and grow, with the right guidance.",
-    image: "/app-images/section1-image.png",
-    text: "About Improself",
+      "Improself ist ein renommiertes Zentrum für Beratung und psychologische Therapie mit einem Team erfahrener Fachkräfte, die bereit sind, dir zuzuhören und dich zu unterstützen. Wir glauben, dass jeder die Fähigkeit hat, zu heilen und zu wachsen – mit der richtigen Anleitung.",
+    image: "/app-images/section-image.png",
+    text: "Über Improself",
     logo: "/app-images/Logo.png",
-    stats: [
-      {
-        title: "2 Years",
-        description: "Years of Experience",
-        icon: "/app-images/icon1.png",
-      },
-      {
-        title: "1.8k",
-        description: "Happy Customers",
-        icon: "/app-images/icon2.png",
-      },
-      {
-        title: "46",
-        description: "Therapy Sessions",
-        icon: "/app-images/icon3.png",
-      },
-      {
-        title: "15",
-        description: "Awards Winner",
+  },
+  sectionOneStats: {
+  stats: [
+    {
+      title: "2 Jahre",
+      description: "Jahre Erfahrung",
+      icon: "/app-images/icon1.png",
+    },
+    {
+      title: "1.8k",
+      description: "Zufriedene Kunden",
+      icon: "/app-images/icon2.png",
+    },
+    {
+      title: "46",
+      description: "Therapiesitzungen",
+      icon: "/app-images/icon3.png",
+    },
+    {
+      title: "15",
+      description: "Preisgewinner",
         icon: "/app-images/icon4.png",
       },
     ],
   },
   sectionTwo: {
-    title: "Counseling & Therapy Services",
+    title: "Beratungs- & Therapiedienstleistungen",
     description:
-      "We offer a wide range of services to meet your personal needs",
-    text: "What We Do",
+      "Wir bieten eine breite Palette von Dienstleistungen, die auf deine persönlichen Bedürfnisse zugeschnitten sind",
+    text: "Was wir tun",
     services: [
       {
-        title: "Individual Counseling",
+        title: "Einzelberatung",
         description:
-          "Personal psychological support to help you overcome stress, anxiety, and regain confidence.",
+          "Persönliche psychologische Unterstützung, um dir zu helfen, Stress und Ängste zu überwinden und wieder Selbstvertrauen zu gewinnen.",
         image: "/app-images/service.png",
       },
       {
-        title: "Family Therapy",
+        title: "Familientherapie",
         description:
-          "Improve family relationships, resolve conflicts, and build a healthy living environment.",
+          "Verbessere Familienbeziehungen, löse Konflikte und schaffe ein gesundes Lebensumfeld.",
         image: "/app-images/service.png",
       },
       {
-        title: "Couples Therapy",
+        title: "Paartherapie",
         description:
-          "Enhance understanding affection between couples, helping to strengthen the relationship.",
+          "Fördere das Verständnis und die Zuneigung zwischen Paaren und hilf dabei, die Beziehung zu stärken.",
         image: "/app-images/service.png",
       },
       {
-        title: "Group Therapy",
+        title: "Gruppentherapie",
         description:
-          "Join others with similar challenges, sharing experiences and support in a group setting.",
+          "Schließe dich anderen mit ähnlichen Herausforderungen an, teile Erfahrungen und erhalte Unterstützung in einer Gruppensituation.",
         image: "/app-images/service.png",
       },
       {
-        title: "Child & Adolescent Therapy",
+        title: "Kinder- & Jugendtherapie",
         description:
-          "Specialized support for children and teens, helping them navigate emotional challenges.",
+          "Spezialisierte Unterstützung für Kinder und Jugendliche, um ihnen zu helfen, emotionale Herausforderungen zu bewältigen.",
         image: "/app-images/service.png",
       },
       {
-        title: "Trauma Counseling",
+        title: "Traumaberatung",
         description:
-          "Focused therapy to help you heal from past trauma and regain control over your life.",
+          "Fokussierte Therapie, um dir zu helfen, von vergangenen Traumata zu heilen und wieder die Kontrolle über dein Leben zu erlangen.",
         image: "/app-images/service.png",
       },
     ],
   },
   sectionThree: {
-    text: "How We Work",
-    title: "An Easy-To-Follow Therapy Approach",
+    text: "Wie wir arbeiten",
+    title: "Ein leicht verständlicher Therapieansatz",
     description:
-      "Supporting you from consultation to care for a smooth path to mental well-being.",
+      "Wir begleiten dich von der Beratung bis zur Betreuung für einen reibungslosen Weg zum mentalen Wohlbefinden.",
     steps: [
       {
-        title: "Contact Consultation",
+        title: "Kontaktberatung",
         description:
-          "Contact us via phone, email to schedule an initial consultation where we'll explore your needs.",
+          "Kontaktiere uns per Telefon oder E-Mail, um eine erste Beratung zu vereinbaren, bei der wir deine Bedürfnisse erkunden.",
         icon: "/app-images/step1.png",
       },
       {
-        title: "Customized Plan",
+        title: "Individueller Plan",
         description:
-          "We'll develop a personalized therapy plan based on your specific needs and goals to ensure the most support.",
+          "Wir entwickeln einen personalisierten Therapieplan basierend auf deinen spezifischen Bedürfnissen und Zielen, um die bestmögliche Unterstützung zu gewährleisten.",
         icon: "/app-images/step2.png",
       },
       {
-        title: "Therapy Sessions",
+        title: "Therapiesitzungen",
         description:
-          "Contact us via phone, email to schedule an initial consultation where we'll explore your needs.",
+          "Regelmäßige Therapiesitzungen, in denen wir gemeinsam an deinen Zielen arbeiten und Fortschritte erzielen.",
         icon: "/app-images/step3.png",
       },
       {
-        title: "Ongoing Support",
+        title: "Laufende Unterstützung",
         description:
-          "We'll provide continuous support, regularly review your progress, and adjust the plan as needed to help you.",
+          "Wir bieten kontinuierliche Unterstützung, überprüfen regelmäßig deine Fortschritte und passen den Plan bei Bedarf an, um dir zu helfen.",
         icon: "/app-images/step4.png",
       },
     ],
   },
   sectionFour: {
-    text: "Client Testimonials",
-    title: "What Our Clients Are Saying",
-    description: "Hear firsthand accounts of healing and positive change.",
+    text: "Kundenbewertungen",
+    title: "Was unsere Kunden sagen",
+    description: "Erfahre aus erster Hand von Heilung und positiven Veränderungen.",
     reviews: [
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "Jane Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "Jane Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 3,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
     ],
   },
   sectionFive: {
-    text: "Favourite Topics",
-    title: "Improself Blog & Resources",
+    text: "Beliebte Themen",
+    title: "Improself Blog & Ressourcen",
     description:
-      "Your go-to source for mental health insights, tools, and advice.",
+      "Deine Anlaufstelle für Einblicke, Tools und Ratschläge zur mentalen Gesundheit.",
     blogs: [
       {
         createdAt: "2025-01-01",
-        category: "Therapy",
+        category: "Therapie",
         title:
-          "Mindfulness For Better Mental Health: Simple Practices for Daily Peace",
+          "Achtsamkeit für bessere mentale Gesundheit: Einfache Praktiken für täglichen Frieden",
         description:
-          "Learn how mindfulness techniques can reduce stress and improve your mental well-being daily.",
+          "Erfahre, wie Achtsamkeitstechniken Stress reduzieren und dein tägliches mentales Wohlbefinden verbessern können.",
         image: "/app-images/blog-image.png",
       },
       {
         createdAt: "2025-09-01",
         category: "Wellness",
         title:
-          "Self-Care for Emotional Well being: Key Steps to Feeling Balanced",
+          "Selbstfürsorge für emotionales Wohlbefinden: Wichtige Schritte zum Ausgeglichensein",
         description:
-          "Explore how CBT techniques help manage stress and build resilience for a calmer life.",
+          "Entdecke, wie CBT-Techniken helfen, Stress zu bewältigen und Resilienz für ein ruhigeres Leben aufzubauen.",
         image: "/app-images/blog-image.png",
       },
       {
         createdAt: "2025-08-01",
         category: "Wellness",
-        title: "How Therapy Helps with Trauma: Pathways to Long-Term Healing",
+        title: "Wie Therapie bei Traumata hilft: Wege zur langfristigen Heilung",
         description:
-          "Find out how therapy can guide you through trauma recovery and foster long-term healing.",
+          "Erfahre, wie Therapie dich durch die Traumabewältigung führen und langfristige Heilung fördern kann.",
         image: "/app-images/blog-image.png",
       },
     ],
@@ -234,34 +236,34 @@ export const homePageData = {
     ],
   },
   sectionSeven: {
-    title: "Your Questions Answered",
-    text: "For practitioners",
+    title: "Deine Fragen beantwortet",
+    text: "Für Praktizierende",
     icon: "/app-images/faq-image.png",
     faqs: [
       {
-        question: "How can I schedule an appointment?",
+        question: "Wie kann ich einen Termin vereinbaren?",
         answer:
-          "Vulputate bibendum erat morbi interdum diam sit. Eu sit dolor vel sodales sed nibh ut. Ac fringilla fames eget a aliquet. Gravida placerat viverra purus sed ac ultricies sem",
+          "Du kannst einen Termin über unsere Website, per Telefon oder E-Mail vereinbaren. Wähle einfach einen verfügbaren Zeitpunkt, der für dich passt, und unser Team wird sich umgehend bei dir melden, um die Details zu bestätigen.",
       },
       {
-        question: "Do you accept insurance?",
+        question: "Akzeptieren Sie Versicherungen?",
         answer:
-          "Vulputate bibendum erat morbi interdum diam sit. Eu sit dolor vel sodales sed nibh ut. Ac fringilla fames eget a aliquet. Gravida placerat viverra purus sed ac ultricies sem",
+          "Ja, wir akzeptieren verschiedene Versicherungen. Bitte kontaktiere uns im Voraus, um zu prüfen, ob deine Versicherung unsere Dienstleistungen abdeckt. Unser Team hilft dir gerne bei der Klärung aller Versicherungsfragen.",
       },
       {
-        question: "What types of payment do you accept?",
+        question: "Welche Zahlungsarten akzeptieren Sie?",
         answer:
-          "Vulputate bibendum erat morbi interdum diam sit. Eu sit dolor vel sodales sed nibh ut. Ac fringilla fames eget a aliquet. Gravida placerat viverra purus sed ac ultricies sem",
+          "Wir akzeptieren verschiedene Zahlungsmethoden, einschließlich Kreditkarten, Banküberweisungen und andere gängige Zahlungsoptionen. Alle Zahlungen werden sicher und vertraulich abgewickelt.",
       },
       {
-        question: "Are your services confidential?",
+        question: "Sind Ihre Dienstleistungen vertraulich?",
         answer:
-          "Vulputate bibendum erat morbi interdum diam sit. Eu sit dolor vel sodales sed nibh ut. Ac fringilla fames eget a aliquet. Gravida placerat viverra purus sed ac ultricies sem",
+          "Absolut. Vertraulichkeit ist für uns von größter Bedeutung. Alle unsere Dienstleistungen werden streng vertraulich behandelt, und wir halten uns an alle geltenden Datenschutzbestimmungen, um deine Privatsphäre zu schützen.",
       },
       {
-        question: "Are your services confidential?",
+        question: "Wie lange dauert eine Therapiesitzung?",
         answer:
-          "Vulputate bibendum erat morbi interdum diam sit. Eu sit dolor vel sodales sed nibh ut. Ac fringilla fames eget a aliquet. Gravida placerat viverra purus sed ac ultricies sem",
+          "Eine typische Therapiesitzung dauert etwa 50-60 Minuten. Die genaue Dauer kann je nach Art der Therapie und deinen individuellen Bedürfnissen variieren. Wir passen die Sitzungsdauer an, um dir die bestmögliche Unterstützung zu bieten.",
       },
     ],
   },

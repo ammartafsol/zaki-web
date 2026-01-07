@@ -18,7 +18,9 @@
 .sectionOneImageContainer {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  /* align-items: flex-end; */
+  align-items: center;
+  height: 100%;
 }
 
 .sectionTwo {
@@ -116,6 +118,7 @@
   color: #052328;
   font-family: var(--font-ranade);
   line-height: var(--lh47);
+  margin-bottom: var(--m-20) !important;
 
 }
 .sectionSixContent .description {
@@ -168,6 +171,31 @@
 .sectionSeven{
   padding-block: var(--p-100);
 }
+
+
+.statsClass {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+.statsDetailClass {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-block: 0 !important;
+}
+.statsDetailClass:nth-child(1),
+.statsDetailClass:nth-child(2),
+.statsDetailClass:nth-child(3) {
+  border-bottom: none !important;
+}
+.statsDetailClass:nth-child(3) {
+  border-left: 1px solid var(--white-2) !important;
+  padding-left: var(--p-40) !important;
+}
+
+
+
 @media (max-width: 1400px) {
   .heroSection {
     padding-top: 159px;

@@ -1,127 +1,127 @@
 export const whyImproselfPageData = {
   sectionOne: {
-    title: "Why Choose Improself?",
+    title: "Warum Improself wählen?",
     description:
-      "Because your mental well-being deserves a trusted, professional, and personalized approach.",
+      "Weil dein mentales Wohlbefinden einen vertrauenswürdigen, professionellen und personalisierten Ansatz verdient.",
     image: "/app-images/about-image.png",
     stats: [
       {
-        title: "2 Years",
-        description: "Years of Experience",
+        title: "2 Jahre",
+        description: "Jahre Erfahrung",
         icon: "/app-images/icon1.png",
       },
       {
         title: "1.8k",
-        description: "Happy Customers",
+        description: "Zufriedene Kunden",
         icon: "/app-images/icon2.png",
       },
       {
         title: "46",
-        description: "Therapy Sessions",
+        description: "Therapiesitzungen",
         icon: "/app-images/icon3.png",
       },
       {
         title: "15",
-        description: "Awards Winner",
+        description: "Preisgewinner",
         icon: "/app-images/icon4.png",
       },
     ],
   },
   sectionTwo: {
-    heading: "The Improself Advantage",
-    subHeading: "What Makes Us Different",
+    heading: "Der Improself-Vorteil",
+    subHeading: "Was uns auszeichnet",
     logo: "/app-images/Logo.png",
     image: "/app-images/section1-image.png",
     advantages: [
       {
-        title: "Certified Therapists",
-        description: "Work only with trusted, qualified professionals.",
+        title: "Zertifizierte Therapeuten",
+        description: "Arbeite nur mit vertrauenswürdigen, qualifizierten Fachkräften.",
         icon: "/app-images/icon4.png",
       },
       {
-        title: "Personalized Plans",
-        description: "Tailored therapy approach for your needs.",
+        title: "Personalisierte Pläne",
+        description: "Maßgeschneiderter Therapieansatz für deine Bedürfnisse.",
         icon: "/app-images/user-icon.png",
       },
       {
-        title: "Holistic Methods",
-        description: "Integrating traditional and modern healing.",
+        title: "Ganzheitliche Methoden",
+        description: "Integration traditioneller und moderner Heilmethoden.",
         icon: "/app-images/wave.png",
       },
       {
-        title: "Continuous Support",
-        description: "Guidance that doesn’t stop after the session.",
+        title: "Kontinuierliche Unterstützung",
+        description: "Begleitung, die nach der Sitzung nicht endet.",
         icon: "/app-images/heart-icon.png",
       },
     ],
   },
   sectionThree: {
-    text: "Client Testimonials",
-    title: "What Our Clients Are Saying",
-    description: "Hear firsthand accounts of healing and positive change.",
+    text: "Kundenbewertungen",
+    title: "Was unsere Kunden sagen",
+    description: "Erfahre aus erster Hand von Heilung und positiven Veränderungen.",
     reviews: [
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "Jane Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "Jane Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 3,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
     ],
   },
   sectionFour: {
     title:
-      "Take the first step towards your well-being today. Discover why thousands trust Improself.",
-    text: "BEGIN YOUR HEALING JOURNEY",
+      "Mache heute den ersten Schritt zu deinem Wohlbefinden. Entdecke, warum Tausende Improself vertrauen.",
+    text: "BEGINNE DEINE HEILUNGSREISE",
     image: "/app-images/section-four.png",
   },
 };

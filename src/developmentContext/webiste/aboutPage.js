@@ -1,182 +1,181 @@
 export const aboutUsPageData = {
   sectionOne: {
-    title: "Welcome The Improself",
+    title: "Willkommen bei Improself",
     description:
-      "It is a trusted counseling and therapy center, staffed by experienced professionals dedicated to listening, supporting, and guiding you. We believe in everyone's potential to heal and grow with the right care.",
+      "Es ist ein vertrauenswürdiges Beratungs- und Therapiezentrum, besetzt mit erfahrenen Fachkräften, die sich dem Zuhören, Unterstützen und Begleiten widmen. Wir glauben an das Potenzial jedes Einzelnen, mit der richtigen Betreuung zu heilen und zu wachsen.",
     image: "/app-images/about-image.png",
     mission: {
-      title: "Our Mission",
-      htmlDescription: `<p>At Improself, our mission is to provide compassionate, personalized mental health care that helps individuals and families overcome challenges. We are committed to creating a safe, supportive space for healing and growth, using evidence-based therapy to guide clients toward mental well-being.</p>
+      title: "Unsere Mission",
+      htmlDescription: `<p>Bei Improself ist es unsere Mission, mitfühlende, personalisierte psychische Gesundheitsversorgung anzubieten, die Einzelpersonen und Familien hilft, Herausforderungen zu bewältigen. Wir sind bestrebt, einen sicheren, unterstützenden Raum für Heilung und Wachstum zu schaffen und evidenzbasierte Therapie zu nutzen, um Klienten zum mentalen Wohlbefinden zu führen.</p>
         <p>
-     Our team of experienced therapists works with each client to develop
-          tailored strategies for resilience and self-awareness. We aim to equip
-          individuals with the tools they need to build healthier relationships,
-          manage stress, and create lasting change.
+     Unser Team erfahrener Therapeuten arbeitet mit jedem Klienten zusammen, um
+          maßgeschneiderte Strategien für Resilienz und Selbstbewusstsein zu entwickeln. Unser Ziel ist es, Einzelpersonen mit den Werkzeugen auszustatten, die sie benötigen, um gesündere Beziehungen aufzubauen,
+          Stress zu bewältigen und dauerhafte Veränderungen zu schaffen.
         </p>
         </p>`,
     },
     vision: {
-      title: "Our Vision",
-      htmlDescription: `<p>Our vision is to be a leading center for mental health, where everyone has access to the care and support they need. We strive to create a world where mental health is prioritized, free from stigma, and where people feel empowered to seek help.</p>
+      title: "Unsere Vision",
+      htmlDescription: `<p>Unsere Vision ist es, ein führendes Zentrum für psychische Gesundheit zu sein, in dem jeder Zugang zu der Betreuung und Unterstützung hat, die er benötigt. Wir streben danach, eine Welt zu schaffen, in der psychische Gesundheit priorisiert wird, frei von Stigma, und in der sich Menschen ermutigt fühlen, Hilfe zu suchen.</p>
         <p>
-       We aim to build a community where seeking therapy is encouraged and
-supported. By promoting mental health awareness and providing high-
-quality care, we hope to make a lasting positive impact on the lives of our
-clients.
+       Unser Ziel ist es, eine Gemeinschaft aufzubauen, in der die Suche nach Therapie ermutigt und
+unterstützt wird. Durch die Förderung des Bewusstseins für psychische Gesundheit und die Bereitstellung hochwertiger
+Betreuung hoffen wir, einen dauerhaften positiven Einfluss auf das Leben unserer
+Klienten zu haben.
         </p>`,
     },
     stats: [
       {
-        title: "2 Years",
-        description: "Years of Experience",
+        title: "2 Jahre",
+        description: "Jahre Erfahrung",
         icon: "/app-images/icon1.png",
       },
       {
         title: "1.8k",
-        description: "Happy Customers",
+        description: "Zufriedene Kunden",
         icon: "/app-images/icon2.png",
       },
       {
         title: "46",
-        description: "Therapy Sessions",
+        description: "Therapiesitzungen",
         icon: "/app-images/icon3.png",
       },
       {
         title: "15",
-        description: "Awards Winner",
+        description: "Preisgewinner",
         icon: "/app-images/icon4.png",
       },
     ],
   },
 
   sectionTwo: {
-    title: "Meet Our Expert Therapists",
+    title: "Lerne unsere Expertentherapeuten kennen",
     description:
-      "A team of licensed therapists focused on your mental health and growth.",
-    text: "Our Teams",
+      "Ein Team lizenzierter Therapeuten, die sich auf deine psychische Gesundheit und dein Wachstum konzentrieren.",
+    text: "Unser Team",
     therapists: [
       {
         fullName: "Dr. Emily Stevens",
-        specialization: "Lead Therapist",
+        specialization: "Leitende Therapeutin",
         photo: "/app-images/therapists.png",
       },
       {
         fullName: "John Doe",
-        specialization: "Family Therapist",
+        specialization: "Familientherapeut",
         photo: "/app-images/therapists.png",
       },
       {
         fullName: "John Doe",
-        specialization: "Child & Adolescent Therapist",
+        specialization: "Kinder- & Jugendtherapeut",
         photo: "/app-images/therapists.png",
       },
       {
         fullName: "John Doe",
-        specialization: "Clinical Psychologist",
+        specialization: "Klinischer Psychologe",
         photo: "/app-images/therapists.png",
       },
     ],
   },
   sectionThree: {
-    text: "Client Testimonials",
-    title: "What Our Clients Are Saying",
-    description: "Hear firsthand accounts of healing and positive change.",
+    text: "Kundenbewertungen",
+    title: "Was unsere Kunden sagen",
+    description: "Erfahre aus erster Hand von Heilung und positiven Veränderungen.",
     reviews: [
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "Jane Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "Jane Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 3,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
       {
         fullName: "John Doe",
         review:
-          " I can't thank Improself enough for their unwavering support and guidance. The personalized therapy sessions and insightful feedback have been crucial in my journey towards a more balanced life.",
-        country: "Germany",
+          "Ich kann Improself nicht genug für ihre unerschütterliche Unterstützung und Anleitung danken. Die personalisierten Therapiesitzungen und die aufschlussreichen Rückmeldungen waren entscheidend auf meinem Weg zu einem ausgeglicheneren Leben.",
+        country: "Deutschland",
         rating: 5,
       },
     ],
   },
   sectionFour: {
-    title: "Your Questions Answered",
-    text: "For practitioners",
+    title: "Deine Fragen beantwortet",
+    text: "Für Praktizierende",
     icon: "/app-images/faq-image.png",
     faqs: [
       {
-        question: "How can I schedule an appointment?",
+        question: "Wie kann ich einen Termin vereinbaren?",
         answer:
-          "Vulputate bibendum erat morbi interdum diam sit. Eu sit dolor vel sodales sed nibh ut. Ac fringilla fames eget a aliquet. Gravida placerat viverra purus sed ac ultricies sem",
+          "Du kannst einen Termin über unsere Website, per Telefon oder E-Mail vereinbaren. Wähle einfach einen verfügbaren Zeitpunkt, der für dich passt, und unser Team wird sich umgehend bei dir melden, um die Details zu bestätigen.",
       },
       {
-        question: "Do you accept insurance?",
+        question: "Akzeptieren Sie Versicherungen?",
         answer:
-          "Vulputate bibendum erat morbi interdum diam sit. Eu sit dolor vel sodales sed nibh ut. Ac fringilla fames eget a aliquet. Gravida placerat viverra purus sed ac ultricies sem",
+          "Ja, wir akzeptieren verschiedene Versicherungen. Bitte kontaktiere uns im Voraus, um zu prüfen, ob deine Versicherung unsere Dienstleistungen abdeckt. Unser Team hilft dir gerne bei der Klärung aller Versicherungsfragen.",
       },
       {
-        question: "What types of payment do you accept?",
+        question: "Welche Zahlungsarten akzeptieren Sie?",
         answer:
-          "Vulputate bibendum erat morbi interdum diam sit. Eu sit dolor vel sodales sed nibh ut. Ac fringilla fames eget a aliquet. Gravida placerat viverra purus sed ac ultricies sem",
+          "Wir akzeptieren verschiedene Zahlungsmethoden, einschließlich Kreditkarten, Banküberweisungen und andere gängige Zahlungsoptionen. Alle Zahlungen werden sicher und vertraulich abgewickelt.",
       },
       {
-        question: "Are your services confidential?",
+        question: "Sind Ihre Dienstleistungen vertraulich?",
         answer:
-          "Vulputate bibendum erat morbi interdum diam sit. Eu sit dolor vel sodales sed nibh ut. Ac fringilla fames eget a aliquet. Gravida placerat viverra purus sed ac ultricies sem",
+          "Absolut. Vertraulichkeit ist für uns von größter Bedeutung. Alle unsere Dienstleistungen werden streng vertraulich behandelt, und wir halten uns an alle geltenden Datenschutzbestimmungen, um deine Privatsphäre zu schützen.",
       },
       {
-        question: "Are your services confidential?",
+        question: "Wie lange dauert eine Therapiesitzung?",
         answer:
-          "Vulputate bibendum erat morbi interdum diam sit. Eu sit dolor vel sodales sed nibh ut. Ac fringilla fames eget a aliquet. Gravida placerat viverra purus sed ac ultricies sem",
+          "Eine typische Therapiesitzung dauert etwa 50-60 Minuten. Die genaue Dauer kann je nach Art der Therapie und deinen individuellen Bedürfnissen variieren. Wir passen die Sitzungsdauer an, um dir die bestmögliche Unterstützung zu bieten.",
       },
     ],
   },
   sectionFive: {
-    title: "Begin Your Transformation to a More Fulfilling Life",
+    title: "Beginne deine Transformation zu einem erfüllteren Leben",
     description:
-      "We offer compassionate, personalized care to address your unique needs. We are committed to working with you to find a resolution promptly. Let’s take the first step towards a healthier, happier you.!",
-    text: "BEGIN YOUR HEALING JOURNEY",
+      "Wir bieten mitfühlende, personalisierte Betreuung, um deine individuellen Bedürfnisse zu erfüllen. Wir sind bestrebt, mit dir zusammenzuarbeiten, um schnell eine Lösung zu finden. Lass uns den ersten Schritt zu einem gesünderen, glücklicheren Du machen!",
+    text: "BEGINNE DEINE HEILUNGSREISE",
     image: "/app-images/section-four.png",
   },
 };

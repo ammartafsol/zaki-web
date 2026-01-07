@@ -55,8 +55,7 @@ export default function Footer() {
           </div>
           <div className={classes.bottomDiv}>
             <p className={classes.copyright}>
-              Copyright © {moment().format("YYYY")} Zenlift{" "}
-              <span> Design by Tafsol</span>
+              Copyright © {moment().format("YYYY")} Improself
             </p>
             <div className={classes.legalLinks}>
               {data?.legalLinks.map((item, index) => (

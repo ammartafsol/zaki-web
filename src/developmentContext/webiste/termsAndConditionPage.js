@@ -1,176 +1,176 @@
 export const termsAndConditionPageData = {
-  title: "Terms and Conditions",
-  lastUpdated: "December 2024",
+  title: "Nutzungsbedingungen",
+  lastUpdated: "Dezember 2024",
   htmlDescription: `
-      <h2>1. Acceptance of Terms</h2>
-      <p>By accessing and using Improself's services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+      <h2>1. Annahme der Bedingungen</h2>
+      <p>Durch den Zugriff auf und die Nutzung der Dienstleistungen von Improself akzeptierst und stimmst du zu, an die Bedingungen und Bestimmungen dieser Vereinbarung gebunden zu sein. Wenn du nicht damit einverstanden bist, dich an das oben Genannte zu halten, verwende bitte diesen Service nicht.</p>
 
-      <h2>2. Description of Service</h2>
-      <p>Improself provides online therapy and mental health services through our platform. Our services include:</p>
+      <h2>2. Beschreibung des Services</h2>
+      <p>Improself bietet Online-Therapie und psychische Gesundheitsdienste über unsere Plattform an. Unsere Dienstleistungen umfassen:</p>
       <ul>
-        <li>Online therapy sessions with licensed therapists</li>
-        <li>Mental health assessments and consultations</li>
-        <li>Appointment scheduling and management</li>
-        <li>Secure messaging and communication tools</li>
-        <li>Payment processing for therapy services</li>
-        <li>Access to mental health resources and educational content</li>
+        <li>Online-Therapiesitzungen mit lizenzierten Therapeuten</li>
+        <li>Bewertungen und Beratungen zur psychischen Gesundheit</li>
+        <li>Terminplanung und -verwaltung</li>
+        <li>Sichere Messaging- und Kommunikationstools</li>
+        <li>Zahlungsabwicklung für Therapiedienstleistungen</li>
+        <li>Zugang zu Ressourcen für psychische Gesundheit und Bildungsinhalten</li>
       </ul>
 
-      <h2>3. User Accounts and Registration</h2>
-      <p>To access our services, you must create an account and provide accurate, current, and complete information. You are responsible for:</p>
+      <h2>3. Benutzerkonten und Registrierung</h2>
+      <p>Um auf unsere Dienstleistungen zuzugreifen, musst du ein Konto erstellen und genaue, aktuelle und vollständige Informationen angeben. Du bist verantwortlich für:</p>
       <ul>
-        <li>Maintaining the confidentiality of your account credentials</li>
-        <li>All activities that occur under your account</li>
-        <li>Notifying us immediately of any unauthorized use</li>
-        <li>Ensuring your information remains accurate and up-to-date</li>
+        <li>Die Vertraulichkeit deiner Kontodaten zu wahren</li>
+        <li>Alle Aktivitäten, die unter deinem Konto stattfinden</li>
+        <li>Uns sofort über unbefugte Nutzung zu benachrichtigen</li>
+        <li>Sicherzustellen, dass deine Informationen genau und aktuell bleiben</li>
       </ul>
 
-      <h2>4. Eligibility and Age Requirements</h2>
-      <p>Our services are available to individuals who are:</p>
+      <h2>4. Berechtigung und Altersanforderungen</h2>
+      <p>Unsere Dienstleistungen stehen Personen zur Verfügung, die:</p>
       <ul>
-        <li>At least 18 years of age, or</li>
-        <li>Between 13-17 years of age with parental consent</li>
-        <li>Legally capable of entering into binding agreements</li>
-        <li>Not prohibited from receiving our services under applicable law</li>
+        <li>Mindestens 18 Jahre alt sind, oder</li>
+        <li>Zwischen 13-17 Jahre alt sind mit elterlicher Zustimmung</li>
+        <li>Rechtlich in der Lage sind, verbindliche Vereinbarungen einzugehen</li>
+        <li>Nicht nach geltendem Recht daran gehindert sind, unsere Dienstleistungen zu erhalten</li>
       </ul>
 
-      <h2>5. Medical Disclaimer</h2>
-      <p><strong>Important:</strong> Our services are not intended to replace emergency medical care. If you are experiencing a mental health emergency, please:</p>
+      <h2>5. Medizinischer Haftungsausschluss</h2>
+      <p><strong>Wichtig:</strong> Unsere Dienstleistungen sind nicht als Ersatz für Notfallmedizin gedacht. Wenn du einen psychischen Notfall erlebst, bitte:</p>
       <ul>
-        <li>Call your local emergency services (911 in the US)</li>
-        <li>Go to your nearest emergency room</li>
-        <li>Contact the National Suicide Prevention Lifeline at 988</li>
+        <li>Rufe deine örtlichen Notdienste an (112 in Deutschland)</li>
+        <li>Gehe zur nächsten Notaufnahme</li>
+        <li>Kontaktiere die Telefonseelsorge unter 0800 111 0 111</li>
       </ul>
-      <p>Our platform provides therapy services but is not a substitute for emergency medical care or crisis intervention.</p>
+      <p>Unsere Plattform bietet Therapiedienstleistungen an, ist aber kein Ersatz für Notfallmedizin oder Krisenintervention.</p>
 
-      <h2>6. Therapist Qualifications and Licensing</h2>
-      <p>All therapists on our platform are:</p>
+      <h2>6. Therapeutenqualifikationen und Lizenzierung</h2>
+      <p>Alle Therapeuten auf unserer Plattform sind:</p>
       <ul>
-        <li>Licensed mental health professionals in their respective jurisdictions</li>
-        <li>Subject to background checks and credential verification</li>
-        <li>Required to maintain current professional licenses</li>
-        <li>Bound by professional ethical standards and confidentiality requirements</li>
-      </ul>
-
-      <h2>7. Payment Terms and Billing</h2>
-      <p>Payment for services is required in advance or at the time of service. We accept various payment methods including:</p>
-      <ul>
-        <li>Credit and debit cards</li>
-        <li>Digital payment platforms</li>
-        <li>Insurance (where applicable and accepted)</li>
-      </ul>
-      <p>All payments are processed securely. Refunds are subject to our refund policy and applicable laws.</p>
-
-      <h2>8. Cancellation and Rescheduling Policy</h2>
-      <p>Appointments may be cancelled or rescheduled subject to the following terms:</p>
-      <ul>
-        <li>Cancellations made 24+ hours in advance: Full refund</li>
-        <li>Cancellations made 2-24 hours in advance: 50% refund</li>
-        <li>Cancellations made less than 2 hours in advance: No refund</li>
-        <li>No-shows: No refund</li>
-        <li>Emergency cancellations may be considered on a case-by-case basis</li>
+        <li>Lizenzierte Fachkräfte für psychische Gesundheit in ihren jeweiligen Gerichtsbarkeiten</li>
+        <li>Hintergrundprüfungen und Qualifikationsüberprüfungen unterworfen</li>
+        <li>Verpflichtet, aktuelle Berufslizenzen zu führen</li>
+        <li>An berufliche ethische Standards und Vertraulichkeitsanforderungen gebunden</li>
       </ul>
 
-      <h2>9. Privacy and Confidentiality</h2>
-      <p>We are committed to protecting your privacy and maintaining confidentiality. However, please note:</p>
+      <h2>7. Zahlungsbedingungen und Abrechnung</h2>
+      <p>Die Zahlung für Dienstleistungen ist im Voraus oder zum Zeitpunkt der Dienstleistung erforderlich. Wir akzeptieren verschiedene Zahlungsmethoden, einschließlich:</p>
       <ul>
-        <li>We may be required to disclose information in certain legal circumstances</li>
-        <li>We may share information if there is a risk of harm to yourself or others</li>
-        <li>We comply with all applicable privacy laws and regulations</li>
-        <li>Your therapist is bound by professional confidentiality standards</li>
+        <li>Kredit- und Debitkarten</li>
+        <li>Digitale Zahlungsplattformen</li>
+        <li>Versicherung (wo zutreffend und akzeptiert)</li>
+      </ul>
+      <p>Alle Zahlungen werden sicher abgewickelt. Rückerstattungen unterliegen unserer Rückerstattungsrichtlinie und geltenden Gesetzen.</p>
+
+      <h2>8. Stornierungs- und Umbuchungsrichtlinie</h2>
+      <p>Termine können unter folgenden Bedingungen storniert oder umgebucht werden:</p>
+      <ul>
+        <li>Stornierungen 24+ Stunden im Voraus: Vollständige Rückerstattung</li>
+        <li>Stornierungen 2-24 Stunden im Voraus: 50% Rückerstattung</li>
+        <li>Stornierungen weniger als 2 Stunden im Voraus: Keine Rückerstattung</li>
+        <li>Nichterscheinen: Keine Rückerstattung</li>
+        <li>Notfallstornierungen können von Fall zu Fall geprüft werden</li>
       </ul>
 
-      <h2>10. Prohibited Uses</h2>
-      <p>You may not use our services for:</p>
+      <h2>9. Datenschutz und Vertraulichkeit</h2>
+      <p>Wir sind verpflichtet, deine Privatsphäre zu schützen und Vertraulichkeit zu wahren. Bitte beachte jedoch:</p>
       <ul>
-        <li>Any unlawful purpose or in violation of any laws</li>
-        <li>Transmitting harmful, threatening, or abusive content</li>
-        <li>Attempting to gain unauthorized access to our systems</li>
-        <li>Interfering with the proper functioning of our services</li>
-        <li>Sharing false or misleading information</li>
-        <li>Harassing or threatening other users or staff</li>
+        <li>Wir können in bestimmten rechtlichen Umständen verpflichtet sein, Informationen offenzulegen</li>
+        <li>Wir können Informationen teilen, wenn ein Risiko für dich oder andere besteht</li>
+        <li>Wir halten uns an alle geltenden Datenschutzgesetze und -vorschriften</li>
+        <li>Dein Therapeut ist an berufliche Vertraulichkeitsstandards gebunden</li>
       </ul>
 
-      <h2>11. Intellectual Property Rights</h2>
-      <p>All content on our platform, including but not limited to:</p>
+      <h2>10. Verbotene Verwendungen</h2>
+      <p>Du darfst unsere Dienstleistungen nicht verwenden für:</p>
       <ul>
-        <li>Text, graphics, logos, and images</li>
-        <li>Software and technical documentation</li>
-        <li>Educational materials and resources</li>
-        <li>Platform design and functionality</li>
-      </ul>
-      <p>Are protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.</p>
-
-      <h2>12. Limitation of Liability</h2>
-      <p>To the maximum extent permitted by law, Improself shall not be liable for:</p>
-      <ul>
-        <li>Indirect, incidental, special, or consequential damages</li>
-        <li>Loss of profits, data, or business opportunities</li>
-        <li>Damages resulting from the use or inability to use our services</li>
-        <li>Third-party actions or content</li>
-      </ul>
-      <p>Our total liability shall not exceed the amount you paid for the services in the 12 months preceding the claim.</p>
-
-      <h2>13. Disclaimers</h2>
-      <p>Our services are provided "as is" without warranties of any kind. We disclaim all warranties, express or implied, including but not limited to:</p>
-      <ul>
-        <li>Warranties of merchantability and fitness for a particular purpose</li>
-        <li>Warranties regarding the accuracy or reliability of information</li>
-        <li>Warranties that our services will be uninterrupted or error-free</li>
+        <li>Jegliche rechtswidrige Zwecke oder zur Verletzung von Gesetzen</li>
+        <li>Die Übertragung schädlicher, bedrohlicher oder missbräuchlicher Inhalte</li>
+        <li>Versuch, unbefugten Zugriff auf unsere Systeme zu erlangen</li>
+        <li>Störung der ordnungsgemäßen Funktionsweise unserer Dienstleistungen</li>
+        <li>Das Teilen falscher oder irreführender Informationen</li>
+        <li>Belästigung oder Bedrohung anderer Benutzer oder Mitarbeiter</li>
       </ul>
 
-      <h2>14. Indemnification</h2>
-      <p>You agree to indemnify and hold harmless Improself, its officers, directors, employees, and agents from any claims, damages, or expenses arising from:</p>
+      <h2>11. Geistige Eigentumsrechte</h2>
+      <p>Alle Inhalte auf unserer Plattform, einschließlich, aber nicht beschränkt auf:</p>
       <ul>
-        <li>Your use of our services</li>
-        <li>Your violation of these terms</li>
-        <li>Your violation of any third-party rights</li>
-        <li>Any content you submit or transmit through our platform</li>
+        <li>Text, Grafiken, Logos und Bilder</li>
+        <li>Software und technische Dokumentation</li>
+        <li>Bildungsmaterialien und Ressourcen</li>
+        <li>Plattformdesign und -funktionalität</li>
+      </ul>
+      <p>Sind durch Urheberrechte, Markenrechte und andere Gesetze zum geistigen Eigentum geschützt. Du darfst ohne unsere ausdrückliche schriftliche Genehmigung keine Vervielfältigungen, Verbreitungen oder abgeleitete Werke erstellen.</p>
+
+      <h2>12. Haftungsbeschränkung</h2>
+      <p>Im gesetzlich zulässigen Umfang haftet Improself nicht für:</p>
+      <ul>
+        <li>Indirekte, zufällige, besondere oder Folgeschäden</li>
+        <li>Verlust von Gewinnen, Daten oder Geschäftsmöglichkeiten</li>
+        <li>Schäden, die aus der Nutzung oder Unfähigkeit zur Nutzung unserer Dienstleistungen resultieren</li>
+        <li>Handlungen oder Inhalte Dritter</li>
+      </ul>
+      <p>Unsere Gesamthaftung darf den Betrag nicht überschreiten, den du für die Dienstleistungen in den 12 Monaten vor der Forderung gezahlt hast.</p>
+
+      <h2>13. Haftungsausschlüsse</h2>
+      <p>Unsere Dienstleistungen werden "wie besehen" ohne Gewährleistungen jeglicher Art bereitgestellt. Wir lehnen alle Gewährleistungen ab, ausdrücklich oder stillschweigend, einschließlich, aber nicht beschränkt auf:</p>
+      <ul>
+        <li>Gewährleistungen der Marktgängigkeit und Eignung für einen bestimmten Zweck</li>
+        <li>Gewährleistungen bezüglich der Genauigkeit oder Zuverlässigkeit von Informationen</li>
+        <li>Gewährleistungen, dass unsere Dienstleistungen ununterbrochen oder fehlerfrei sein werden</li>
       </ul>
 
-      <h2>15. Termination</h2>
-      <p>We may terminate or suspend your account and access to our services at any time, with or without notice, for:</p>
+      <h2>14. Freistellung</h2>
+      <p>Du stimmst zu, Improself, seine Offiziere, Direktoren, Mitarbeiter und Vertreter von allen Ansprüchen, Schäden oder Ausgaben freizustellen, die sich ergeben aus:</p>
       <ul>
-        <li>Violation of these terms</li>
-        <li>Fraudulent or illegal activity</li>
-        <li>Non-payment of fees</li>
-        <li>Any other reason at our sole discretion</li>
-      </ul>
-      <p>You may terminate your account at any time by contacting our support team.</p>
-
-      <h2>16. Governing Law and Dispute Resolution</h2>
-      <p>These terms are governed by the laws of [Your Jurisdiction]. Any disputes arising from these terms or your use of our services shall be resolved through:</p>
-      <ul>
-        <li>Good faith negotiations first</li>
-        <li>Mediation if negotiations fail</li>
-        <li>Binding arbitration as a last resort</li>
+        <li>Deiner Nutzung unserer Dienstleistungen</li>
+        <li>Deiner Verletzung dieser Bedingungen</li>
+        <li>Deiner Verletzung von Rechten Dritter</li>
+        <li>Jeglichen Inhalten, die du über unsere Plattform einreichst oder überträgst</li>
       </ul>
 
-      <h2>17. Changes to Terms</h2>
-      <p>We reserve the right to modify these terms at any time. We will notify users of material changes by:</p>
+      <h2>15. Kündigung</h2>
+      <p>Wir können dein Konto und den Zugang zu unseren Dienstleistungen jederzeit mit oder ohne Vorankündigung kündigen oder sperren für:</p>
       <ul>
-        <li>Posting the updated terms on our website</li>
-        <li>Sending email notifications to registered users</li>
-        <li>Displaying notices within our platform</li>
+        <li>Verletzung dieser Bedingungen</li>
+        <li>Betrügerische oder illegale Aktivitäten</li>
+        <li>Nichtzahlung von Gebühren</li>
+        <li>Jeden anderen Grund nach unserem alleinigen Ermessen</li>
       </ul>
-      <p>Continued use of our services after changes constitutes acceptance of the new terms.</p>
+      <p>Du kannst dein Konto jederzeit kündigen, indem du unser Support-Team kontaktierst.</p>
 
-      <h2>18. Severability</h2>
-      <p>If any provision of these terms is found to be unenforceable or invalid, the remaining provisions shall remain in full force and effect.</p>
-
-      <h2>19. Contact Information</h2>
-      <p>If you have any questions about these terms and conditions, please contact us at:</p>
+      <h2>16. Geltendes Recht und Streitbeilegung</h2>
+      <p>Diese Bedingungen unterliegen den Gesetzen von [Deine Gerichtsbarkeit]. Alle Streitigkeiten, die sich aus diesen Bedingungen oder deiner Nutzung unserer Dienstleistungen ergeben, werden gelöst durch:</p>
       <ul>
-        <li>Email: legal@improself.com</li>
-        <li>Phone: [Your Contact Number]</li>
-        <li>Address: [Your Business Address]</li>
+        <li>Zuerst Verhandlungen in gutem Glauben</li>
+        <li>Mediation, wenn Verhandlungen scheitern</li>
+        <li>Bindende Schiedsgerichtsbarkeit als letztes Mittel</li>
+      </ul>
+
+      <h2>17. Änderungen der Bedingungen</h2>
+      <p>Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Wir werden Benutzer über wesentliche Änderungen informieren durch:</p>
+      <ul>
+        <li>Veröffentlichung der aktualisierten Bedingungen auf unserer Website</li>
+        <li>Versendung von E-Mail-Benachrichtigungen an registrierte Benutzer</li>
+        <li>Anzeige von Hinweisen innerhalb unserer Plattform</li>
+      </ul>
+      <p>Die fortgesetzte Nutzung unserer Dienstleistungen nach Änderungen stellt die Annahme der neuen Bedingungen dar.</p>
+
+      <h2>18. Teilnichtigkeit</h2>
+      <p>Wenn eine Bestimmung dieser Bedingungen als nicht durchsetzbar oder ungültig befunden wird, bleiben die übrigen Bestimmungen in vollem Umfang in Kraft.</p>
+
+      <h2>19. Kontaktinformationen</h2>
+      <p>Wenn du Fragen zu diesen Nutzungsbedingungen hast, kontaktiere uns bitte unter:</p>
+      <ul>
+        <li>E-Mail: legal@improself.com</li>
+        <li>Telefon: [Deine Kontaktnummer]</li>
+        <li>Adresse: [Deine Geschäftsadresse]</li>
         <li>Website: www.improself.com</li>
       </ul>
 
-      <h2>20. Entire Agreement</h2>
-      <p>These terms and conditions, together with our privacy policy and any other legal notices published on our website, constitute the entire agreement between you and Improself regarding your use of our services.</p>
+      <h2>20. Vollständige Vereinbarung</h2>
+      <p>Diese Nutzungsbedingungen bilden zusammen mit unserer Datenschutzerklärung und allen anderen rechtlichen Hinweisen, die auf unserer Website veröffentlicht werden, die vollständige Vereinbarung zwischen dir und Improself bezüglich deiner Nutzung unserer Dienstleistungen.</p>
 
-      <p><strong>Effective Date:</strong> December 2024</p>
-      <p><strong>Last Updated:</strong> December 2024</p>
+      <p><strong>Gültigkeitsdatum:</strong> Dezember 2024</p>
+      <p><strong>Zuletzt aktualisiert:</strong> Dezember 2024</p>
   `,
 };

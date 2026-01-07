@@ -22,7 +22,6 @@ import { ContactFormSchema } from "@/formik/schema";
 import FaqSection from "@/components/molecules/FaqSection";
 import ReviewsCards from "@/components/molecules/ReviewsCards";
 
-
 export default function HomeTemplate() {
   const [data, setData] = useState(homePageData);
 
@@ -60,7 +59,7 @@ export default function HomeTemplate() {
       {data?.sectionOne && (
         <div className={clsx(classes.sectionOne)}>
           <Container>
-            <Row>
+            <Row className="gy-5">
               <Col lg={6}>
                 <TrustedProfessionalsSection data={data?.sectionOne} />
               </Col>
@@ -70,6 +69,14 @@ export default function HomeTemplate() {
                     <Image src={data?.sectionOne?.image} alt="image" fill />
                   </div>
                 </div>
+              </Col>
+              <Col lg={12}>
+                <TrustedProfessionalsSection
+                  data={data?.sectionOneStats}
+                  showStats={true}
+                  statsClass={classes.statsClass}
+                  statsDetailClass={classes.statsDetailClass}
+                />
               </Col>
             </Row>
           </Container>
@@ -93,14 +100,17 @@ export default function HomeTemplate() {
                       {data?.sectionTwo?.description}
                     </p>
                   </div>
-                  <Button label="Explore Our Services" variant="primary-outlined" />
+                  <Button
+                    label="Unsere Dienstleistungen erkunden"
+                    variant="primary-outlined"
+                  />
                 </div>
               </Col>
 
               <Col lg={12}>
                 <Row className="gy-4">
                   {data?.sectionTwo?.services?.map((item, index) => (
-                    <Col lg={4} key={index}>
+                    <Col lg={4} key={index + "service"}>
                       <ServiceCards data={item} />
                     </Col>
                   ))}
@@ -143,7 +153,7 @@ export default function HomeTemplate() {
               <Col lg={6}>
                 <Row className="gy-4">
                   {data?.sectionThree?.steps?.map((item, index) => (
-                    <Col lg={12} key={index}>
+                    <Col lg={12} key={index + "step"}>
                       <StepsCards data={item} index={index} />
                     </Col>
                   ))}
@@ -204,17 +214,26 @@ export default function HomeTemplate() {
             <Row>
               <Col lg={6}>
                 <div className={classes.sectionSixContent}>
-                  <div className={classes.imagesSection}>
-                    {data?.sectionSix?.users?.slice(0, 8).map((item, index) => (
+                  <div className={classes.sectionSixTitle}>
+                    <h2 className={clsx(classes.title, "fs30 fw-500")}>
+                      Newsletter
+                    </h2>
+                  </div>
+                  {/* <div className={classes.imagesSection}> */}
+                  {/* {data?.sectionSix?.users?.slice(0, 8).map((item, index) => (
                       <div key={index} className={classes.sectionSixImage}>
                         {item.photo && (
                           <Image src={item.photo} alt={`Profile ${index + 1}`} fill />
                         )}
                       </div>
-                    ))}
-                    </div>
-                  <h2 className={clsx(classes.title, "fs42 fw-500")}>{data?.sectionSix?.title}</h2>
-                  <p className={clsx(classes.description, "fs20 fw-400")}>{data?.sectionSix?.description}</p>
+                    ))} */}
+                  {/* </div> */}
+                  <h2 className={clsx(classes.title, "fs42 fw-500")}>
+                    {data?.sectionSix?.title}
+                  </h2>
+                  <p className={clsx(classes.description, "fs20 fw-400")}>
+                    {data?.sectionSix?.description}
+                  </p>
                 </div>
               </Col>
               <Col lg={6}>
@@ -229,7 +248,7 @@ export default function HomeTemplate() {
           <Container>
             <Row>
               <Col lg={12}>
-            <FaqSection data={data?.sectionSeven} />
+                <FaqSection data={data?.sectionSeven} />
               </Col>
             </Row>
           </Container>

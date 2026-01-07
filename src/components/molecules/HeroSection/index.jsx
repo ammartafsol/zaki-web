@@ -3,6 +3,7 @@ import classes from "./HeroSection.module.css";
 import Button from "@/components/atoms/Button";
 import clsx from "clsx";
 import { HiArrowRightCircle } from "react-icons/hi2";
+import PropTypes from "prop-types";
 
 export default function HeroSection({ data }) {
   return (
@@ -24,3 +25,6 @@ export default function HeroSection({ data }) {
     </div>
   );
 }
+HeroSection.propTypes = {
+  data: PropTypes.object.isRequired,
+};

@@ -22,7 +22,7 @@ export default function AboutUsTemplate() {
         <Container>
           <Row>
             <Col lg={12}>
-              <Banner title="About Us" path="About" />
+              <Banner title="Über uns" path="Über uns" />
             </Col>
           </Row>
         </Container>

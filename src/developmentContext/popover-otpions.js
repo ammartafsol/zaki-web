@@ -60,11 +60,12 @@ export const locationOptions = [
 
 export const LANGUAGE_OPTIONS = [
   {
-    label: "En",
-    value: "en",
-  },
-  {
     label: "De",
     value: "de",
   },
+  {
+    label: "En",
+    value: "en",
+  },
+
 ];

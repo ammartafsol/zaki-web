@@ -32,7 +32,7 @@ export default function OurPractitionersTemplate() {
         <Container>
           <Row>
             <Col lg={12}>
-              <Banner title="Our Practitioners" path="Our Practitioners" />
+              <Banner title="Unsere Praktizierenden" path="Unsere Praktizierenden" />
             </Col>
           </Row>
         </Container>

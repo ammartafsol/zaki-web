@@ -21,7 +21,7 @@ export default function WhyImproselfTemplate() {
         <Container>
           <Row>
             <Col lg={12}>
-              <Banner title="Why Improself" path="Why Improself?" />
+              <Banner title="Warum Improself?" path="Warum Improself?" />
             </Col>
           </Row>
         </Container>
